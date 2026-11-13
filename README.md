@@ -1,4 +1,9 @@
-# Method Bench
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="branding/lockup-on-dark.svg">
+    <img src="branding/lockup.svg" alt="Method Bench" width="420">
+  </picture>
+</h1>
 
 An open reversed-phase LC method-development simulator for teaching.
 
@@ -126,6 +131,7 @@ A static site: strict TypeScript, Vite, Vitest, Playwright, no framework. One ru
 | [`src/ui/`](src/ui) | Views. [`src/ui/three/`](src/ui/three) holds the instrument drawing and the run comparison. |
 | [`tools/`](tools) | Transcribed source tables, fitting scripts, the data build. |
 | [`tests/`](tests), [`e2e/`](e2e) | Golden tests against closed-form results, literature reproduction, a scripted student, regressions from two adversarial reviews, browser and accessibility tests. |
+| [`branding/`](branding) | The mark, drawn by `tools/make-logo.ts` as the sum of three Gaussian peaks. |
 | [`docs/`](docs) | [Model](docs/MODEL.md), [data and provenance](docs/DATA.md), [instructor guide](docs/INSTRUCTOR.md), [decisions](docs/DECISIONS.md). |
 
 Two rules hold the design together. The student-facing side never reads the engine's truth: peak tables come from integrating the trace, and results come from the peaks the student named. And no view owns a setting: the drawing and the form both change one method and are redrawn from it. Project rules for contributors are in [`CLAUDE.md`](CLAUDE.md).
