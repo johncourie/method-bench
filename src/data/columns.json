@@ -1,0 +1,407 @@
+[
+ {
+  "id": "lit-heliyon-c18",
+  "name": "C18, fully porous 5 µm (literature check only)",
+  "chemistry": "C18, end-capped",
+  "lengthMm": 250,
+  "idMm": 4,
+  "particleUm": 5,
+  "particleType": "FPP",
+  "porosityTotal": 0.62,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 1,
+   "B": 2.5,
+   "C": 0.08
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 400,
+  "prov": {
+   "basis": "assumed",
+   "ref": "heliyon2024",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Purospher STAR RP-18 end-capped."
+  }
+ },
+ {
+  "id": "gt-c18-spp4",
+  "name": "C18, superficially porous 4 µm",
+  "chemistry": "C18, end-capped",
+  "lengthMm": 250,
+  "idMm": 4.6,
+  "particleUm": 4,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 400,
+  "prov": {
+   "basis": "assumed",
+   "ref": "molecules2021-3485",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: InfinityLab Poroshell 120 EC-C18."
+  }
+ },
+ {
+  "id": "gt-c18-fpp35",
+  "name": "C18, fully porous 3.5 µm",
+  "chemistry": "C18, extra dense bonding",
+  "lengthMm": 150,
+  "idMm": 3,
+  "particleUm": 3.5,
+  "particleType": "FPP",
+  "porosityTotal": 0.62,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 1,
+   "B": 2.5,
+   "C": 0.08
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "pedan2018",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Eclipse XDB-C18."
+  }
+ },
+ {
+  "id": "gt-c18-fpp17",
+  "name": "C18, hybrid 1.7 µm",
+  "chemistry": "C18 on hybrid silica",
+  "lengthMm": 100,
+  "idMm": 2.1,
+  "particleUm": 1.7,
+  "particleType": "FPP",
+  "porosityTotal": 0.62,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 1,
+   "B": 2.5,
+   "C": 0.08
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 1200,
+  "prov": {
+   "basis": "assumed",
+   "ref": "xiao2021",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: ACQUITY UPLC BEH C18."
+  }
+ },
+ {
+  "id": "lit-jin-c18",
+  "name": "C18, 1.8 µm (literature check only)",
+  "chemistry": "C18",
+  "lengthMm": 100,
+  "idMm": 2.1,
+  "particleUm": 1.8,
+  "particleType": "FPP",
+  "porosityTotal": 0.62,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 1,
+   "B": 2.5,
+   "C": 0.08
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 1200,
+  "prov": {
+   "basis": "assumed",
+   "ref": "jin2019",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: ZORBAX Eclipse Plus C18."
+  }
+ },
+ {
+  "id": "lit-chen-c18",
+  "name": "C18 T3, 1.8 µm (literature check only)",
+  "chemistry": "C18, low ligand density",
+  "lengthMm": 100,
+  "idMm": 2.1,
+  "particleUm": 1.8,
+  "particleType": "FPP",
+  "porosityTotal": 0.62,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 1,
+   "B": 2.5,
+   "C": 0.08
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 1200,
+  "prov": {
+   "basis": "assumed",
+   "ref": "chen2018",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Acquity UPLC HSS T3."
+  }
+ },
+ {
+  "id": "lit-foods-c18",
+  "name": "C18, superficially porous 2.7 µm (literature check only)",
+  "chemistry": "C18",
+  "lengthMm": 50,
+  "idMm": 4.6,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "foods2026",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: CORTECS C18."
+  }
+ },
+ {
+  "id": "gt-pfp-spp4",
+  "name": "PFP, superficially porous 4 µm",
+  "chemistry": "Pentafluorophenyl",
+  "lengthMm": 250,
+  "idMm": 4.6,
+  "particleUm": 4,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 400,
+  "prov": {
+   "basis": "assumed",
+   "ref": "molecules2021-3485",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: InfinityLab Poroshell 120 PFP."
+  }
+ },
+ {
+  "id": "gt-pfp-spp19",
+  "name": "PFP, superficially porous 1.9 µm",
+  "chemistry": "Pentafluorophenyl",
+  "lengthMm": 50,
+  "idMm": 2.1,
+  "particleUm": 1.9,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 1200,
+  "prov": {
+   "basis": "assumed",
+   "ref": "molecules2021-3485",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: InfinityLab Poroshell 120 PFP."
+  }
+ },
+ {
+  "id": "cb-carb",
+  "name": "C18 with embedded carbamate, superficially porous 2.7 µm",
+  "chemistry": "Embedded polar group (carbamate)",
+  "lengthMm": 150,
+  "idMm": 2.1,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "owolabi2025",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Cortecs Shield RP-18."
+  }
+ },
+ {
+  "id": "cb-c18sp",
+  "name": "C18 sterically protected, superficially porous 2.7 µm",
+  "chemistry": "Diisobutyl-octadecyl",
+  "lengthMm": 150,
+  "idMm": 2.1,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "owolabi2025",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Raptor ARC-18."
+  }
+ },
+ {
+  "id": "cb-c18",
+  "name": "C18, superficially porous 2.7 µm",
+  "chemistry": "Dimethyl-octadecyl",
+  "lengthMm": 150,
+  "idMm": 2.1,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "owolabi2025",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Poroshell 120 EC-C18."
+  }
+ },
+ {
+  "id": "cb-amide",
+  "name": "RP-amide, superficially porous 2.7 µm",
+  "chemistry": "Embedded polar group (amide)",
+  "lengthMm": 150,
+  "idMm": 2.1,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "owolabi2025",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Ascentis Express RP-Amide."
+  }
+ },
+ {
+  "id": "cb-c18sp-x2",
+  "name": "C18 sterically protected, two columns in series",
+  "chemistry": "Diisobutyl-octadecyl",
+  "lengthMm": 300,
+  "idMm": 2.1,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "owolabi2025",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source: two Raptor ARC-18 columns in series."
+  }
+ },
+ {
+  "id": "lit-abc-c18",
+  "name": "C18, superficially porous 2.7 µm (literature check only)",
+  "chemistry": "C18",
+  "lengthMm": 150,
+  "idMm": 3,
+  "particleUm": 2.7,
+  "particleType": "SPP",
+  "porosityTotal": 0.52,
+  "porosityExt": 0.4,
+  "vd": {
+   "A": 0.5,
+   "B": 2,
+   "C": 0.05
+  },
+  "pHRange": [
+   2,
+   8
+  ],
+  "tMaxC": 60,
+  "pMaxBar": 600,
+  "prov": {
+   "basis": "assumed",
+   "ref": "abc2024",
+   "note": "Dimensions as in the source. Porosity and plate-height coefficients are typical values for the particle class. Source column: Ascentis Express C18."
+  }
+ }
+]

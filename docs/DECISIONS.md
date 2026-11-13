@@ -1,0 +1,45 @@
+# Decisions
+
+Append-only. Newest last.
+
+**2026-11-13. Standalone repository, own Pages site.** Chosen by the owner over a folder inside the existing teaching-tools site, so the tool can be cited and forked on its own.
+
+**2026-11-13. Two cases in the first version.** Catechins for method development, cannabinoids for the stability-indicating and compliance exercise.
+
+**2026-11-13. MIT for code, CC BY 4.0 for data and text.**
+
+**2026-11-13. No non-commercial sources.** The best-known open LC simulator, its compound parameters, and the public column-selectivity database are all CC BY-NC-SA. None of their code or data is used. Consequence: the hydrophobic-subtraction model is not implemented, and column selectivity comes from per-column retention data instead.
+
+**2026-11-13. Acetonitrile only.** No open data supports methanol for either compound class. Offering it would mean inventing selectivity.
+
+**2026-11-13. The model is hidden; the student fits it.** The alternative, sliders that redraw a labelled chromatogram, teaches the response surface but not the practice of method development. Chosen: unlabelled chromatograms, injections that cost time, a model fitted from the student's own runs.
+
+**2026-11-13. The trace is integrated by an algorithm that sees only the trace.** Peak tables are not derived from the engine's knowledge of where peaks are. This is what makes co-elution, drift and wide-range calibration behave realistically.
+
+**2026-11-13. Linear solvent strength, no curvature.** A shared Neue-Kuss curvature term made the catechin leave-one-out error worse. The engine still supports it for future measured data.
+
+**2026-11-13. Catechin parameters fitted jointly across seven published methods, then calibrated per column.** No measured retention against composition is open. The joint fit gives the only available estimate of S; per-column calibration reproduces each source method. Leave-one-method-out error is published in the application.
+
+**2026-11-13. Generic column names in the interface.** The source column is named in each column's provenance note. Parameters fitted from one paper's methods should not be presented as a description of a commercial product.
+
+**2026-11-13. Acidic-cannabinoid pH response digitized from a published figure.** It exists in no table. The digitization was validated against the same paper's tabulated values.
+
+**2026-11-13. Where a source's legend and its plotted points disagree, the points are used** and the disagreement is recorded in the provenance note.
+
+**2026-11-13. One unresolved literature discrepancy is shown, not hidden** (resolution of CBDA and CBG in Owolabi 2025, Section 2.3).
+
+**2026-11-13. The instructor key is in the page.** A static site cannot keep it secret. The mitigation is the notebook file, which records every injection, and saying so plainly.
+
+**2026-11-13. No generated imagery.**
+
+**2026-11-13. Two adversarial reviews before release; findings fixed and pinned by tests** (`tests/review.test.ts`, `e2e/regressions.spec.ts`). The main ones: peak height and width are measured on the recorded signal, not a smoothed copy; detection limits under weighted regression use the response standard deviation at the lowest standard; thermal reactions apply only to a heat stress; processing choices are part of the notebook; a label names exactly one peak; notebook files are validated field by field.
+
+**2026-11-13. No temperature selectivity.** Each case uses one enthalpy. The alternative, giving compounds different assumed values, would manufacture selectivity effects with no data behind them.
+
+**2026-11-13. The truth stays log-linear, and the application says so.** The published cannabinoid data is linear over its range and curvature made the catechin fit worse. Inventing curvature to make the student's fit less perfect was rejected; the limit is disclosed on the Fit and predict tab.
+
+**2026-11-13. The anomalous C18 column is not offered to students.** One source method implies retention several times higher than any other C18 in the set. It stays in the joint fit and in the literature checks.
+
+**2026-11-13. Plate numbers are calibrated to one published table, and labelled as calibration.**
+
+**2026-11-13. Proper unit symbols** (µ, °) in interface text. The house rule excludes dashes, curly quotes and emoji, not unit signs.

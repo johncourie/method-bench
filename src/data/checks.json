@@ -1,0 +1,114 @@
+[
+ {
+  "caseId": "cannabis",
+  "ref": "scirep2022",
+  "quantity": "CBD: slope of log k against acetonitrile fraction, 60 to 80%",
+  "published": "-3.77",
+  "model": "-3.86",
+  "note": "Published value computed here from Table 1a retention times and the retention factor in Table 2a, on a 5 µm C18 from another maker. Model value is the published slope on the C18 used in the simulator."
+ },
+ {
+  "caseId": "cannabis",
+  "ref": "scirep2022",
+  "quantity": "d9-THC to CBD retention factor ratio at 75% acetonitrile",
+  "published": "2.12",
+  "model": "2.36",
+  "note": "Table 2a retention factors, different C18 column and 25 °C."
+ },
+ {
+  "caseId": "cannabis",
+  "ref": "owolabi2025",
+  "quantity": "Plate number of CBD, C18 column, 70% acetonitrile, 0.3 mL/min",
+  "published": "23390",
+  "model": "23553",
+  "note": "Supplementary Table S4. Not an independent test: the plate-height coefficients for superficially porous columns and the instrument's extra-column volume were set with this table in view."
+ },
+ {
+  "caseId": "cannabis",
+  "ref": "owolabi2025",
+  "quantity": "Plate number of CBC, C18 column, 70% acetonitrile, 0.3 mL/min",
+  "published": "38570",
+  "model": "34683",
+  "note": "Supplementary Table S4. Not an independent test: the plate-height coefficients for superficially porous columns and the instrument's extra-column volume were set with this table in view."
+ },
+ {
+  "caseId": "cannabis",
+  "ref": "owolabi2025",
+  "quantity": "Resolution CBDA / CBG, two sterically protected C18 columns in series, 75% acetonitrile, pH 2.97, 0.5 mL/min",
+  "published": "1.48",
+  "model": "10.20",
+  "note": "Section 2.3. Not reproduced, and not understood: the same paper's Table 1 and Figure 4 give retention factors of about 1.7 and 2.1 for this pair under these conditions, a selectivity of 1.18, which at the plate numbers the paper reports gives a resolution several times larger than 1.48. The pair named in the text may not be the adjacent pair in the published chromatogram."
+ },
+ {
+  "caseId": "cannabis",
+  "ref": "owolabi2025",
+  "quantity": "Resolution d9-THC / d8-THC, same method",
+  "published": "1.43",
+  "model": "1.95",
+  "note": "Section 2.3."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "kaeswurm2021",
+  "quantity": "Molar absorptivity of epicatechin at 280 nm, L/mol/cm",
+  "published": "3981",
+  "model": "3764",
+  "note": "Model value is what the slope-scaling rule gives from catechin; it is how the unreported compounds were scaled. The simulator uses the reported value for epicatechin itself."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "kaeswurm2021",
+  "quantity": "Molar absorptivity of EGCG near 280 nm, L/mol/cm",
+  "published": "10735 (at 277 nm)",
+  "model": "11280",
+  "note": "Same scaling rule, tested on a compound whose value is reported."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "heliyon2024",
+  "quantity": "Leave-one-method-out: C18 5 µm, 250 x 4.0 mm, 20 to 40% MeCN, 0.1% phosphoric acid",
+  "published": "11 retention times",
+  "model": "rms error 15.0%, largest single error 24.9%, 51 of 55 pair orders correct",
+  "note": "Model refitted without this method. One parameter, this column's overall strength, was then fitted to the held-out retention times; selectivity and gradient behaviour are predictions."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "molecules2021-3485",
+  "quantity": "Leave-one-method-out: C18 superficially porous 4 µm, 250 x 4.6 mm, 10 to 25% MeCN, 0.1% formic acid",
+  "published": "9 retention times",
+  "model": "rms error 6.7%, largest single error 16.6%, 34 of 36 pair orders correct",
+  "note": "Model refitted without this method. One parameter, this column's overall strength, was then fitted to the held-out retention times; selectivity and gradient behaviour are predictions."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "pedan2018",
+  "quantity": "Leave-one-method-out: C18 3.5 µm, 150 x 3.0 mm, multi-step 3 to 50% B, 0.1% formic acid",
+  "published": "11 retention times",
+  "model": "rms error 9.3%, largest single error 13.3%, 54 of 55 pair orders correct",
+  "note": "Model refitted without this method. One parameter, this column's overall strength, was then fitted to the held-out retention times; selectivity and gradient behaviour are predictions."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "xiao2021",
+  "quantity": "Leave-one-method-out: C18 1.7 µm, 100 x 2.1 mm, 5 to 50% MeCN, 0.2% formic acid",
+  "published": "12 retention times",
+  "model": "rms error 15.8%, largest single error 31.0%, 65 of 66 pair orders correct",
+  "note": "Model refitted without this method. One parameter, this column's overall strength, was then fitted to the held-out retention times; selectivity and gradient behaviour are predictions."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "jin2019",
+  "quantity": "Leave-one-method-out: C18 1.8 µm, 100 x 2.1 mm, 5 to 18% MeCN, 0.3% formic acid",
+  "published": "9 retention times",
+  "model": "rms error 4.4%, largest single error 6.9%, 35 of 36 pair orders correct",
+  "note": "Model refitted without this method. One parameter, this column's overall strength, was then fitted to the held-out retention times; selectivity and gradient behaviour are predictions."
+ },
+ {
+  "caseId": "greentea",
+  "ref": "chen2018",
+  "quantity": "Leave-one-method-out: C18 (T3) 1.8 µm, 100 x 2.1 mm, 1 to 40% MeCN, 0.1% formic acid",
+  "published": "8 retention times",
+  "model": "rms error 7.4%, largest single error 9.9%, 27 of 28 pair orders correct",
+  "note": "Model refitted without this method. One parameter, this column's overall strength, was then fitted to the held-out retention times; selectivity and gradient behaviour are predictions."
+ }
+]

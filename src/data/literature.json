@@ -1,0 +1,1068 @@
+[
+ {
+  "id": "heliyon2024",
+  "ref": "heliyon2024",
+  "caseId": "greentea",
+  "label": "C18 5 µm, 250 x 4.0 mm, 20 to 40% MeCN, 0.1% phosphoric acid",
+  "method": {
+   "columnId": "lit-heliyon-c18",
+   "modifier": "MeCN",
+   "pH": 2.2,
+   "tempC": 30,
+   "flowMlMin": 1,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.2
+    },
+    {
+     "t": 1,
+     "phi": 0.2
+    },
+    {
+     "t": 5,
+     "phi": 0.25
+    },
+    {
+     "t": 15,
+     "phi": 0.3
+    },
+    {
+     "t": 25,
+     "phi": 0.4
+    }
+   ],
+   "runTimeMin": 25,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 1,
+  "reported": [
+   {
+    "soluteId": "ga",
+    "tR": 3.97
+   },
+   {
+    "soluteId": "gc",
+    "tR": 4.61
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 5.39
+   },
+   {
+    "soluteId": "tep",
+    "tR": 8.39
+   },
+   {
+    "soluteId": "c",
+    "tR": 9.05
+   },
+   {
+    "soluteId": "caf",
+    "tR": 11.2
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 12.1
+   },
+   {
+    "soluteId": "ec",
+    "tR": 13.2
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 14.4
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 16.6
+   },
+   {
+    "soluteId": "cg",
+    "tR": 18.1
+   }
+  ],
+  "usedInFit": true,
+  "heldOut": [
+   {
+    "soluteId": "ga",
+    "tR": 4.45
+   },
+   {
+    "soluteId": "gc",
+    "tR": 5.76
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 4.75
+   },
+   {
+    "soluteId": "tep",
+    "tR": 7.94
+   },
+   {
+    "soluteId": "c",
+    "tR": 10.92
+   },
+   {
+    "soluteId": "caf",
+    "tR": 8.81
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 11.62
+   },
+   {
+    "soluteId": "ec",
+    "tR": 10.85
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 13.12
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 18.37
+   },
+   {
+    "soluteId": "cg",
+    "tR": 20.19
+   }
+  ],
+  "note": "Section 2.3 and Table 2 (standard solution, intraday). Dwell volume (1 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "molecules3485-c18",
+  "ref": "molecules2021-3485",
+  "caseId": "greentea",
+  "label": "C18 superficially porous 4 µm, 250 x 4.6 mm, 10 to 25% MeCN, 0.1% formic acid",
+  "method": {
+   "columnId": "gt-c18-spp4",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 25,
+   "flowMlMin": 0.5,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.1
+    },
+    {
+     "t": 5,
+     "phi": 0.1
+    },
+    {
+     "t": 50,
+     "phi": 0.25
+    }
+   ],
+   "runTimeMin": 55,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 1,
+  "reported": [
+   {
+    "soluteId": "gc",
+    "tR": 10.035
+   },
+   {
+    "soluteId": "egc",
+    "tR": 15.89
+   },
+   {
+    "soluteId": "caf",
+    "tR": 18.648
+   },
+   {
+    "soluteId": "c",
+    "tR": 19.694
+   },
+   {
+    "soluteId": "ec",
+    "tR": 26.926
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 27.922
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 30.81
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 41.214
+   },
+   {
+    "soluteId": "cg",
+    "tR": 42.129
+   }
+  ],
+  "usedInFit": true,
+  "heldOut": [
+   {
+    "soluteId": "gc",
+    "tR": 9.45
+   },
+   {
+    "soluteId": "egc",
+    "tR": 16.3
+   },
+   {
+    "soluteId": "caf",
+    "tR": 21.74
+   },
+   {
+    "soluteId": "c",
+    "tR": 18.38
+   },
+   {
+    "soluteId": "ec",
+    "tR": 27.33
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 27.24
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 31.31
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 38.89
+   },
+   {
+    "soluteId": "cg",
+    "tR": 41.02
+   }
+  ],
+  "note": "Supplementary Table S1 and Figure S1. Dwell volume (1 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "pedan2018",
+  "ref": "pedan2018",
+  "caseId": "greentea",
+  "label": "C18 3.5 µm, 150 x 3.0 mm, multi-step 3 to 50% B, 0.1% formic acid",
+  "method": {
+   "columnId": "gt-c18-fpp35",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 38,
+   "flowMlMin": 0.25,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.02847
+    },
+    {
+     "t": 5,
+     "phi": 0.02847
+    },
+    {
+     "t": 8,
+     "phi": 0.05694
+    },
+    {
+     "t": 20,
+     "phi": 0.10439
+    },
+    {
+     "t": 25,
+     "phi": 0.11388
+    },
+    {
+     "t": 32,
+     "phi": 0.16133
+    },
+    {
+     "t": 38,
+     "phi": 0.1898
+    },
+    {
+     "t": 44,
+     "phi": 0.26572
+    },
+    {
+     "t": 47,
+     "phi": 0.29419
+    },
+    {
+     "t": 51,
+     "phi": 0.36062
+    },
+    {
+     "t": 54,
+     "phi": 0.42705
+    },
+    {
+     "t": 58,
+     "phi": 0.4745
+    },
+    {
+     "t": 61,
+     "phi": 0.8541
+    },
+    {
+     "t": 63,
+     "phi": 0.8541
+    }
+   ],
+   "runTimeMin": 54,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 0.6,
+  "reported": [
+   {
+    "soluteId": "ga",
+    "tR": 9.4
+   },
+   {
+    "soluteId": "gc",
+    "tR": 15
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 15.2
+   },
+   {
+    "soluteId": "egc",
+    "tR": 22
+   },
+   {
+    "soluteId": "c",
+    "tR": 23.8
+   },
+   {
+    "soluteId": "caf",
+    "tR": 25.4
+   },
+   {
+    "soluteId": "ec",
+    "tR": 31.1
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 31.7
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 34.3
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 40.3
+   },
+   {
+    "soluteId": "cg",
+    "tR": 41.1
+   }
+  ],
+  "usedInFit": true,
+  "heldOut": [
+   {
+    "soluteId": "ga",
+    "tR": 8.93
+   },
+   {
+    "soluteId": "gc",
+    "tR": 13.83
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 13.18
+   },
+   {
+    "soluteId": "egc",
+    "tR": 20.8
+   },
+   {
+    "soluteId": "c",
+    "tR": 24.1
+   },
+   {
+    "soluteId": "caf",
+    "tR": 26.85
+   },
+   {
+    "soluteId": "ec",
+    "tR": 34.51
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 34.91
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 38.26
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 44.8
+   },
+   {
+    "soluteId": "cg",
+    "tR": 45.96
+   }
+  ],
+  "note": "Section 2.4 and Table 2. Dwell volume (0.6 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "xiao2021",
+  "ref": "xiao2021",
+  "caseId": "greentea",
+  "label": "C18 1.7 µm, 100 x 2.1 mm, 5 to 50% MeCN, 0.2% formic acid",
+  "method": {
+   "columnId": "gt-c18-fpp17",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 40,
+   "flowMlMin": 0.3,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.05
+    },
+    {
+     "t": 15,
+     "phi": 0.05
+    },
+    {
+     "t": 35,
+     "phi": 0.15
+    },
+    {
+     "t": 50,
+     "phi": 0.5
+    },
+    {
+     "t": 60,
+     "phi": 0.8
+    }
+   ],
+   "runTimeMin": 43,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 0.15,
+  "reported": [
+   {
+    "soluteId": "ga",
+    "tR": 2.25
+   },
+   {
+    "soluteId": "gc",
+    "tR": 3.35
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 3.45
+   },
+   {
+    "soluteId": "tep",
+    "tR": 5.3
+   },
+   {
+    "soluteId": "egc",
+    "tR": 7
+   },
+   {
+    "soluteId": "c",
+    "tR": 8.7
+   },
+   {
+    "soluteId": "caf",
+    "tR": 11
+   },
+   {
+    "soluteId": "ec",
+    "tR": 19.4
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 19.8
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 24
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 31.3
+   },
+   {
+    "soluteId": "cg",
+    "tR": 32.6
+   }
+  ],
+  "usedInFit": true,
+  "heldOut": [
+   {
+    "soluteId": "ga",
+    "tR": 2.52
+   },
+   {
+    "soluteId": "gc",
+    "tR": 4.39
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 4.15
+   },
+   {
+    "soluteId": "tep",
+    "tR": 5.45
+   },
+   {
+    "soluteId": "egc",
+    "tR": 7.76
+   },
+   {
+    "soluteId": "c",
+    "tR": 9.44
+   },
+   {
+    "soluteId": "caf",
+    "tR": 10.86
+   },
+   {
+    "soluteId": "ec",
+    "tR": 14.62
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 16.66
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 19.32
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 30.23
+   },
+   {
+    "soluteId": "cg",
+    "tR": 31.07
+   }
+  ],
+  "note": "Section 2.4 and Table 2. Dwell volume (0.15 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "jin2019",
+  "ref": "jin2019",
+  "caseId": "greentea",
+  "label": "C18 1.8 µm, 100 x 2.1 mm, 5 to 18% MeCN, 0.3% formic acid",
+  "method": {
+   "columnId": "lit-jin-c18",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 30,
+   "flowMlMin": 0.3,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.05
+    },
+    {
+     "t": 1,
+     "phi": 0.1
+    },
+    {
+     "t": 10,
+     "phi": 0.18
+    },
+    {
+     "t": 14,
+     "phi": 1
+    },
+    {
+     "t": 17,
+     "phi": 1
+    }
+   ],
+   "runTimeMin": 15,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 0.12,
+  "reported": [
+   {
+    "soluteId": "ga",
+    "tR": 1.69
+   },
+   {
+    "soluteId": "gc",
+    "tR": 2.25
+   },
+   {
+    "soluteId": "egc",
+    "tR": 3.16
+   },
+   {
+    "soluteId": "c",
+    "tR": 3.78
+   },
+   {
+    "soluteId": "ec",
+    "tR": 5.36
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 5.66
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 6.43
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 9.42
+   },
+   {
+    "soluteId": "cg",
+    "tR": 9.8
+   }
+  ],
+  "usedInFit": true,
+  "heldOut": [
+   {
+    "soluteId": "ga",
+    "tR": 1.66
+   },
+   {
+    "soluteId": "gc",
+    "tR": 2.15
+   },
+   {
+    "soluteId": "egc",
+    "tR": 3.27
+   },
+   {
+    "soluteId": "c",
+    "tR": 3.72
+   },
+   {
+    "soluteId": "ec",
+    "tR": 5.73
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 5.73
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 6.74
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 8.81
+   },
+   {
+    "soluteId": "cg",
+    "tR": 9.38
+   }
+  ],
+  "note": "Section 2.4 and Table 1. Dwell volume (0.12 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "chen2018",
+  "ref": "chen2018",
+  "caseId": "greentea",
+  "label": "C18 (T3) 1.8 µm, 100 x 2.1 mm, 1 to 40% MeCN, 0.1% formic acid",
+  "method": {
+   "columnId": "lit-chen-c18",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 40,
+   "flowMlMin": 0.3,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.01
+    },
+    {
+     "t": 2,
+     "phi": 0.07
+    },
+    {
+     "t": 13,
+     "phi": 0.4
+    },
+    {
+     "t": 14,
+     "phi": 0.99
+    },
+    {
+     "t": 17,
+     "phi": 0.99
+    }
+   ],
+   "runTimeMin": 12,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 0.12,
+  "reported": [
+   {
+    "soluteId": "gc",
+    "tR": 3.84
+   },
+   {
+    "soluteId": "egc",
+    "tR": 4.93
+   },
+   {
+    "soluteId": "c",
+    "tR": 5.36
+   },
+   {
+    "soluteId": "ec",
+    "tR": 6.28
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 6.35
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 7.86
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 3.8
+   },
+   {
+    "soluteId": "caf",
+    "tR": 5.6
+   }
+  ],
+  "usedInFit": true,
+  "heldOut": [
+   {
+    "soluteId": "gc",
+    "tR": 3.49
+   },
+   {
+    "soluteId": "egc",
+    "tR": 4.9
+   },
+   {
+    "soluteId": "c",
+    "tR": 5.41
+   },
+   {
+    "soluteId": "ec",
+    "tR": 6.9
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 6.9
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 8.49
+   },
+   {
+    "soluteId": "tbm",
+    "tR": 3.43
+   },
+   {
+    "soluteId": "caf",
+    "tR": 5.88
+   }
+  ],
+  "note": "Section 2.3 and Table 1. Dwell volume (0.12 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "foods2026",
+  "ref": "foods2026",
+  "caseId": "greentea",
+  "label": "C18 superficially porous 2.7 µm, 50 x 4.6 mm, 7% MeCN hold then to 70%, 0.1% formic acid",
+  "method": {
+   "columnId": "lit-foods-c18",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 30,
+   "flowMlMin": 0.8,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.07
+    },
+    {
+     "t": 4,
+     "phi": 0.07
+    },
+    {
+     "t": 8,
+     "phi": 0.7
+    }
+   ],
+   "runTimeMin": 7,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 273,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 0.7,
+  "reported": [
+   {
+    "soluteId": "tbm",
+    "tR": 1.145
+   },
+   {
+    "soluteId": "tep",
+    "tR": 1.677
+   },
+   {
+    "soluteId": "caf",
+    "tR": 3.246
+   }
+  ],
+  "usedInFit": true,
+  "note": "Section 2.3 and Figure 2 peak labels (agreeing with the text). Dwell volume (0.7 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "molecules3485-pfp-short",
+  "ref": "molecules2021-3485",
+  "caseId": "greentea",
+  "label": "PFP superficially porous 1.9 µm, 50 x 2.1 mm, 5 to 30% MeCN in 5 min, 2% formic acid",
+  "method": {
+   "columnId": "gt-pfp-spp19",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 25,
+   "flowMlMin": 0.5,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.05
+    },
+    {
+     "t": 5,
+     "phi": 0.3
+    },
+    {
+     "t": 6,
+     "phi": 0.95
+    },
+    {
+     "t": 10,
+     "phi": 0.95
+    }
+   ],
+   "runTimeMin": 9,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 1,
+  "reported": [
+   {
+    "soluteId": "gc",
+    "tR": 1.14
+   },
+   {
+    "soluteId": "caf",
+    "tR": 1.73
+   },
+   {
+    "soluteId": "egc",
+    "tR": 2.2
+   },
+   {
+    "soluteId": "c",
+    "tR": 2.48
+   },
+   {
+    "soluteId": "ec",
+    "tR": 3.45
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 4.24
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 4.49
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 4.98
+   },
+   {
+    "soluteId": "cg",
+    "tR": 5.19
+   }
+  ],
+  "usedInFit": true,
+  "note": "Section 4.3 and Table 1. Dwell volume (1 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "molecules3485-pfp-long",
+  "ref": "molecules2021-3485",
+  "caseId": "greentea",
+  "label": "PFP superficially porous 4 µm, 250 x 4.6 mm, 10 to 25% MeCN, 0.1% formic acid",
+  "method": {
+   "columnId": "gt-pfp-spp4",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 25,
+   "flowMlMin": 0.5,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.1
+    },
+    {
+     "t": 5,
+     "phi": 0.1
+    },
+    {
+     "t": 50,
+     "phi": 0.25
+    }
+   ],
+   "runTimeMin": 63,
+   "injUl": 2,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "dwellMl": 1,
+  "reported": [
+   {
+    "soluteId": "gc",
+    "tR": 14.342
+   },
+   {
+    "soluteId": "caf",
+    "tR": 18.195
+   },
+   {
+    "soluteId": "egc",
+    "tR": 20.072
+   },
+   {
+    "soluteId": "c",
+    "tR": 23.995
+   },
+   {
+    "soluteId": "ec",
+    "tR": 29.001
+   },
+   {
+    "soluteId": "egcg",
+    "tR": 35.513
+   },
+   {
+    "soluteId": "gcg",
+    "tR": 38.266
+   },
+   {
+    "soluteId": "ecg",
+    "tR": 46.373
+   },
+   {
+    "soluteId": "cg",
+    "tR": 48.64
+   }
+  ],
+  "usedInFit": true,
+  "note": "Supplementary Table S2 and Figure S1. Dwell volume (1 mL) and porosity are assumed; the source reports neither."
+ },
+ {
+  "id": "abc2024",
+  "ref": "abc2024",
+  "caseId": "cannabis",
+  "label": "C18 superficially porous 2.7 µm, 150 x 3.0 mm, 70 to 90% MeCN in 20 min, 0.1% formic acid",
+  "method": {
+   "columnId": "lit-abc-c18",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 30,
+   "flowMlMin": 0.2,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.7
+    },
+    {
+     "t": 20,
+     "phi": 0.9
+    },
+    {
+     "t": 25,
+     "phi": 0.9
+    }
+   ],
+   "runTimeMin": 28,
+   "injUl": 3,
+   "detector": {
+    "kind": "uv",
+    "nm": 210,
+    "rateHz": 5
+   }
+  },
+  "dwellMl": 0.2,
+  "reported": [
+   {
+    "soluteId": "cbg",
+    "tR": 11.3
+   },
+   {
+    "soluteId": "cbd",
+    "tR": 12
+   },
+   {
+    "soluteId": "d9thc",
+    "tR": 19.2
+   },
+   {
+    "soluteId": "d8thc",
+    "tR": 19.6
+   },
+   {
+    "soluteId": "cbc",
+    "tR": 21.8
+   }
+  ],
+  "usedInFit": false,
+  "note": "Table 1 (UHPLC system). A different C18 column from the one the parameters were measured on: one column-strength term was fitted, selectivity and gradient behaviour are predicted. Column temperature is not reported (30 °C assumed); dwell volume assumed."
+ }
+]

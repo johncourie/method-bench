@@ -1,0 +1,833 @@
+[
+ {
+  "id": "greentea",
+  "title": "Green tea catechins",
+  "brief": "A supplier offers a green tea leaf extract with a label claim for EGCG and caffeine. Develop a reversed-phase method that separates the eight catechins and caffeine, show it is suitable, then determine the content of the lot you were sent and decide whether it meets its claim. Tea extracts carry other compounds, catechins epimerize and degrade, and the lot may not be what the label says.",
+  "product": {
+   "name": "Green tea leaf extract, powder",
+   "claim": [
+    {
+     "soluteId": "egcg",
+     "mgPerG": 450
+    },
+    {
+     "soluteId": "caf",
+     "mgPerG": 60
+    }
+   ],
+   "prepMg": 25,
+   "prepMl": 50
+  },
+  "analytes": [
+   "caf",
+   "gc",
+   "egc",
+   "c",
+   "ec",
+   "egcg",
+   "gcg",
+   "ecg",
+   "cg"
+  ],
+  "extraStandards": [
+   "ga",
+   "tbm",
+   "uracil"
+  ],
+  "composition": {
+   "egcg": [
+    400,
+    480
+   ],
+   "ecg": [
+    70,
+    110
+   ],
+   "egc": [
+    60,
+    120
+   ],
+   "ec": [
+    25,
+    50
+   ],
+   "gcg": [
+    8,
+    20
+   ],
+   "gc": [
+    5,
+    15
+   ],
+   "c": [
+    5,
+    12
+   ],
+   "cg": [
+    1,
+    4
+   ],
+   "caf": [
+    50,
+    72
+   ]
+  },
+  "matrix": {
+   "ga": [
+    2,
+    6
+   ],
+   "tbm": [
+    1,
+    4
+   ]
+  },
+  "recovery": [
+   0.93,
+   0.99
+  ],
+  "columns": [
+   "gt-c18-spp4",
+   "gt-c18-fpp35",
+   "gt-c18-fpp17",
+   "gt-pfp-spp4",
+   "gt-pfp-spp19"
+  ],
+  "modifiers": [
+   "MeCN"
+  ],
+  "pH": {
+   "min": 2,
+   "max": 7,
+   "step": 0.1,
+   "note": "Before mixing with solvent B."
+  },
+  "reactions": [
+   {
+    "from": "egcg",
+    "to": "gcg",
+    "agent": "heat",
+    "kRefPerH": 0.06,
+    "tRefC": 80,
+    "eaKJ": 117.6,
+    "yield": 1,
+    "ref": "wang2006",
+    "basis": "assumed"
+   },
+   {
+    "from": "gcg",
+    "to": "egcg",
+    "agent": "heat",
+    "kRefPerH": 0.05,
+    "tRefC": 80,
+    "eaKJ": 84.2,
+    "yield": 1,
+    "ref": "wang2006",
+    "basis": "assumed"
+   },
+   {
+    "from": "ecg",
+    "to": "cg",
+    "agent": "heat",
+    "kRefPerH": 0.05,
+    "tRefC": 80,
+    "eaKJ": 100,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "cg",
+    "to": "ecg",
+    "agent": "heat",
+    "kRefPerH": 0.05,
+    "tRefC": 80,
+    "eaKJ": 100,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egc",
+    "to": "gc",
+    "agent": "heat",
+    "kRefPerH": 0.05,
+    "tRefC": 80,
+    "eaKJ": 100,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "gc",
+    "to": "egc",
+    "agent": "heat",
+    "kRefPerH": 0.05,
+    "tRefC": 80,
+    "eaKJ": 100,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "ec",
+    "to": "c",
+    "agent": "heat",
+    "kRefPerH": 0.04,
+    "tRefC": 80,
+    "eaKJ": 100,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "c",
+    "to": "ec",
+    "agent": "heat",
+    "kRefPerH": 0.04,
+    "tRefC": 80,
+    "eaKJ": 100,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egcg",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 1.8,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "gcg",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 1.8,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egc",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 1.8,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "gc",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 1.8,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "ecg",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 1,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "cg",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 1,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "ec",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 0.3,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "c",
+    "to": "gtox",
+    "agent": "base",
+    "kRefPerH": 0.3,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egcg",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.35,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "gcg",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.35,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egc",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.35,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "gc",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.35,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "ecg",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.1,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "cg",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.1,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "ec",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.1,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "c",
+    "to": "gtox",
+    "agent": "peroxide",
+    "kRefPerH": 0.1,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egcg",
+    "to": "egc",
+    "coProduct": "ga",
+    "agent": "acid",
+    "kRefPerH": 0.02,
+    "tRefC": 60,
+    "eaKJ": 80,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "ecg",
+    "to": "ec",
+    "coProduct": "ga",
+    "agent": "acid",
+    "kRefPerH": 0.02,
+    "tRefC": 60,
+    "eaKJ": 80,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "gcg",
+    "to": "gc",
+    "coProduct": "ga",
+    "agent": "acid",
+    "kRefPerH": 0.02,
+    "tRefC": 60,
+    "eaKJ": 80,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egcg",
+    "to": "gtox",
+    "agent": "light",
+    "kRefPerH": 0.004,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "egc",
+    "to": "gtox",
+    "agent": "light",
+    "kRefPerH": 0.004,
+    "tRefC": 25,
+    "eaKJ": 50,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   }
+  ],
+  "variants": [
+   {
+    "id": "clean",
+    "label": "Lot as labelled. Nothing unusual."
+   },
+   {
+    "id": "interferent",
+    "label": "A matrix compound co-elutes with EGCG under the starting gradient (5 to 40% B in 30 min at 1 mL/min) and moves away from it when the gradient slope changes. Because the overlap is exact there, a purity check across the peak does not flag it. What gives it away: the peak spectrum has a band near 325 nm that an EGCG standard lacks, its mass differs, and it separates from EGCG on a steeper or shallower gradient. Uncorrected, EGCG reads about 10% high.",
+    "add": {
+     "gtx": 70
+    }
+   },
+   {
+    "id": "heated",
+    "label": "The extract was held hot in solution during manufacture (72 h at 60 °C): part of the EGCG has epimerized to GCG, and likewise for the other epimer pairs.",
+    "stress": {
+     "agent": "heat",
+     "hours": 72,
+     "tempC": 60
+    }
+   },
+   {
+    "id": "short",
+    "label": "Under-strength in EGCG (about 60% of the usual content) with added caffeine.",
+    "scale": {
+     "egcg": 0.6
+    },
+    "add": {
+     "caf": 60
+    }
+   }
+  ],
+  "ratios": [
+   {
+    "label": "EGCG to caffeine",
+    "num": "egcg",
+    "den": "caf"
+   },
+   {
+    "label": "EGCG to ECG",
+    "num": "egcg",
+    "den": "ecg"
+   }
+  ],
+  "totals": [
+   {
+    "label": "Total catechins (sum of eight)",
+    "terms": [
+     {
+      "id": "gc",
+      "factor": 1
+     },
+     {
+      "id": "egc",
+      "factor": 1
+     },
+     {
+      "id": "c",
+      "factor": 1
+     },
+     {
+      "id": "ec",
+      "factor": 1
+     },
+     {
+      "id": "egcg",
+      "factor": 1
+     },
+     {
+      "id": "gcg",
+      "factor": 1
+     },
+     {
+      "id": "ecg",
+      "factor": 1
+     },
+     {
+      "id": "cg",
+      "factor": 1
+     }
+    ]
+   }
+  ],
+  "defaultMethod": {
+   "columnId": "gt-c18-spp4",
+   "modifier": "MeCN",
+   "pH": 2.7,
+   "tempC": 30,
+   "flowMlMin": 1,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.05
+    },
+    {
+     "t": 30,
+     "phi": 0.4
+    }
+   ],
+   "runTimeMin": 35,
+   "injUl": 5,
+   "detector": {
+    "kind": "uv",
+    "nm": 280,
+    "rateHz": 10
+   }
+  },
+  "diluentPhi": 0.05
+ },
+ {
+  "id": "cannabis",
+  "title": "Hemp cannabinoids",
+  "brief": "A grower submits dried, milled hemp flower for potency testing. Develop a method that separates the acidic and neutral cannabinoids, in particular d9-THC from d8-THC and the acids from the neutral cannabinoids they elute among, show it is suitable, then report the content and decide whether total THC is within the 3 mg/g (0.3%) limit. Acidic cannabinoids decarboxylate on heating, CBD can convert under acid, and several of these compounds share one mass.",
+  "product": {
+   "name": "Hemp flower, dried and milled",
+   "claim": [
+    {
+     "soluteId": "cbda",
+     "mgPerG": 85
+    }
+   ],
+   "prepMg": 100,
+   "prepMl": 50
+  },
+  "analytes": [
+   "cbda",
+   "cbga",
+   "cbg",
+   "cbd",
+   "thcv",
+   "cbn",
+   "d9thc",
+   "d8thc",
+   "cbc",
+   "thca"
+  ],
+  "extraStandards": [
+   "uracil"
+  ],
+  "composition": {
+   "cbda": [
+    65,
+    105
+   ],
+   "cbd": [
+    8,
+    22
+   ],
+   "thca": [
+    1.6,
+    3.4
+   ],
+   "d9thc": [
+    0.4,
+    1
+   ],
+   "cbga": [
+    1.5,
+    4
+   ],
+   "cbg": [
+    0.4,
+    1.2
+   ],
+   "cbc": [
+    0.4,
+    1
+   ],
+   "cbn": [
+    0.08,
+    0.3
+   ],
+   "thcv": [
+    0.05,
+    0.15
+   ],
+   "d8thc": [
+    0,
+    0
+   ]
+  },
+  "matrix": {},
+  "recovery": [
+   0.92,
+   0.99
+  ],
+  "columns": [
+   "cb-c18",
+   "cb-c18sp",
+   "cb-carb",
+   "cb-amide"
+  ],
+  "modifiers": [
+   "MeCN"
+  ],
+  "pH": {
+   "min": 2.5,
+   "max": 4.5,
+   "step": 0.05,
+   "note": "Formic acid with ammonium formate, before mixing."
+  },
+  "reactions": [
+   {
+    "from": "thca",
+    "to": "d9thc",
+    "agent": "heat",
+    "kRefPerH": 0.648,
+    "tRefC": 80,
+    "eaKJ": 88,
+    "yield": 1,
+    "ref": "wang2016",
+    "basis": "reported"
+   },
+   {
+    "from": "cbda",
+    "to": "cbd",
+    "agent": "heat",
+    "kRefPerH": 0.18000000000000002,
+    "tRefC": 80,
+    "eaKJ": 112,
+    "yield": 1,
+    "ref": "wang2016",
+    "basis": "reported"
+   },
+   {
+    "from": "cbga",
+    "to": "cbg",
+    "agent": "heat",
+    "kRefPerH": 0.216,
+    "tRefC": 80,
+    "eaKJ": 109,
+    "yield": 1,
+    "ref": "wang2016",
+    "basis": "reported"
+   },
+   {
+    "from": "cbd",
+    "to": "d9thc",
+    "agent": "acid",
+    "kRefPerH": 0.03,
+    "tRefC": 60,
+    "eaKJ": 80,
+    "yield": 1,
+    "ref": "golombek2020",
+    "basis": "assumed"
+   },
+   {
+    "from": "cbd",
+    "to": "d8thc",
+    "agent": "acid",
+    "kRefPerH": 0.015,
+    "tRefC": 60,
+    "eaKJ": 80,
+    "yield": 1,
+    "ref": "golombek2020",
+    "basis": "assumed"
+   },
+   {
+    "from": "d9thc",
+    "to": "d8thc",
+    "agent": "acid",
+    "kRefPerH": 0.02,
+    "tRefC": 60,
+    "eaKJ": 80,
+    "yield": 1,
+    "ref": "golombek2020",
+    "basis": "assumed"
+   },
+   {
+    "from": "d9thc",
+    "to": "cbn",
+    "agent": "peroxide",
+    "kRefPerH": 0.05,
+    "tRefC": 25,
+    "eaKJ": 60,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "d9thc",
+    "to": "cbn",
+    "agent": "light",
+    "kRefPerH": 0.001,
+    "tRefC": 25,
+    "eaKJ": 30,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "cbd",
+    "to": "cbq",
+    "agent": "base",
+    "kRefPerH": 0.05,
+    "tRefC": 25,
+    "eaKJ": 60,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   },
+   {
+    "from": "cbd",
+    "to": "cbq",
+    "agent": "peroxide",
+    "kRefPerH": 0.02,
+    "tRefC": 25,
+    "eaKJ": 60,
+    "yield": 1,
+    "ref": "this-work",
+    "basis": "assumed"
+   }
+  ],
+  "variants": [
+   {
+    "id": "clean",
+    "label": "Lot as submitted. Nothing unusual."
+   },
+   {
+    "id": "hot",
+    "label": "High in THCA: total THC is over the limit unless THCA is ignored.",
+    "scale": {
+     "thca": 1.7
+    }
+   },
+   {
+    "id": "aged",
+    "label": "Stored in light for three weeks: about 40% of the d9-THC has oxidized to CBN. The acids are unchanged.",
+    "stress": {
+     "agent": "light",
+     "hours": 500,
+     "tempC": 25
+    }
+   },
+   {
+    "id": "d8",
+    "label": "Contains d8-THC (4 mg/g), which has the same mass as d9-THC and elutes next to it.",
+    "add": {
+     "d8thc": 4
+    }
+   }
+  ],
+  "ratios": [
+   {
+    "label": "CBDA to CBD (extent of decarboxylation)",
+    "num": "cbda",
+    "den": "cbd"
+   }
+  ],
+  "totals": [
+   {
+    "label": "Total THC = d9-THC + 0.877 x THCA",
+    "terms": [
+     {
+      "id": "d9thc",
+      "factor": 1
+     },
+     {
+      "id": "thca",
+      "factor": 0.877
+     }
+    ],
+    "limit": {
+     "kind": "max",
+     "mgPerG": 3,
+     "text": "limit 3 mg/g (0.3%)"
+    }
+   },
+   {
+    "label": "Total CBD = CBD + 0.877 x CBDA",
+    "terms": [
+     {
+      "id": "cbd",
+      "factor": 1
+     },
+     {
+      "id": "cbda",
+      "factor": 0.877
+     }
+    ]
+   }
+  ],
+  "defaultMethod": {
+   "columnId": "cb-c18",
+   "modifier": "MeCN",
+   "pH": 3,
+   "tempC": 30,
+   "flowMlMin": 0.3,
+   "program": [
+    {
+     "t": 0,
+     "phi": 0.7
+    }
+   ],
+   "runTimeMin": 20,
+   "injUl": 3,
+   "detector": {
+    "kind": "uv",
+    "nm": 230,
+    "rateHz": 10
+   }
+  },
+  "diluentPhi": 0.8
+ }
+]

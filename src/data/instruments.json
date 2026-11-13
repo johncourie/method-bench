@@ -1,0 +1,24 @@
+[
+ {
+  "id": "hplc",
+  "name": "HPLC, 600 bar, quaternary pump",
+  "dwellMl": 1,
+  "extraColVarUl2": 25,
+  "detTauS": 0.3,
+  "pMaxBar": 600,
+  "pathCm": 1,
+  "uvNoiseMau": 0.008,
+  "strayLight": 0.0005
+ },
+ {
+  "id": "uhplc",
+  "name": "UHPLC, 1200 bar, binary pump",
+  "dwellMl": 0.15,
+  "extraColVarUl2": 6,
+  "detTauS": 0.1,
+  "pMaxBar": 1200,
+  "pathCm": 1,
+  "uvNoiseMau": 0.008,
+  "strayLight": 0.0005
+ }
+]

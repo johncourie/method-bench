@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Open reversed-phase LC method-development simulator for teaching. Scouting, selectivity, system suitability, calibration and validation on published retention data." />
+    <title>Method Bench</title>
+    <link rel="stylesheet" href="./src/ui/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <div class="brand">
+        <strong>Method Bench</strong>
+        <span>Reversed-phase LC method development</span>
+      </div>
+      <div class="top-tools">
+        <span id="ledger" class="ledger"></span>
+        <button type="button" id="theme" class="small" aria-pressed="false">Dark theme</button>
+      </div>
+    </header>
+    <nav class="tabs" aria-label="Sections"><div role="tablist" id="tablist"></div></nav>
+    <div id="live" class="sr" role="status" aria-live="polite"></div>
+    <main id="main" tabindex="-1"></main>
+    <footer class="foot">
+      <p>
+        A teaching simulator. Retention and response parameters come from published measurements or are fitted or assumed, as labelled under Model and limits. Not for regulated work.
+        Code MIT, data and text CC BY 4.0. <span id="version"></span>
+      </p>
+    </footer>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

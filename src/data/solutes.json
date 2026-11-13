@@ -1,0 +1,5250 @@
+[
+ {
+  "id": "ga",
+  "name": "Gallic acid",
+  "abbr": "GA",
+  "mw": 170.12,
+  "monoMass": 170.02152,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 2.9202,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 0.9895,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 1.5091,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 1.673,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 1.1605,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 1.5735,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 0.6885,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 2.0329,
+     "S1": 19.1519,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "No published retention on this phase. Estimated from the C18 fit and the mean C18-to-PFP shift of the nine compounds that were measured."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 2.0329,
+     "S1": 19.1519,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "No published retention on this phase. Estimated from the C18 fit and the mean C18-to-PFP shift of the nine compounds that were measured."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 4.4,
+   "dpKaDphi": 2,
+   "ionizedRatio": 0.05,
+   "prov": {
+    "basis": "reported",
+    "ref": "pubchem",
+    "locus": "CID 370",
+    "note": "Aqueous pKa. Its shift with acetonitrile and the retention of the anion are assumed."
+   }
+  },
+  "uv": [
+   {
+    "nm": 273,
+    "eps": 9507,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 57042,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "reported",
+   "ref": "kaeswurm2021",
+   "locus": "Table 1, methanol/water 50:50",
+   "note": "Band maximum and molar absorptivity reported. Band width and the short-wavelength band are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.37
+ },
+ {
+  "id": "gc",
+  "name": "(-)-Gallocatechin",
+  "abbr": "GC",
+  "mw": 306.27,
+  "monoMass": 306.07395,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 3.5973,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 1.8133,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 2.33,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 2.3098,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 1.9636,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 2.4983,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 1.4256,
+     "S1": 16.3367,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 2.38,
+     "S1": 16.1303,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 2.38,
+     "S1": 16.1303,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 271,
+    "eps": 1493,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 8956,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2021-3485",
+   "locus": "Supplementary Table S1 slopes at 280 nm",
+   "note": "Scaled from the calibration slope relative to catechin, whose molar absorptivity is reported (Kaeswurm 2021). Band position and width are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.37
+ },
+ {
+  "id": "egc",
+  "name": "(-)-Epigallocatechin",
+  "abbr": "EGC",
+  "mw": 306.27,
+  "monoMass": 306.07395,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 4.2859,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 2.3171,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 2.9239,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 3.0565,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 2.4332,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 2.941,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 2.0385,
+     "S1": 13.8821,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 3.2697,
+     "S1": 19.0437,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 3.2697,
+     "S1": 19.0437,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 271,
+    "eps": 2953,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 17720,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2021-3485",
+   "locus": "Supplementary Table S1 slopes at 280 nm",
+   "note": "Scaled from the calibration slope relative to catechin, whose molar absorptivity is reported (Kaeswurm 2021). Band position and width are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.51
+ },
+ {
+  "id": "c",
+  "name": "(+)-Catechin",
+  "abbr": "C",
+  "mw": 290.27,
+  "monoMass": 290.07904,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 4.4908,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 2.7057,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 3.0948,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 3.3117,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 2.7709,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 3.1812,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 2.3093,
+     "S1": 14.197,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 3.2673,
+     "S1": 16.0619,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 3.2673,
+     "S1": 16.0619,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 280,
+    "eps": 4175,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 25050,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "reported",
+   "ref": "kaeswurm2021",
+   "locus": "Table 1, methanol/water 50:50",
+   "note": "Band maximum and molar absorptivity reported. Band width and the short-wavelength band are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.29
+ },
+ {
+  "id": "ec",
+  "name": "(-)-Epicatechin",
+  "abbr": "EC",
+  "mw": 290.27,
+  "monoMass": 290.07904,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 5.4214,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 3.367,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 3.693,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 4.2272,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 3.441,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 3.7205,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 3.0923,
+     "S1": 15.0651,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 4.1165,
+     "S1": 19.7852,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 4.1165,
+     "S1": 19.7852,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 280,
+    "eps": 3981,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 23886,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "reported",
+   "ref": "kaeswurm2021",
+   "locus": "Table 1, methanol/water 50:50",
+   "note": "Band maximum and molar absorptivity reported. Band width and the short-wavelength band are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.35
+ },
+ {
+  "id": "egcg",
+  "name": "(-)-Epigallocatechin gallate",
+  "abbr": "EGCG",
+  "mw": 458.4,
+  "monoMass": 458.08491,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 5.4672,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 3.5464,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 3.8093,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 4.2993,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 3.628,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 3.8557,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 3.2053,
+     "S1": 15.9376,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 5.1714,
+     "S1": 23.5889,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 5.1714,
+     "S1": 23.5889,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 7.6,
+   "dpKaDphi": 2,
+   "ionizedRatio": 0.1,
+   "prov": {
+    "basis": "reported",
+    "ref": "law2017",
+    "note": "Experimental value quoted in the source. Shift with acetonitrile and anion retention are assumed."
+   }
+  },
+  "uv": [
+   {
+    "nm": 277,
+    "eps": 10735,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 64410,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "reported",
+   "ref": "kaeswurm2021",
+   "locus": "Table 1, methanol/water 50:50",
+   "note": "Band maximum and molar absorptivity reported. Band width and the short-wavelength band are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.41
+ },
+ {
+  "id": "gcg",
+  "name": "(-)-Gallocatechin gallate",
+  "abbr": "GCG",
+  "mw": 458.4,
+  "monoMass": 458.08491,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 5.7038,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 3.6933,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 3.9658,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 4.5656,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 3.7992,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 4.3073,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 3.4223,
+     "S1": 15.5168,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 5.5636,
+     "S1": 24.6271,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 5.5636,
+     "S1": 24.6271,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 7.6,
+   "dpKaDphi": 2,
+   "ionizedRatio": 0.1,
+   "prov": {
+    "basis": "assumed",
+    "ref": "this-work",
+    "note": "Taken equal to its epimer EGCG."
+   }
+  },
+  "uv": [
+   {
+    "nm": 277,
+    "eps": 13723,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 82336,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2021-3485",
+   "locus": "Supplementary Table S1 slopes at 280 nm",
+   "note": "Scaled from the calibration slope relative to catechin, whose molar absorptivity is reported (Kaeswurm 2021). Band position and width are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.43
+ },
+ {
+  "id": "ecg",
+  "name": "(-)-Epicatechin gallate",
+  "abbr": "ECG",
+  "mw": 442.4,
+  "monoMass": 442.09,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 6.3445,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 4.5645,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 4.6161,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 5.1963,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 4.67,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 4.7621,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 4.1435,
+     "S1": 16.8788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 5.6395,
+     "S1": 21.1961,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 5.6395,
+     "S1": 21.1961,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 7.6,
+   "dpKaDphi": 2,
+   "ionizedRatio": 0.1,
+   "prov": {
+    "basis": "reported",
+    "ref": "law2017",
+    "note": "Experimental value quoted in the source. Shift with acetonitrile and anion retention are assumed."
+   }
+  },
+  "uv": [
+   {
+    "nm": 278,
+    "eps": 15711,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 94263,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2021-3485",
+   "locus": "Supplementary Table S1 slopes at 280 nm",
+   "note": "Scaled from the calibration slope relative to catechin, whose molar absorptivity is reported (Kaeswurm 2021). Band position and width are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.46
+ },
+ {
+  "id": "cg",
+  "name": "(-)-Catechin gallate",
+  "abbr": "CG",
+  "mw": 442.4,
+  "monoMass": 442.09,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 6.377,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 4.5312,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 4.6134,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 5.2496,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 4.6718,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "jin2019",
+      "locus": "Section 2.4 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 5.0629,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 4.1779,
+     "S1": 16.3091,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 6.0617,
+     "S1": 22.5814,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 6.0617,
+     "S1": 22.5814,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 7.6,
+   "dpKaDphi": 2,
+   "ionizedRatio": 0.1,
+   "prov": {
+    "basis": "assumed",
+    "ref": "this-work",
+    "note": "Taken equal to its epimer ECG."
+   }
+  },
+  "uv": [
+   {
+    "nm": 278,
+    "eps": 16657,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 99944,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2021-3485",
+   "locus": "Supplementary Table S1 slopes at 280 nm",
+   "note": "Scaled from the calibration slope relative to catechin, whose molar absorptivity is reported (Kaeswurm 2021). Band position and width are assumed."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.32
+ },
+ {
+  "id": "caf",
+  "name": "Caffeine",
+  "abbr": "Caffeine",
+  "mw": 194.19,
+  "monoMass": 194.08038,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 4.8019,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 2.5706,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Supplementary Table S1 and Figure S1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 3.1961,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 3.5447,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 2.922,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 3.2605,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 2.577,
+     "S1": 13.794,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "foods2026",
+      "locus": "Section 2.3 and Figure 2 peak labels (agreeing with the text)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 2.9301,
+     "S1": 17.5499,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 2.9301,
+     "S1": 17.5499,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "molecules2021-3485",
+      "locus": "Table 1 and Supplementary Table S2",
+      "note": "ln kw and S solved from two published gradients on this phase. Temperature dependence is assumed."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 273,
+    "eps": 10648,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 63886,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2021-3485",
+   "locus": "Supplementary Table S1 slopes at 280 nm",
+   "note": "Scaled from the calibration slope relative to catechin, whose molar absorptivity is reported (Kaeswurm 2021). Band position and width are assumed."
+  },
+  "msResponse": {
+   "pos": 3,
+   "neg": 0
+  },
+  "tailRatio": 0.47
+ },
+ {
+  "id": "tbm",
+  "name": "Theobromine",
+  "abbr": "Theobromine",
+  "mw": 180.16,
+  "monoMass": 180.06473,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 3.5871,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 1.6194,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 2.2922,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "pedan2018",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 2.2698,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 1.7556,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 2.3883,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "chen2018",
+      "locus": "Section 2.3 and Table 1",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 1.1486,
+     "S1": 14.7914,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "foods2026",
+      "locus": "Section 2.3 and Figure 2 peak labels (agreeing with the text)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 2.6629,
+     "S1": 19.53,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "No published retention on this phase. Estimated from the C18 fit and the mean C18-to-PFP shift of the nine compounds that were measured."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 2.6629,
+     "S1": 19.53,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "No published retention on this phase. Estimated from the C18 fit and the mean C18-to-PFP shift of the nine compounds that were measured."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 273,
+    "eps": 10000,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 60000,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "assumed",
+   "ref": "this-work",
+   "note": "Typical value for a methylxanthine. No open source was found."
+  },
+  "msResponse": {
+   "pos": 3,
+   "neg": 0
+  },
+  "tailRatio": 0.64
+ },
+ {
+  "id": "tep",
+  "name": "Theophylline",
+  "abbr": "Theophylline",
+  "mw": 180.16,
+  "monoMass": 180.06473,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 3.8582,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "heliyon2024",
+      "locus": "Section 2.3 and Table 2 (standard solution, intraday)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 1.9082,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 2.39,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 2.649,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "xiao2021",
+      "locus": "Section 2.4 and Table 2",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 2.0444,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 2.4922,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "this-work",
+      "note": "Not reported on this column. Predicted from the joint fit across seven published C18 methods plus this column's overall strength."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 1.5871,
+     "S1": 12.0402,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "foods2026",
+      "locus": "Section 2.3 and Figure 2 peak labels (agreeing with the text)",
+      "note": "S from the joint fit across seven published C18 methods; ln kw set so the source method's retention time is reproduced. Temperature dependence is assumed."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 2.9517,
+     "S1": 16.7788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "No published retention on this phase. Estimated from the C18 fit and the mean C18-to-PFP shift of the nine compounds that were measured."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 2.9517,
+     "S1": 16.7788,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "No published retention on this phase. Estimated from the C18 fit and the mean C18-to-PFP shift of the nine compounds that were measured."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 271,
+    "eps": 10000,
+    "width": 14
+   },
+   {
+    "nm": 205,
+    "eps": 60000,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "assumed",
+   "ref": "this-work",
+   "note": "Typical value for a methylxanthine. No open source was found."
+  },
+  "msResponse": {
+   "pos": 3,
+   "neg": 0
+  },
+  "tailRatio": 0.28
+ },
+ {
+  "id": "gtx",
+  "name": "Matrix compound X",
+  "abbr": "X",
+  "mw": 344.27,
+  "monoMass": 344.0743,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 4.7707,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 3.1447,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 3.5208,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 4.0676,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 3.4381,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 3.6537,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 3.0005,
+     "S1": 12.7501,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 4.4332,
+     "S1": 18.8711,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 4.8721,
+     "S1": 18.8711,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Invented matrix compound for the co-elution exercise. It is not a real tea constituent."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 325,
+    "eps": 16000,
+    "width": 16
+   },
+   {
+    "nm": 290,
+    "eps": 9000,
+    "width": 14
+   },
+   {
+    "nm": 215,
+    "eps": 30000,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "assumed",
+   "ref": "this-work",
+   "note": "Invented, with a hydroxycinnamate-like spectrum so that it differs from the catechins."
+  },
+  "msResponse": {
+   "pos": 0.5,
+   "neg": 1
+  },
+  "tailRatio": 0.25,
+  "ionSuppression": 0.6,
+  "hidden": true
+ },
+ {
+  "id": "gtox",
+  "name": "Catechin oxidation products",
+  "abbr": "Ox",
+  "mw": 304.25,
+  "monoMass": 304.0583,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": 3.4202,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": 1.4895,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": 2.0091,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": 2.173,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": 1.6605,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": 2.0735,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": 1.1885,
+     "S1": 14.4133,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": 2.5329,
+     "S1": 19.1519,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": 2.5329,
+     "S1": 19.1519,
+     "S2": 0,
+     "phiRange": [
+      0.01,
+      0.45
+     ],
+     "tRefC": 30,
+     "dH0": -15,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for catechin oxidation products. Placed a little after gallic acid."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 265,
+    "eps": 9000,
+    "width": 18
+   },
+   {
+    "nm": 380,
+    "eps": 2500,
+    "width": 30
+   },
+   {
+    "nm": 210,
+    "eps": 20000,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "assumed",
+   "ref": "this-work",
+   "note": "Stand-in."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 1
+  },
+  "tailRatio": 0.29,
+  "hidden": true
+ },
+ {
+  "id": "cbda",
+  "name": "Cannabidiolic acid",
+  "abbr": "CBDA",
+  "mw": 358.5,
+  "monoMass": 358.21441,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 7.3881,
+     "S1": 8.6807,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.35,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 65% acetonitrile, fitted to points digitized from the figure (fit residual 0.002 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 6.3591,
+     "S1": 7.8518,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.02,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 75% acetonitrile, fitted to points digitized from the figure (fit residual 0.002 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 7.841,
+     "S1": 9.5788,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.84,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 77.5% acetonitrile, fitted to points digitized from the figure (fit residual 0.009 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.0323,
+     "S1": 7.9669,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.13,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 65% acetonitrile, fitted to points digitized from the figure (fit residual 0.010 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 6.3591,
+     "S1": 7.8518,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.02,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 75% acetonitrile, fitted to points digitized from the figure (fit residual 0.002 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 8.0066,
+     "S1": 9.5788,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.84,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 77.5% acetonitrile, fitted to points digitized from the figure (fit residual 0.009 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 4.08,
+   "dpKaDphi": 0,
+   "ionizedRatio": 0.03,
+   "prov": {
+    "basis": "digitized",
+    "ref": "owolabi2025",
+    "locus": "Figure 4",
+    "note": "Apparent pKa on the aqueous pH scale, fitted per column to points digitized from the published figure (the value differs by column; the mean is shown). Anion retention is assumed."
+   }
+  },
+  "uv": [
+   {
+    "nm": 222,
+    "eps": 25054,
+    "width": 10
+   },
+   {
+    "nm": 268,
+    "eps": 6264,
+    "width": 12
+   },
+   {
+    "nm": 305,
+    "eps": 3132,
+    "width": 12
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Three bands near 222, 268 and 305 nm, as published for the acidic cannabinoids. Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 2
+  },
+  "tailRatio": 0.59
+ },
+ {
+  "id": "cbga",
+  "name": "Cannabigerolic acid",
+  "abbr": "CBGA",
+  "mw": 360.5,
+  "monoMass": 360.23006,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 8.2069,
+     "S1": 9.3024,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.39,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 65% acetonitrile, fitted to points digitized from the figure (fit residual 0.004 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 7.599,
+     "S1": 9.3485,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.08,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 75% acetonitrile, fitted to points digitized from the figure (fit residual 0.001 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 8.32,
+     "S1": 10.1083,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.84,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 77.5% acetonitrile, fitted to points digitized from the figure (fit residual 0.010 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.9516,
+     "S1": 8.6577,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.13,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 65% acetonitrile, fitted to points digitized from the figure (fit residual 0.009 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 7.599,
+     "S1": 9.3485,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 4.08,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 75% acetonitrile, fitted to points digitized from the figure (fit residual 0.001 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 8.4856,
+     "S1": 10.1083,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.84,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 77.5% acetonitrile, fitted to points digitized from the figure (fit residual 0.010 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 4.11,
+   "dpKaDphi": 0,
+   "ionizedRatio": 0.03,
+   "prov": {
+    "basis": "digitized",
+    "ref": "owolabi2025",
+    "locus": "Figure 4",
+    "note": "Apparent pKa on the aqueous pH scale, fitted per column to points digitized from the published figure (the value differs by column; the mean is shown). Anion retention is assumed."
+   }
+  },
+  "uv": [
+   {
+    "nm": 222,
+    "eps": 26312,
+    "width": 10
+   },
+   {
+    "nm": 268,
+    "eps": 6578,
+    "width": 12
+   },
+   {
+    "nm": 305,
+    "eps": 3289,
+    "width": 12
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Three bands near 222, 268 and 305 nm, as published for the acidic cannabinoids. Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 2
+  },
+  "tailRatio": 0.63
+ },
+ {
+  "id": "cbg",
+  "name": "Cannabigerol",
+  "abbr": "CBG",
+  "mw": 316.5,
+  "monoMass": 316.24023,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 8.2762,
+     "S1": 10.0623,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 7.8829,
+     "S1": 9.5557,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 7.888,
+     "S1": 9.3024,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.5369,
+     "S1": 9.5238,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-4.14); the printed legend value (-4.04) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 7.8829,
+     "S1": 9.5557,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 8.0536,
+     "S1": 9.3024,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 208,
+    "eps": 44710,
+    "width": 6
+   },
+   {
+    "nm": 223,
+    "eps": 15202,
+    "width": 11
+   },
+   {
+    "nm": 274,
+    "eps": 1252,
+    "width": 10
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Spectral shape fitted to the reported CBD response at 214 to 280 nm (Analakkattillam 2022, Table 1b). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.48
+ },
+ {
+  "id": "cbd",
+  "name": "Cannabidiol",
+  "abbr": "CBD",
+  "mw": 314.5,
+  "monoMass": 314.22458,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 7.7587,
+     "S1": 9.5097,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 7.5302,
+     "S1": 8.9801,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 7.6661,
+     "S1": 8.888,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.0256,
+     "S1": 9.0455,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-3.93); the printed legend value (-3.86) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 7.5302,
+     "S1": 8.9801,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 7.8317,
+     "S1": 8.888,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 208,
+    "eps": 33646,
+    "width": 6
+   },
+   {
+    "nm": 223,
+    "eps": 11440,
+    "width": 11
+   },
+   {
+    "nm": 274,
+    "eps": 942,
+    "width": 10
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Spectral shape fitted to the reported CBD response at 214 to 280 nm (Analakkattillam 2022, Table 1b). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.48
+ },
+ {
+  "id": "thcv",
+  "name": "Tetrahydrocannabivarin",
+  "abbr": "THCV",
+  "mw": 286.4,
+  "monoMass": 286.19328,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 6.9935,
+     "S1": 8.4166,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-3.66); the printed legend value (-3.59) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 6.8422,
+     "S1": 7.8979,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 7.0888,
+     "S1": 7.8979,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 7.2298,
+     "S1": 7.9759,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-3.46); the printed legend value (-3.43) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 6.8422,
+     "S1": 7.8979,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 7.2544,
+     "S1": 7.8979,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 208,
+    "eps": 41442,
+    "width": 6
+   },
+   {
+    "nm": 223,
+    "eps": 14091,
+    "width": 11
+   },
+   {
+    "nm": 274,
+    "eps": 1160,
+    "width": 10
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Spectral shape fitted to the reported CBD response at 214 to 280 nm (Analakkattillam 2022, Table 1b). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.49
+ },
+ {
+  "id": "cbn",
+  "name": "Cannabinol",
+  "abbr": "CBN",
+  "mw": 310.4,
+  "monoMass": 310.19328,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 8.1666,
+     "S1": 9.4406,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 8.0583,
+     "S1": 9.0031,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 8.2928,
+     "S1": 8.9571,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.4923,
+     "S1": 8.9977,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-3.91); the printed legend value (-3.89) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 8.0583,
+     "S1": 9.0031,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 8.4584,
+     "S1": 8.9571,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 217,
+    "eps": 40498,
+    "width": 9
+   },
+   {
+    "nm": 283,
+    "eps": 19844,
+    "width": 9
+   },
+   {
+    "nm": 299,
+    "eps": 13769,
+    "width": 9
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Band positions and relative heights as published (Hazekamp 2005). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.48
+ },
+ {
+  "id": "d9thc",
+  "name": "delta-9-Tetrahydrocannabinol",
+  "abbr": "d9-THC",
+  "mw": 314.5,
+  "monoMass": 314.22458,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 8.3328,
+     "S1": 9.4176,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 8.3142,
+     "S1": 8.9801,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 8.5614,
+     "S1": 8.934,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.7805,
+     "S1": 9.2189,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-4.00); the printed legend value (-3.88) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 8.3142,
+     "S1": 8.9801,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 8.727,
+     "S1": 8.934,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 208,
+    "eps": 48845,
+    "width": 6
+   },
+   {
+    "nm": 223,
+    "eps": 16608,
+    "width": 11
+   },
+   {
+    "nm": 274,
+    "eps": 1368,
+    "width": 10
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Spectral shape fitted to the reported CBD response at 214 to 280 nm (Analakkattillam 2022, Table 1b). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.38
+ },
+ {
+  "id": "d8thc",
+  "name": "delta-8-Tetrahydrocannabinol",
+  "abbr": "d8-THC",
+  "mw": 314.5,
+  "monoMass": 314.22458,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 8.4552,
+     "S1": 9.5097,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 8.4386,
+     "S1": 9.0952,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 8.6915,
+     "S1": 9.0492,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 8.7445,
+     "S1": 9.0524,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-3.93); the printed legend value (-3.93) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 8.4386,
+     "S1": 9.0952,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 8.8571,
+     "S1": 9.0492,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 208,
+    "eps": 43033,
+    "width": 6
+   },
+   {
+    "nm": 223,
+    "eps": 14632,
+    "width": 11
+   },
+   {
+    "nm": 274,
+    "eps": 1205,
+    "width": 10
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Spectral shape fitted to the reported CBD response at 214 to 280 nm (Analakkattillam 2022, Table 1b). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.43
+ },
+ {
+  "id": "cbc",
+  "name": "Cannabichromene",
+  "abbr": "CBC",
+  "mw": 314.5,
+  "monoMass": 314.22458,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 9.0455,
+     "S1": 9.9932,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 9.0065,
+     "S1": 9.5557,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 9.3084,
+     "S1": 9.5327,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 9.3625,
+     "S1": 9.5178,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-4.13); the printed legend value (-4.14) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 9.0065,
+     "S1": 9.5557,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 1 and Figure 1",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 9.474,
+     "S1": 9.5327,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 208,
+    "eps": 45645,
+    "width": 6
+   },
+   {
+    "nm": 223,
+    "eps": 15520,
+    "width": 11
+   },
+   {
+    "nm": 274,
+    "eps": 1278,
+    "width": 10
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Spectral shape fitted to the reported CBD response at 214 to 280 nm (Analakkattillam 2022, Table 1b). Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 1,
+   "neg": 0.3
+  },
+  "tailRatio": 0.48
+ },
+ {
+  "id": "thca",
+  "name": "delta-9-Tetrahydrocannabinolic acid A",
+  "abbr": "THCA",
+  "mw": 358.5,
+  "monoMass": 358.21441,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 8.5647,
+     "S1": 8.8189,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.86,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 65% acetonitrile, fitted to points digitized from the figure (fit residual 0.006 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 8.587,
+     "S1": 8.8419,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.75,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 75% acetonitrile, fitted to points digitized from the figure (fit residual 0.003 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 9.3638,
+     "S1": 9.5235,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.65,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 77.5% acetonitrile, fitted to points digitized from the figure (fit residual 0.007 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "digitized",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction from the points plotted in the figure (-4.14); the printed legend value (-3.97) disagrees with them. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 9.0579,
+     "S1": 8.059,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.88,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 65% acetonitrile, fitted to points digitized from the figure (fit residual 0.013 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 8.587,
+     "S1": 8.8419,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.75,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 75% acetonitrile, fitted to points digitized from the figure (fit residual 0.003 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "reported",
+      "ref": "owolabi2025",
+      "locus": "Table 2 and Figure 2",
+      "note": "Retention factor at 70% acetonitrile as published. Slope of log k against acetonitrile fraction as printed in the figure legend. One enthalpy is used for all cannabinoids (mean of two values derived from Analakkattillam 2022, Table 3), so temperature changes retention but not selectivity."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": 9.5294,
+     "S1": 9.5235,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "ionization": {
+      "kind": "acid",
+      "pKa": 3.65,
+      "dpKaDphi": 0,
+      "ionizedRatio": 0.03,
+      "prov": {
+       "basis": "digitized",
+       "ref": "owolabi2025",
+       "locus": "Figure 4",
+       "note": "Apparent pKa on the aqueous pH scale at 77.5% acetonitrile, fitted to points digitized from the figure (fit residual 0.007 log units). Its change with acetonitrile content is not known and is taken as zero. Anion retention (0.03 of the neutral form) is assumed."
+      }
+     },
+     "prov": {
+      "basis": "fitted",
+      "ref": "abc2024",
+      "note": "C18 parameters from Owolabi 2025 shifted by one fitted column-strength term."
+     }
+    }
+   }
+  },
+  "ionization": {
+   "kind": "acid",
+   "pKa": 3.79,
+   "dpKaDphi": 0,
+   "ionizedRatio": 0.03,
+   "prov": {
+    "basis": "digitized",
+    "ref": "owolabi2025",
+    "locus": "Figure 4",
+    "note": "Apparent pKa on the aqueous pH scale, fitted per column to points digitized from the published figure (the value differs by column; the mean is shown). Anion retention is assumed."
+   }
+  },
+  "uv": [
+   {
+    "nm": 222,
+    "eps": 24108,
+    "width": 10
+   },
+   {
+    "nm": 268,
+    "eps": 6027,
+    "width": 12
+   },
+   {
+    "nm": 305,
+    "eps": 3013,
+    "width": 12
+   }
+  ],
+  "uvProv": {
+   "basis": "fitted",
+   "ref": "molecules2019",
+   "locus": "Calibration slopes at 220 nm, Section 2.2.7",
+   "note": "Three bands near 222, 268 and 305 nm, as published for the acidic cannabinoids. Magnitude scaled so the response at 220 nm relative to CBD matches the published calibration slopes; the absolute scale is the published molar absorptivity of CBD at 207 nm."
+  },
+  "msResponse": {
+   "pos": 0.3,
+   "neg": 2
+  },
+  "tailRatio": 0.48
+ },
+ {
+  "id": "cbq",
+  "name": "Cannabinoid quinone degradants",
+  "abbr": "Q",
+  "mw": 328.4,
+  "monoMass": 328.2038,
+  "retention": {
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": 7.0087,
+     "S1": 9.5097,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for cannabinoid quinone degradants. Placed ahead of CBD."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": 6.7802,
+     "S1": 8.9801,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for cannabinoid quinone degradants. Placed ahead of CBD."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": 6.9161,
+     "S1": 8.888,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for cannabinoid quinone degradants. Placed ahead of CBD."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": 7.2756,
+     "S1": 9.0455,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for cannabinoid quinone degradants. Placed ahead of CBD."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": 6.7802,
+     "S1": 8.9801,
+     "S2": 0,
+     "phiRange": [
+      0.55,
+      0.85
+     ],
+     "tRefC": 30,
+     "dH0": -3,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Stand-in for cannabinoid quinone degradants. Placed ahead of CBD."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 272,
+    "eps": 12000,
+    "width": 14
+   },
+   {
+    "nm": 215,
+    "eps": 18000,
+    "width": 9
+   },
+   {
+    "nm": 400,
+    "eps": 800,
+    "width": 30
+   }
+  ],
+  "uvProv": {
+   "basis": "assumed",
+   "ref": "this-work",
+   "note": "Stand-in."
+  },
+  "msResponse": {
+   "pos": 0.6,
+   "neg": 1
+  },
+  "tailRatio": 0.48,
+  "hidden": true
+ },
+ {
+  "id": "uracil",
+  "name": "Uracil (unretained marker)",
+  "abbr": "Uracil",
+  "mw": 112.09,
+  "monoMass": 112.02728,
+  "retention": {
+   "lit-heliyon-c18": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "gt-c18-spp4": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "gt-c18-fpp35": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "gt-c18-fpp17": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "lit-jin-c18": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "lit-chen-c18": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "lit-foods-c18": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "gt-pfp-spp4": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "gt-pfp-spp19": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "cb-carb": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "cb-c18sp": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "cb-c18": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "cb-amide": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "cb-c18sp-x2": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   },
+   "lit-abc-c18": {
+    "MeCN": {
+     "lnkw": -4,
+     "S1": 0,
+     "S2": 0,
+     "phiRange": [
+      0,
+      1
+     ],
+     "tRefC": 30,
+     "dH0": 0,
+     "dH1": 0,
+     "prov": {
+      "basis": "assumed",
+      "ref": "this-work",
+      "note": "Taken as unretained."
+     }
+    }
+   }
+  },
+  "uv": [
+   {
+    "nm": 259,
+    "eps": 8200,
+    "width": 12
+   },
+   {
+    "nm": 205,
+    "eps": 9000,
+    "width": 8
+   }
+  ],
+  "uvProv": {
+   "basis": "assumed",
+   "ref": "this-work",
+   "note": "Typical literature values."
+  },
+  "msResponse": {
+   "pos": 0.2,
+   "neg": 0.5
+  },
+  "tailRatio": 0.3
+ }
+]

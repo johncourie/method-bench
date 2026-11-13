@@ -1,0 +1,2076 @@
+{
+ "source": "Owolabi et al., Molecules 2025, 30, 758, doi:10.3390/molecules30040758, Figure 2 (molecules-30-00758-g002_hires.png): log k of the eight acidic cannabinoids versus acetonitrile content",
+ "license": "CC BY 4.0",
+ "method": "see README.md; exact-colour disk fit of 20 px markers, axes calibrated on all labelled gridlines",
+ "uncertainty_logk": 0.003,
+ "x_axis": "acetonitrile_pct (% v/v in the mobile phase)",
+ "panels": [
+  {
+   "panel": "A",
+   "column": "Agilent Poroshell 120 EC-C18",
+   "axis_calibration": {
+    "y_gridline_px": [
+     75.0,
+     179.5,
+     284.0,
+     389.0,
+     493.5,
+     598.0,
+     702.5,
+     807.0,
+     912.0,
+     1017.0,
+     1121.0,
+     1226.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     358.0,
+     576.0,
+     793.0,
+     1011.0,
+     1229.0,
+     1447.0,
+     1664.5
+    ],
+    "x_values": [
+     55,
+     60,
+     65,
+     70,
+     75,
+     80,
+     85
+    ],
+    "y_fit": {
+     "logk_per_px": -0.001911412767920163,
+     "intercept": 2.143135078936076,
+     "max_abs_residual_logk": 0.0007717060387297803
+    },
+    "x_fit": {
+     "units_per_px": 0.02296022234607777,
+     "intercept": 46.782295160469786,
+     "max_abs_residual": 0.010248519090538366
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.9571,
+       "logk_unc": 0.004,
+       "px": [
+        1229.0,
+        620.5
+       ],
+       "x_read_from_pixels": 75.0004,
+       "visible_fraction": 0.38
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.8588,
+       "logk_unc": 0.003,
+       "px": [
+        1337.67,
+        671.92
+       ],
+       "x_read_from_pixels": 77.4954,
+       "visible_fraction": 0.54
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=75: marker partly hidden by an overlapping marker or line (38% of the disk visible, 170 deg of rim); centre from the visible arc, +/-0.004",
+      "acetonitrile_pct=77.5: marker partly hidden by an overlapping marker or line (54% of the disk visible, 220 deg of rim); centre from the visible arc, +/-0.003",
+      "acetonitrile_pct=70: NOT LOCATED, marker completely hidden and the covering marker cannot be identified from the image alone"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.932,
+      "intercept": 3.9061,
+      "r": -1.0,
+      "n_points": 2
+     },
+     "legend_slope_as_printed": -4.08
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.1638,
+       "logk_unc": 0.003,
+       "px": [
+        1011.12,
+        512.38
+       ],
+       "x_read_from_pixels": 69.9979,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.948,
+       "logk_unc": 0.003,
+       "px": [
+        1229.25,
+        625.25
+       ],
+       "x_read_from_pixels": 75.0061,
+       "visible_fraction": 0.88
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.8429,
+       "logk_unc": 0.003,
+       "px": [
+        1337.5,
+        680.25
+       ],
+       "x_read_from_pixels": 77.4916,
+       "visible_fraction": 0.96
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=75: marker partly hidden by an overlapping marker or line (88% of the disk visible, 350 deg of rim); centre from the visible arc, +/-0.003"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.284,
+      "intercept": 4.1622,
+      "r": -0.99998,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -4.29
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.0828,
+       "logk_unc": 0.003,
+       "px": [
+        1011.0,
+        554.75
+       ],
+       "x_read_from_pixels": 69.9951,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.874,
+       "logk_unc": 0.003,
+       "px": [
+        1229.25,
+        664.0
+       ],
+       "x_read_from_pixels": 75.0061,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.7731,
+       "logk_unc": 0.003,
+       "px": [
+        1337.75,
+        716.75
+       ],
+       "x_read_from_pixels": 77.4973,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.136,
+      "intercept": 3.9775,
+      "r": -0.99996,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.97
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.9227,
+       "logk_unc": 0.003,
+       "px": [
+        1011.0,
+        638.5
+       ],
+       "x_read_from_pixels": 69.9951,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.7167,
+       "logk_unc": 0.003,
+       "px": [
+        1229.0,
+        746.25
+       ],
+       "x_read_from_pixels": 75.0004,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.6159,
+       "logk_unc": 0.003,
+       "px": [
+        1337.5,
+        799.0
+       ],
+       "x_read_from_pixels": 77.4916,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.095,
+      "intercept": 3.7888,
+      "r": -0.99999,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -4.1
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.7497,
+       "logk_unc": 0.003,
+       "px": [
+        1011.0,
+        729.0
+       ],
+       "x_read_from_pixels": 69.9951,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.5608,
+       "logk_unc": 0.003,
+       "px": [
+        1229.17,
+        827.83
+       ],
+       "x_read_from_pixels": 75.0042,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.4711,
+       "logk_unc": 0.003,
+       "px": [
+        1337.75,
+        874.75
+       ],
+       "x_read_from_pixels": 77.4973,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.724,
+      "intercept": 3.3556,
+      "r": -0.99992,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.73
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.4812,
+       "logk_unc": 0.003,
+       "px": [
+        1011.12,
+        869.5
+       ],
+       "x_read_from_pixels": 69.9979,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.2604,
+       "logk_unc": 0.003,
+       "px": [
+        1229.0,
+        985.0
+       ],
+       "x_read_from_pixels": 75.0004,
+       "visible_fraction": 0.97
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.1524,
+       "logk_unc": 0.003,
+       "px": [
+        1337.75,
+        1041.5
+       ],
+       "x_read_from_pixels": 77.4973,
+       "visible_fraction": 0.88
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=77.5: marker partly hidden by an overlapping marker or line (88% of the disk visible, 290 deg of rim); centre from the visible arc, +/-0.003"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.389,
+      "intercept": 3.5529,
+      "r": -0.99999,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -4.39
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.4334,
+       "logk_unc": 0.003,
+       "px": [
+        1011.12,
+        894.5
+       ],
+       "x_read_from_pixels": 69.9979,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.2222,
+       "logk_unc": 0.003,
+       "px": [
+        1229.25,
+        1005.0
+       ],
+       "x_read_from_pixels": 75.0061,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.123,
+       "logk_unc": 0.003,
+       "px": [
+        1337.5,
+        1056.88
+       ],
+       "x_read_from_pixels": 77.4916,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.151,
+      "intercept": 3.3381,
+      "r": -0.99988,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -4.16
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.1734,
+       "logk_unc": 0.003,
+       "px": [
+        1011.12,
+        1030.5
+       ],
+       "x_read_from_pixels": 69.9979,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": -0.0225,
+       "logk_unc": 0.003,
+       "px": [
+        1229.0,
+        1133.0
+       ],
+       "x_read_from_pixels": 75.0004,
+       "visible_fraction": 0.97
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": -0.1181,
+       "logk_unc": 0.003,
+       "px": [
+        1337.75,
+        1183.0
+       ],
+       "x_read_from_pixels": 77.4973,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.891,
+      "intercept": 2.8969,
+      "r": -0.99998,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.89
+    }
+   ],
+   "mobile_phase": "A solvent 0.02% (v/v) HCO2H, B solvent acetonitrile (figure caption)"
+  },
+  {
+   "panel": "B",
+   "column": "Restek Raptor ARC-18",
+   "axis_calibration": {
+    "y_gridline_px": [
+     75.5,
+     179.5,
+     283.5,
+     388.0,
+     492.0,
+     596.5,
+     700.5,
+     804.5,
+     909.0,
+     1013.0,
+     1117.0,
+     1222.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     2466.0,
+     2685.0,
+     2904.0,
+     3123.0,
+     3342.0,
+     3560.5,
+     3779.5
+    ],
+    "x_values": [
+     55,
+     60,
+     65,
+     70,
+     75,
+     80,
+     85
+    ],
+    "y_fit": {
+     "logk_per_px": -0.001919333610873819,
+     "intercept": 2.1445279021840995,
+     "max_abs_residual_logk": 0.0008977703037071905
+    },
+    "x_fit": {
+     "units_per_px": 0.02284035990315238,
+     "intercept": -1.3271810689872987,
+     "max_abs_residual": 0.0053017273479554206
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.7616,
+       "logk_unc": 0.004,
+       "px": [
+        3450.75,
+        720.5
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 0.31
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=77.5: marker partly hidden by an overlapping marker or line (31% of the disk visible, 200 deg of rim); centre from the visible arc, +/-0.004",
+      "acetonitrile_pct=70: NOT LOCATED, marker completely hidden and the covering marker cannot be identified from the image alone",
+      "acetonitrile_pct=75: NOT LOCATED, marker completely hidden and the covering marker cannot be identified from the image alone"
+     ],
+     "legend_slope_as_printed": -3.95
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.0515,
+       "logk_unc": 0.003,
+       "px": [
+        3122.75,
+        569.5
+       ],
+       "x_read_from_pixels": 69.9976,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.8672,
+       "logk_unc": 0.003,
+       "px": [
+        3341.75,
+        665.5
+       ],
+       "x_read_from_pixels": 74.9996,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.7525,
+       "logk_unc": 0.003,
+       "px": [
+        3450.62,
+        725.25
+       ],
+       "x_read_from_pixels": 77.4863,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.944,
+      "intercept": 3.8153,
+      "r": -0.9984,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.95
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.9701,
+       "logk_unc": 0.003,
+       "px": [
+        3122.5,
+        611.88
+       ],
+       "x_read_from_pixels": 69.9918,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.7866,
+       "logk_unc": 0.003,
+       "px": [
+        3341.75,
+        707.5
+       ],
+       "x_read_from_pixels": 74.9996,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.6791,
+       "logk_unc": 0.003,
+       "px": [
+        3450.75,
+        763.5
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.85,
+      "intercept": 3.6674,
+      "r": -0.99918,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.84
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.8327,
+       "logk_unc": 0.003,
+       "px": [
+        3122.75,
+        683.5
+       ],
+       "x_read_from_pixels": 69.9976,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.6513,
+       "logk_unc": 0.003,
+       "px": [
+        3341.5,
+        778.0
+       ],
+       "x_read_from_pixels": 74.9939,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.5462,
+       "logk_unc": 0.003,
+       "px": [
+        3450.75,
+        832.75
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.793,
+      "intercept": 3.4896,
+      "r": -0.99929,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.79
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.658,
+       "logk_unc": 0.003,
+       "px": [
+        3122.75,
+        774.5
+       ],
+       "x_read_from_pixels": 69.9976,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.4939,
+       "logk_unc": 0.003,
+       "px": [
+        3341.62,
+        860.0
+       ],
+       "x_read_from_pixels": 74.9967,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.397,
+       "logk_unc": 0.003,
+       "px": [
+        3450.75,
+        910.5
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.452,
+      "intercept": 3.0763,
+      "r": -0.99909,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.45
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.4222,
+       "logk_unc": 0.003,
+       "px": [
+        3122.75,
+        897.38
+       ],
+       "x_read_from_pixels": 69.9976,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.23,
+       "logk_unc": 0.003,
+       "px": [
+        3341.75,
+        997.5
+       ],
+       "x_read_from_pixels": 74.9996,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.1148,
+       "logk_unc": 0.003,
+       "px": [
+        3450.75,
+        1057.5
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.062,
+      "intercept": 3.2685,
+      "r": -0.99892,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -4.06
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.3356,
+       "logk_unc": 0.003,
+       "px": [
+        3122.75,
+        942.5
+       ],
+       "x_read_from_pixels": 69.9976,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.1858,
+       "logk_unc": 0.003,
+       "px": [
+        3341.75,
+        1020.5
+       ],
+       "x_read_from_pixels": 74.9996,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.0745,
+       "logk_unc": 0.003,
+       "px": [
+        3450.75,
+        1078.5
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.412,
+      "intercept": 2.7292,
+      "r": -0.99447,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.41
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.112,
+       "logk_unc": 0.003,
+       "px": [
+        3122.62,
+        1059.0
+       ],
+       "x_read_from_pixels": 69.9947,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": -0.0502,
+       "logk_unc": 0.003,
+       "px": [
+        3341.75,
+        1143.5
+       ],
+       "x_read_from_pixels": 74.9996,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": -0.1558,
+       "logk_unc": 0.003,
+       "px": [
+        3450.75,
+        1198.5
+       ],
+       "x_read_from_pixels": 77.4892,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.524,
+      "intercept": 2.5823,
+      "r": -0.99764,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.52
+    }
+   ],
+   "mobile_phase": "A solvent 0.02% (v/v) HCO2H, B solvent acetonitrile (figure caption)"
+  },
+  {
+   "panel": "C",
+   "column": "Waters Cortecs Shield RP-18",
+   "axis_calibration": {
+    "y_gridline_px": [
+     1495.0,
+     1599.5,
+     1703.5,
+     1808.0,
+     1911.5,
+     2017.0,
+     2121.0,
+     2225.5,
+     2329.0,
+     2433.5,
+     2537.5,
+     2642.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     332.0,
+     556.0,
+     779.0,
+     1003.0,
+     1226.5,
+     1450.5,
+     1673.5
+    ],
+    "x_values": [
+     55,
+     60,
+     65,
+     70,
+     75,
+     80,
+     85
+    ],
+    "y_fit": {
+     "logk_per_px": -0.0019181740938109578,
+     "intercept": 4.867902960889116,
+     "max_abs_residual_logk": 0.0013131805694699406
+    },
+    "x_fit": {
+     "units_per_px": 0.02236063898968505,
+     "intercept": 47.57387628184514,
+     "max_abs_residual": 0.00798313638330228
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.25,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        1886.12
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 0.87
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.0831,
+       "logk_unc": 0.0058,
+       "px": [
+        1003.25,
+        1973.12
+       ],
+       "x_read_from_pixels": 70.0072,
+       "visible_fraction": 0.51
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.8632,
+       "logk_unc": 0.003,
+       "px": [
+        1226.5,
+        2087.75
+       ],
+       "x_read_from_pixels": 74.9992,
+       "visible_fraction": 0.51
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=65: marker partly hidden by an overlapping marker or line (87% of the disk visible, 270 deg of rim); centre from the visible arc, +/-0.003",
+      "acetonitrile_pct=70: marker partly hidden by an overlapping marker or line (51% of the disk visible, 170 deg of rim); centre from the visible arc, +/-0.0058",
+      "acetonitrile_pct=75: marker partly hidden by an overlapping marker or line (51% of the disk visible, 220 deg of rim); centre from the visible arc, +/-0.003"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.868,
+      "intercept": 3.773,
+      "r": -0.99689,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.86
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.2761,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        1872.5
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 0.92
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.104,
+       "logk_unc": 0.003,
+       "px": [
+        1003.25,
+        1962.25
+       ],
+       "x_read_from_pixels": 70.0072,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.8786,
+       "logk_unc": 0.003,
+       "px": [
+        1226.75,
+        2079.75
+       ],
+       "x_read_from_pixels": 75.0048,
+       "visible_fraction": 0.92
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.975,
+      "intercept": 3.8687,
+      "r": -0.99702,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.95
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.1457,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        1940.5
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.9805,
+       "logk_unc": 0.003,
+       "px": [
+        1003.12,
+        2026.62
+       ],
+       "x_read_from_pixels": 70.0044,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.7625,
+       "logk_unc": 0.003,
+       "px": [
+        1226.5,
+        2140.25
+       ],
+       "x_read_from_pixels": 74.9992,
+       "visible_fraction": 0.77
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=75: marker partly hidden by an overlapping marker or line (77% of the disk visible, 265 deg of rim); centre from the visible arc, +/-0.003"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.832,
+      "intercept": 3.6453,
+      "r": -0.99685,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.83
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.0944,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        1967.25
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.9395,
+       "logk_unc": 0.003,
+       "px": [
+        1003.0,
+        2048.0
+       ],
+       "x_read_from_pixels": 70.0016,
+       "visible_fraction": 0.96
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.7369,
+       "logk_unc": 0.003,
+       "px": [
+        1226.75,
+        2153.62
+       ],
+       "x_read_from_pixels": 75.0048,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.575,
+      "intercept": 3.4261,
+      "r": -0.99705,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.58
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 0.8469,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        2096.25
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.7002,
+       "logk_unc": 0.004,
+       "px": [
+        1003.25,
+        2172.75
+       ],
+       "x_read_from_pixels": 70.0072,
+       "visible_fraction": 0.44
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.5113,
+       "logk_unc": 0.003,
+       "px": [
+        1226.5,
+        2271.25
+       ],
+       "x_read_from_pixels": 74.9992,
+       "visible_fraction": 0.65
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=70: marker partly hidden by an overlapping marker or line (44% of the disk visible, 155 deg of rim); centre from the visible arc, +/-0.004",
+      "acetonitrile_pct=75: marker partly hidden by an overlapping marker or line (65% of the disk visible, 245 deg of rim); centre from the visible arc, +/-0.003"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.356,
+      "intercept": 3.0353,
+      "r": -0.99738,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.36
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 0.8925,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        2072.5
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.7184,
+       "logk_unc": 0.003,
+       "px": [
+        1003.25,
+        2163.25
+       ],
+       "x_read_from_pixels": 70.0072,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.4894,
+       "logk_unc": 0.003,
+       "px": [
+        1226.75,
+        2282.62
+       ],
+       "x_read_from_pixels": 75.0048,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -4.031,
+      "intercept": 3.5218,
+      "r": -0.99692,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -4.04
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 0.7184,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        2163.25
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.5496,
+       "logk_unc": 0.003,
+       "px": [
+        1003.12,
+        2251.25
+       ],
+       "x_read_from_pixels": 70.0044,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.3405,
+       "logk_unc": 0.003,
+       "px": [
+        1226.62,
+        2360.25
+       ],
+       "x_read_from_pixels": 75.002,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.779,
+      "intercept": 3.1815,
+      "r": -0.99811,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.77
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 0.4623,
+       "logk_unc": 0.003,
+       "px": [
+        779.5,
+        2296.75
+       ],
+       "x_read_from_pixels": 65.004,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.2768,
+       "logk_unc": 0.003,
+       "px": [
+        1003.25,
+        2393.5
+       ],
+       "x_read_from_pixels": 70.0072,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.1315,
+       "logk_unc": 0.003,
+       "px": [
+        1226.5,
+        2469.25
+       ],
+       "x_read_from_pixels": 74.9992,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.308,
+      "intercept": 2.6058,
+      "r": -0.99755,
+      "n_points": 3
+     },
+     "legend_slope_as_printed": -3.31
+    }
+   ],
+   "mobile_phase": "A solvent 0.02% (v/v) HCO2H, B solvent acetonitrile (figure caption)"
+  },
+  {
+   "panel": "D",
+   "column": "Ascentis Express RP-Amide (printed \"Ascentis Experess RP-Amide\")",
+   "axis_calibration": {
+    "y_gridline_px": [
+     1494.0,
+     1599.0,
+     1704.0,
+     1808.5,
+     1913.0,
+     2019.0,
+     2123.5,
+     2228.0,
+     2332.5,
+     2437.5,
+     2542.0,
+     2646.5
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     2494.0,
+     2709.0,
+     2924.0,
+     3139.0,
+     3354.0,
+     3569.0,
+     3784.0
+    ],
+    "x_values": [
+     55,
+     60,
+     65,
+     70,
+     75,
+     80,
+     85
+    ],
+    "y_fit": {
+     "logk_per_px": -0.0019086690081195352,
+     "intercept": 4.852137764937512,
+     "max_abs_residual_logk": 0.0014649624558291663
+    },
+    "x_fit": {
+     "units_per_px": 0.023255813953488403,
+     "intercept": -3.0000000000001252,
+     "max_abs_residual": 4.973799150320701e-14
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.7324,
+       "logk_unc": 0.003,
+       "px": [
+        2924.0,
+        1634.5
+       ],
+       "x_read_from_pixels": 65.0,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.553,
+       "logk_unc": 0.003,
+       "px": [
+        3138.75,
+        1728.5
+       ],
+       "x_read_from_pixels": 69.9942,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 1.376,
+       "logk_unc": 0.003,
+       "px": [
+        3353.62,
+        1821.25
+       ],
+       "x_read_from_pixels": 74.9913,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 1.2865,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        1868.12
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 1.2032,
+       "logk_unc": 0.003,
+       "px": [
+        3568.75,
+        1911.75
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.538,
+      "intercept": 4.0306,
+      "r": -0.99995,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -3.54
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.7875,
+       "logk_unc": 0.003,
+       "px": [
+        2924.0,
+        1605.62
+       ],
+       "x_read_from_pixels": 65.0,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.6017,
+       "logk_unc": 0.003,
+       "px": [
+        3139.0,
+        1703.0
+       ],
+       "x_read_from_pixels": 70.0,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 1.4296,
+       "logk_unc": 0.003,
+       "px": [
+        3353.58,
+        1793.17
+       ],
+       "x_read_from_pixels": 74.9903,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 1.3397,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        1840.25
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 1.2591,
+       "logk_unc": 0.003,
+       "px": [
+        3568.75,
+        1882.5
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.526,
+      "intercept": 4.075,
+      "r": -0.99979,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -3.53
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.6098,
+       "logk_unc": 0.004,
+       "px": [
+        2924.5,
+        1698.75
+       ],
+       "x_read_from_pixels": 65.0116,
+       "visible_fraction": 0.49
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.4299,
+       "logk_unc": 0.003,
+       "px": [
+        3139.12,
+        1793.0
+       ],
+       "x_read_from_pixels": 70.0029,
+       "visible_fraction": 0.88
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 1.2572,
+       "logk_unc": 0.003,
+       "px": [
+        3353.75,
+        1883.5
+       ],
+       "x_read_from_pixels": 74.9942,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 1.1691,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        1929.62
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 1.0849,
+       "logk_unc": 0.003,
+       "px": [
+        3568.75,
+        1973.75
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=65: marker partly hidden by an overlapping marker or line (49% of the disk visible, 185 deg of rim); centre from the visible arc, +/-0.004",
+      "acetonitrile_pct=70: marker partly hidden by an overlapping marker or line (88% of the disk visible, 295 deg of rim); centre from the visible arc, +/-0.003"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.499,
+      "intercept": 3.8821,
+      "r": -0.99995,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -3.5
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.6243,
+       "logk_unc": 0.003,
+       "px": [
+        2924.12,
+        1691.12
+       ],
+       "x_read_from_pixels": 65.0029,
+       "visible_fraction": 0.91
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.46,
+       "logk_unc": 0.003,
+       "px": [
+        3139.0,
+        1777.25
+       ],
+       "x_read_from_pixels": 70.0,
+       "visible_fraction": 0.97
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 1.3101,
+       "logk_unc": 0.003,
+       "px": [
+        3353.5,
+        1855.75
+       ],
+       "x_read_from_pixels": 74.9884,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 1.2347,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        1895.25
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 1.1655,
+       "logk_unc": 0.003,
+       "px": [
+        3568.75,
+        1931.5
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.06,
+      "intercept": 3.6079,
+      "r": -0.99961,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -3.06
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.2934,
+       "logk_unc": 0.003,
+       "px": [
+        2924.0,
+        1864.5
+       ],
+       "x_read_from_pixels": 65.0,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.136,
+       "logk_unc": 0.003,
+       "px": [
+        3139.0,
+        1947.0
+       ],
+       "x_read_from_pixels": 70.0,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.9899,
+       "logk_unc": 0.003,
+       "px": [
+        3353.75,
+        2023.5
+       ],
+       "x_read_from_pixels": 74.9942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.9141,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        2063.25
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.78
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 0.8473,
+       "logk_unc": 0.004,
+       "px": [
+        3568.75,
+        2098.25
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 0.24
+      }
+     ],
+     "flags": [
+      "acetonitrile_pct=77.5: marker partly hidden by an overlapping marker or line (78% of the disk visible, 275 deg of rim); centre from the visible arc, +/-0.003",
+      "acetonitrile_pct=80: marker partly hidden by an overlapping marker or line (24% of the disk visible, 200 deg of rim); centre from the visible arc, +/-0.004"
+     ],
+     "fit": {
+      "slope_per_unit_volume_fraction": -2.98,
+      "intercept": 3.2265,
+      "r": -0.99973,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -2.98
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.4153,
+       "logk_unc": 0.003,
+       "px": [
+        2924.05,
+        1800.65
+       ],
+       "x_read_from_pixels": 65.0012,
+       "visible_fraction": 0.97
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.2245,
+       "logk_unc": 0.003,
+       "px": [
+        3139.05,
+        1900.6
+       ],
+       "x_read_from_pixels": 70.0012,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 1.0307,
+       "logk_unc": 0.003,
+       "px": [
+        3353.75,
+        2002.12
+       ],
+       "x_read_from_pixels": 74.9942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.9389,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        2050.25
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.97
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 0.853,
+       "logk_unc": 0.003,
+       "px": [
+        3568.75,
+        2095.25
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 0.94
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.772,
+      "intercept": 3.865,
+      "r": -0.99983,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -3.76
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 1.2137,
+       "logk_unc": 0.003,
+       "px": [
+        2923.75,
+        1906.25
+       ],
+       "x_read_from_pixels": 64.9942,
+       "visible_fraction": 0.97
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 1.0334,
+       "logk_unc": 0.003,
+       "px": [
+        3139.12,
+        2000.75
+       ],
+       "x_read_from_pixels": 70.0029,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.858,
+       "logk_unc": 0.003,
+       "px": [
+        3353.75,
+        2092.62
+       ],
+       "x_read_from_pixels": 74.9942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.7738,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        2136.75
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 0.6955,
+       "logk_unc": 0.003,
+       "px": [
+        3568.62,
+        2177.75
+       ],
+       "x_read_from_pixels": 79.9913,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -3.469,
+      "intercept": 3.4648,
+      "r": -0.99974,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -3.46
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "acetonitrile_pct": 65.0,
+       "logk": 0.9351,
+       "logk_unc": 0.003,
+       "px": [
+        2923.75,
+        2052.25
+       ],
+       "x_read_from_pixels": 64.9942,
+       "visible_fraction": 0.98
+      },
+      {
+       "acetonitrile_pct": 70.0,
+       "logk": 0.7824,
+       "logk_unc": 0.003,
+       "px": [
+        3139.12,
+        2132.25
+       ],
+       "x_read_from_pixels": 70.0029,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 75.0,
+       "logk": 0.6325,
+       "logk_unc": 0.003,
+       "px": [
+        3353.75,
+        2210.75
+       ],
+       "x_read_from_pixels": 74.9942,
+       "visible_fraction": 0.99
+      },
+      {
+       "acetonitrile_pct": 77.5,
+       "logk": 0.56,
+       "logk_unc": 0.003,
+       "px": [
+        3461.25,
+        2248.75
+       ],
+       "x_read_from_pixels": 77.4942,
+       "visible_fraction": 1.0
+      },
+      {
+       "acetonitrile_pct": 80.0,
+       "logk": 0.4942,
+       "logk_unc": 0.003,
+       "px": [
+        3568.75,
+        2283.25
+       ],
+       "x_read_from_pixels": 79.9942,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [],
+     "fit": {
+      "slope_per_unit_volume_fraction": -2.956,
+      "intercept": 2.8532,
+      "r": -0.99974,
+      "n_points": 5
+     },
+     "legend_slope_as_printed": -2.96
+    }
+   ],
+   "mobile_phase": "A solvent 0.02% (v/v) HCO2H, B solvent acetonitrile (figure caption)"
+  }
+ ],
+ "uncertainty_detail": {
+  "meaning_of_uncertainty_logk": "half-width for a fully visible marker; each point carries its own logk_unc",
+  "fully_visible_marker": 0.003,
+  "partly_hidden_marker": "0.003 to 0.008, see logk_unc on each point",
+  "completely_hidden_marker": "not in points; bound given in hidden_points (about +/-0.003 around the covering marker)",
+  "basis": "pixel size 0.00192 log k; axis fit residual <= 0.0016 log k; marker 20 px (0.038 log k) located to about 0.5 px; Figures 1/2 digitized with the same code agree with log10(k) of Tables 1 and 2 at 70.0% to mean |d| 0.0006, max |d| 0.0033 over 69 points, of which up to 0.0017 is rounding of the tabulated k to two decimals"
+ }
+}

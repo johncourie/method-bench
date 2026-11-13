@@ -1,0 +1,28 @@
+{
+  "name": "method-bench",
+  "version": "0.9.0",
+  "private": true,
+  "type": "module",
+  "description": "Open reversed-phase LC method-development simulator for teaching: scouting, selectivity, system suitability, calibration, and validation on published retention data",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "typescript": "7.0.2",
+    "vite": "8.3.6",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

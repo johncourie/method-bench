@@ -1,0 +1,1943 @@
+{
+ "source": "Owolabi et al., Molecules 2025, 30, 758, doi:10.3390/molecules30040758, Figure 4 (molecules-30-00758-g004_hires.png): effect of pH of the A solvent on log k of the eight acidic cannabinoids",
+ "license": "CC BY 4.0",
+ "method": "see README.md; exact-colour disk fit of 20 px markers, axes calibrated on all labelled gridlines; x positions are the nominal A-solvent pH values, confirmed from the pixel x of each marker",
+ "uncertainty_logk": 0.003,
+ "uncertainty_detail": {
+  "meaning_of_uncertainty_logk": "half-width for a fully visible marker; each point carries its own logk_unc",
+  "fully_visible_marker": 0.003,
+  "partly_hidden_marker": "0.003 to 0.008, see logk_unc on each point",
+  "completely_hidden_marker": "not in points; bound given in hidden_points (about +/-0.003 around the covering marker)",
+  "basis": "pixel size 0.00192 log k; axis fit residual <= 0.0016 log k; marker 20 px (0.038 log k) located to about 0.5 px; Figures 1/2 digitized with the same code agree with log10(k) of Tables 1 and 2 at 70.0% to mean |d| 0.0006, max |d| 0.0033 over 69 points, of which up to 0.0017 is rounding of the tabulated k to two decimals"
+ },
+ "x_axis": "pH of the aqueous A solvent (not of the mixed mobile phase)",
+ "panels": [
+  {
+   "panel": "A",
+   "column": "Agilent Poroshell 120 EC-C18",
+   "axis_calibration": {
+    "y_gridline_px": [
+     67.0,
+     171.5,
+     275.0,
+     379.0,
+     483.0,
+     587.5,
+     691.0,
+     795.0,
+     899.0,
+     1004.0,
+     1107.0,
+     1211.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     319.0,
+     568.0,
+     817.0,
+     1066.0,
+     1315.0,
+     1564.5,
+     1813.0
+    ],
+    "x_values": [
+     2.8,
+     3.0,
+     3.2,
+     3.4,
+     3.6,
+     3.8,
+     4.0
+    ],
+    "y_fit": {
+     "logk_per_px": -0.0019229461816197006,
+     "intercept": 2.1290831010852584,
+     "max_abs_residual_logk": 0.0015548652609209679
+    },
+    "x_fit": {
+     "units_per_px": 0.0008030975798275758,
+     "intercept": 2.5438406157909585,
+     "max_abs_residual": 0.0002867794312013672
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.8614,
+       "logk_unc": 0.003,
+       "px": [
+        530.25,
+        659.25
+       ],
+       "x_read_from_pixels": 2.9697,
+       "visible_fraction": 0.94
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.8157,
+       "logk_unc": 0.003,
+       "px": [
+        755.0,
+        683.0
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.7746,
+       "logk_unc": 0.003,
+       "px": [
+        1041.25,
+        704.38
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.8277,
+       "logk_unc": 0.003,
+       "px": [
+        530.25,
+        676.75
+       ],
+       "x_read_from_pixels": 2.9697,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.7453,
+       "logk_unc": 0.003,
+       "px": [
+        755.0,
+        719.62
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.73
+      }
+     ],
+     "flags": [
+      "pH=3.15: marker partly hidden by an overlapping marker or line (73% of the disk visible, 255 deg of rim); centre from the visible arc, +/-0.003",
+      "pH=3.38: NOT LOCATED, marker completely hidden under the d9-THCA marker(s); not in 'points'. Bound in 'hidden_points': log k 0.668 to 0.673 (positions at which a 20 px disk would be fully covered), chosen by own connecting line traced to the edge of the covering marker (expects 0.677)"
+     ],
+     "hidden_points": [
+      {
+       "pH": 3.38,
+       "hidden_under": [
+        "d9-THCA"
+       ],
+       "logk_min": 0.6681,
+       "logk_max": 0.6734,
+       "logk_mid": 0.6708,
+       "logk_expected": 0.6775,
+       "expected_from": "own connecting line traced to the edge of the covering marker"
+      }
+     ]
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.7734,
+       "logk_unc": 0.003,
+       "px": [
+        530.5,
+        705.0
+       ],
+       "x_read_from_pixels": 2.9699,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.7215,
+       "logk_unc": 0.003,
+       "px": [
+        755.0,
+        732.0
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.6705,
+       "logk_unc": 0.003,
+       "px": [
+        1041.25,
+        758.5
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.5792,
+       "logk_unc": 0.003,
+       "px": [
+        530.5,
+        806.0
+       ],
+       "x_read_from_pixels": 2.9699,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.4523,
+       "logk_unc": 0.003,
+       "px": [
+        755.0,
+        872.0
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.3316,
+       "logk_unc": 0.004,
+       "px": [
+        1041.25,
+        934.75
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.47
+      }
+     ],
+     "flags": [
+      "pH=3.38: marker partly hidden by an overlapping marker or line (48% of the disk visible, 215 deg of rim); centre from the visible arc, +/-0.004"
+     ]
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.4696,
+       "logk_unc": 0.003,
+       "px": [
+        530.38,
+        863.0
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.4061,
+       "logk_unc": 0.003,
+       "px": [
+        755.0,
+        896.0
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.3465,
+       "logk_unc": 0.003,
+       "px": [
+        1041.25,
+        927.0
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.1691,
+       "logk_unc": 0.003,
+       "px": [
+        530.25,
+        1019.25
+       ],
+       "x_read_from_pixels": 2.9697,
+       "visible_fraction": 0.92
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.121,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        1044.25
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.84
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.0941,
+       "logk_unc": 0.003,
+       "px": [
+        1041.25,
+        1058.25
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.89
+      }
+     ],
+     "flags": [
+      "pH=3.15: marker partly hidden by an overlapping marker or line (84% of the disk visible, 290 deg of rim); centre from the visible arc, +/-0.003",
+      "pH=3.38: marker partly hidden by an overlapping marker or line (89% of the disk visible, 305 deg of rim); centre from the visible arc, +/-0.003"
+     ]
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.1374,
+       "logk_unc": 0.003,
+       "px": [
+        530.25,
+        1035.75
+       ],
+       "x_read_from_pixels": 2.9697,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.0927,
+       "logk_unc": 0.003,
+       "px": [
+        755.0,
+        1059.0
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.0631,
+       "logk_unc": 0.003,
+       "px": [
+        1041.25,
+        1074.38
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": -0.0991,
+       "logk_unc": 0.003,
+       "px": [
+        530.25,
+        1158.75
+       ],
+       "x_read_from_pixels": 2.9697,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": -0.1626,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        1191.75
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": -0.1972,
+       "logk_unc": 0.003,
+       "px": [
+        1041.25,
+        1209.75
+       ],
+       "x_read_from_pixels": 3.3801,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "acetonitrile_pct": 77.5,
+   "title_as_printed": "A: Poroshell 120 EC-C18; 77.5% (v/v) ACN",
+   "elution_order_at_pH_2_97_low_to_high_logk": [
+    "CBDVA",
+    "CBDA",
+    "CBGA",
+    "THCVA",
+    "CBNA",
+    "d9-THCA",
+    "CBCA",
+    "CBLA"
+   ]
+  },
+  {
+   "panel": "B",
+   "column": "Restek Raptor ARC-18",
+   "axis_calibration": {
+    "y_gridline_px": [
+     67.0,
+     171.5,
+     275.0,
+     379.0,
+     483.0,
+     587.5,
+     691.0,
+     795.0,
+     899.0,
+     1004.0,
+     1107.0,
+     1211.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     2448.0,
+     2682.0,
+     2916.0,
+     3149.5,
+     3383.5,
+     3617.5,
+     3851.0
+    ],
+    "x_values": [
+     2.8,
+     3.0,
+     3.2,
+     3.4,
+     3.6,
+     3.8,
+     4.0
+    ],
+    "y_fit": {
+     "logk_per_px": -0.0019229461816197006,
+     "intercept": 2.1290831010852584,
+     "max_abs_residual_logk": 0.0015548652609209679
+    },
+    "x_fit": {
+     "units_per_px": 0.0008552882031529917,
+     "intercept": 0.7061476201406307,
+     "max_abs_residual": 0.00016802053475428735
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.9051,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        636.5
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.65
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.8724,
+       "logk_unc": 0.003,
+       "px": [
+        2857.5,
+        653.5
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.833,
+       "logk_unc": 0.003,
+       "px": [
+        3126.5,
+        674.0
+       ],
+       "x_read_from_pixels": 3.3802,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [
+      "pH=2.97: marker partly hidden by an overlapping marker or line (65% of the disk visible, 245 deg of rim); centre from the visible arc, +/-0.003"
+     ]
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.884,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        647.5
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.8234,
+       "logk_unc": 0.003,
+       "px": [
+        2857.5,
+        679.0
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": [
+      "pH=3.38: NOT LOCATED, marker completely hidden under the d9-THCA marker(s); not in 'points'. Bound in 'hidden_points': log k 0.732 to 0.737 (positions at which a 20 px disk would be fully covered), chosen by own connecting line traced to the edge of the covering marker (expects 0.740)"
+     ],
+     "hidden_points": [
+      {
+       "pH": 3.38,
+       "hidden_under": [
+        "d9-THCA"
+       ],
+       "logk_min": 0.7316,
+       "logk_max": 0.7369,
+       "logk_mid": 0.7342,
+       "logk_expected": 0.7398,
+       "expected_from": "own connecting line traced to the edge of the covering marker"
+      }
+     ]
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.8196,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        681.0
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.7825,
+       "logk_unc": 0.003,
+       "px": [
+        2857.5,
+        700.25
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.7345,
+       "logk_unc": 0.003,
+       "px": [
+        3126.62,
+        725.25
+       ],
+       "x_read_from_pixels": 3.3803,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.6571,
+       "logk_unc": 0.003,
+       "px": [
+        2647.12,
+        765.5
+       ],
+       "x_read_from_pixels": 2.9702,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.5552,
+       "logk_unc": 0.003,
+       "px": [
+        2857.25,
+        818.5
+       ],
+       "x_read_from_pixels": 3.1499,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.4422,
+       "logk_unc": 0.004,
+       "px": [
+        3126.62,
+        877.25
+       ],
+       "x_read_from_pixels": 3.3803,
+       "visible_fraction": 0.24
+      }
+     ],
+     "flags": [
+      "pH=3.38: marker partly hidden by an overlapping marker or line (24% of the disk visible, 185 deg of rim); centre from the visible arc, +/-0.004"
+     ]
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.5282,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        832.5
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.4927,
+       "logk_unc": 0.003,
+       "px": [
+        2857.5,
+        851.0
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.435,
+       "logk_unc": 0.003,
+       "px": [
+        3126.5,
+        881.0
+       ],
+       "x_read_from_pixels": 3.3802,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.2778,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        962.75
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.26,
+       "logk_unc": 0.003,
+       "px": [
+        2857.5,
+        972.0
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.2326,
+       "logk_unc": 0.003,
+       "px": [
+        3126.5,
+        986.25
+       ],
+       "x_read_from_pixels": 3.3802,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.2386,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        983.12
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.2167,
+       "logk_unc": 0.003,
+       "px": [
+        2857.38,
+        994.5
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.1869,
+       "logk_unc": 0.003,
+       "px": [
+        3126.5,
+        1010.0
+       ],
+       "x_read_from_pixels": 3.3802,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.011,
+       "logk_unc": 0.003,
+       "px": [
+        2647.25,
+        1101.5
+       ],
+       "x_read_from_pixels": 2.9703,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": -0.0054,
+       "logk_unc": 0.003,
+       "px": [
+        2857.5,
+        1110.0
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": -0.0477,
+       "logk_unc": 0.003,
+       "px": [
+        3126.5,
+        1132.0
+       ],
+       "x_read_from_pixels": 3.3802,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "acetonitrile_pct": 75.0,
+   "title_as_printed": "B: Raptor ARC-18; 75% (v/v) ACN",
+   "elution_order_at_pH_2_97_low_to_high_logk": [
+    "CBDVA",
+    "CBDA",
+    "CBGA",
+    "THCVA",
+    "CBNA",
+    "d9-THCA",
+    "CBCA",
+    "CBLA"
+   ]
+  },
+  {
+   "panel": "C",
+   "column": "Waters Cortecs Shield RP-18",
+   "axis_calibration": {
+    "y_gridline_px": [
+     1484.0,
+     1589.0,
+     1693.0,
+     1797.0,
+     1901.0,
+     2006.0,
+     2110.0,
+     2214.0,
+     2318.0,
+     2422.0,
+     2526.0,
+     2630.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     319.0,
+     568.0,
+     817.0,
+     1066.0,
+     1315.0,
+     1563.5,
+     1812.5
+    ],
+    "x_values": [
+     2.8,
+     3.0,
+     3.2,
+     3.4,
+     3.6,
+     3.8,
+     4.0
+    ],
+    "y_fit": {
+     "logk_per_px": -0.0019201058088518228,
+     "intercept": 4.8506177017126255,
+     "max_abs_residual_logk": 0.0011806813765202762
+    },
+    "x_fit": {
+     "units_per_px": 0.0008035009064738312,
+     "intercept": 2.54358281954268,
+     "max_abs_residual": 0.00018651155576865364
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.2451,
+       "logk_unc": 0.004,
+       "px": [
+        530.75,
+        1877.75
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 0.43
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.2442,
+       "logk_unc": 0.004,
+       "px": [
+        755.0,
+        1878.25
+       ],
+       "x_read_from_pixels": 3.1502,
+       "visible_fraction": 0.31
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.2149,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        1893.5
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.94
+      }
+     ],
+     "flags": [
+      "pH=2.97: marker partly hidden by an overlapping marker or line (43% of the disk visible, 215 deg of rim); centre from the visible arc, +/-0.004",
+      "pH=3.15: marker partly hidden by an overlapping marker or line (31% of the disk visible, 195 deg of rim); centre from the visible arc, +/-0.004"
+     ]
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.2586,
+       "logk_unc": 0.003,
+       "px": [
+        530.75,
+        1870.75
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.2346,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        1883.25
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.1811,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        1911.12
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.1703,
+       "logk_unc": 0.003,
+       "px": [
+        530.75,
+        1916.75
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.1333,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        1936.0
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.0987,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        1954.0
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.0627,
+       "logk_unc": 0.003,
+       "px": [
+        530.75,
+        1972.75
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.0186,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        1995.75
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.9413,
+       "logk_unc": 0.003,
+       "px": [
+        1041.0,
+        2036.0
+       ],
+       "x_read_from_pixels": 3.38,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.8371,
+       "logk_unc": 0.003,
+       "px": [
+        530.75,
+        2090.25
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.8237,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        2097.25
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.7829,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        2118.5
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.8909,
+       "logk_unc": 0.003,
+       "px": [
+        530.75,
+        2062.25
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.8923,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        2061.5
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.869,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        2073.62
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.7152,
+       "logk_unc": 0.003,
+       "px": [
+        530.75,
+        2153.75
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.7123,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        2155.25
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.6905,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        2166.62
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.4561,
+       "logk_unc": 0.003,
+       "px": [
+        530.83,
+        2288.67
+       ],
+       "x_read_from_pixels": 2.9701,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.4512,
+       "logk_unc": 0.003,
+       "px": [
+        754.75,
+        2291.25
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.4236,
+       "logk_unc": 0.003,
+       "px": [
+        1040.75,
+        2305.62
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "acetonitrile_pct": 65.0,
+   "title_as_printed": "C: Cortecs Shield RP-18; 65% (v/v)",
+   "elution_order_at_pH_2_97_low_to_high_logk": [
+    "CBDVA",
+    "CBDA",
+    "THCVA",
+    "CBGA",
+    "CBNA",
+    "d9-THCA",
+    "CBLA",
+    "CBCA"
+   ]
+  },
+  {
+   "panel": "D",
+   "column": "Ascentis Express RP-Amide (printed \"Ascentis Experess RP-Amide\")",
+   "axis_calibration": {
+    "y_gridline_px": [
+     1485.0,
+     1589.0,
+     1693.0,
+     1797.0,
+     1901.0,
+     2006.0,
+     2110.0,
+     2214.0,
+     2318.0,
+     2422.5,
+     2526.0,
+     2630.0
+    ],
+    "y_values": [
+     2.0,
+     1.8,
+     1.6,
+     1.4,
+     1.2,
+     1.0,
+     0.8,
+     0.6,
+     0.4,
+     0.2,
+     0.0,
+     -0.2
+    ],
+    "x_gridline_px": [
+     2448.0,
+     2697.0,
+     2946.5,
+     3195.5,
+     3444.5,
+     3694.0,
+     3942.5
+    ],
+    "x_values": [
+     2.8,
+     3.0,
+     3.2,
+     3.4,
+     3.6,
+     3.8,
+     4.0
+    ],
+    "y_fit": {
+     "logk_per_px": -0.0019205897482536974,
+     "intercept": 4.851853480750512,
+     "max_abs_residual_logk": 0.0008495542464053152
+    },
+    "x_fit": {
+     "units_per_px": 0.0008028097065519535,
+     "intercept": 0.8346789262637004,
+     "max_abs_residual": 0.00025798226661688517
+    },
+    "note": "pixel coordinates are 0-based centres of the 3-4 px wide gridlines in the full hires image; least-squares line through all labelled gridlines"
+   },
+   "series": [
+    {
+     "compound": "CBLA",
+     "marker_rgb": [
+      91,
+      155,
+      213
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.7119,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1634.88
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.7026,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1639.75
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.58
+      },
+      {
+       "pH": 3.55,
+       "logk": 1.6291,
+       "logk_unc": 0.003,
+       "px": [
+        3382.0,
+        1678.0
+       ],
+       "x_read_from_pixels": 3.5498,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.5388,
+       "logk_unc": 0.003,
+       "px": [
+        3693.5,
+        1725.0
+       ],
+       "x_read_from_pixels": 3.7999,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [
+      "pH=3.15: marker partly hidden by an overlapping marker or line (58% of the disk visible, 235 deg of rim); centre from the visible arc, +/-0.003",
+      "pH=3.38: NOT LOCATED, marker completely hidden under the CBCA marker(s); not in 'points'. Bound in 'hidden_points': log k 1.685 to 1.690 (positions at which a 20 px disk would be fully covered), chosen by own connecting line traced to the edge of the covering marker (expects 1.687)"
+     ],
+     "hidden_points": [
+      {
+       "pH": 3.38,
+       "hidden_under": [
+        "CBCA"
+       ],
+       "logk_min": 1.6848,
+       "logk_max": 1.6901,
+       "logk_mid": 1.6874,
+       "logk_expected": 1.6872,
+       "expected_from": "own connecting line traced to the edge of the covering marker"
+      }
+     ]
+    },
+    {
+     "compound": "CBCA",
+     "marker_rgb": [
+      237,
+      125,
+      49
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.7482,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1616.0
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.7213,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1630.0
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.6874,
+       "logk_unc": 0.003,
+       "px": [
+        3170.0,
+        1647.62
+       ],
+       "x_read_from_pixels": 3.3796,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.55,
+       "logk": 1.584,
+       "logk_unc": 0.003,
+       "px": [
+        3382.0,
+        1701.5
+       ],
+       "x_read_from_pixels": 3.5498,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.4349,
+       "logk_unc": 0.003,
+       "px": [
+        3693.5,
+        1779.12
+       ],
+       "x_read_from_pixels": 3.7999,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "d9-THCA",
+     "marker_rgb": [
+      165,
+      165,
+      165
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.5864,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1700.25
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.65
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.5744,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1706.5
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.5576,
+       "logk_unc": 0.003,
+       "px": [
+        3170.25,
+        1715.25
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.55,
+       "logk": 1.4889,
+       "logk_unc": 0.003,
+       "px": [
+        3382.0,
+        1751.0
+       ],
+       "x_read_from_pixels": 3.5498,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.3871,
+       "logk_unc": 0.003,
+       "px": [
+        3693.5,
+        1804.0
+       ],
+       "x_read_from_pixels": 3.7999,
+       "visible_fraction": 0.98
+      }
+     ],
+     "flags": [
+      "pH=2.97: marker partly hidden by an overlapping marker or line (65% of the disk visible, 245 deg of rim); centre from the visible arc, +/-0.003"
+     ]
+    },
+    {
+     "compound": "CBNA",
+     "marker_rgb": [
+      255,
+      192,
+      0
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.5657,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1711.0
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.522,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1733.75
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.4762,
+       "logk_unc": 0.003,
+       "px": [
+        3170.0,
+        1757.62
+       ],
+       "x_read_from_pixels": 3.3796,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.1536,
+       "logk_unc": 0.003,
+       "px": [
+        3693.67,
+        1925.58
+       ],
+       "x_read_from_pixels": 3.8,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": [
+      "pH=3.55: NOT LOCATED, marker completely hidden under the CBGA marker(s); not in 'points'. Bound in 'hidden_points': log k 1.334 to 1.341 (positions at which a 20 px disk would be fully covered), chosen by own connecting line traced to the edge of the covering marker (expects 1.337)"
+     ],
+     "hidden_points": [
+      {
+       "pH": 3.55,
+       "hidden_under": [
+        "CBGA"
+       ],
+       "logk_min": 1.3343,
+       "logk_max": 1.341,
+       "logk_mid": 1.3377,
+       "logk_expected": 1.3375,
+       "expected_from": "own connecting line traced to the edge of the covering marker"
+      }
+     ]
+    },
+    {
+     "compound": "THCVA",
+     "marker_rgb": [
+      68,
+      114,
+      196
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.2666,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1866.75
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.2488,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1876.0
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.2311,
+       "logk_unc": 0.003,
+       "px": [
+        3170.25,
+        1885.25
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.55,
+       "logk": 1.1538,
+       "logk_unc": 0.004,
+       "px": [
+        3382.0,
+        1925.5
+       ],
+       "x_read_from_pixels": 3.5498,
+       "visible_fraction": 0.43
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.0342,
+       "logk_unc": 0.003,
+       "px": [
+        3693.5,
+        1987.75
+       ],
+       "x_read_from_pixels": 3.7999,
+       "visible_fraction": 0.88
+      }
+     ],
+     "flags": [
+      "pH=3.55: marker partly hidden by an overlapping marker or line (43% of the disk visible, 210 deg of rim); centre from the visible arc, +/-0.004",
+      "pH=3.8: marker partly hidden by an overlapping marker or line (88% of the disk visible, 295 deg of rim); centre from the visible arc, +/-0.003"
+     ]
+    },
+    {
+     "compound": "CBGA",
+     "marker_rgb": [
+      112,
+      173,
+      71
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.3984,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1798.12
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.391,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1802.0
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.3833,
+       "logk_unc": 0.003,
+       "px": [
+        3170.25,
+        1806.0
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.98
+      },
+      {
+       "pH": 3.55,
+       "logk": 1.3381,
+       "logk_unc": 0.003,
+       "px": [
+        3382.12,
+        1829.5
+       ],
+       "x_read_from_pixels": 3.5499,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.2685,
+       "logk_unc": 0.003,
+       "px": [
+        3693.5,
+        1865.75
+       ],
+       "x_read_from_pixels": 3.7999,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDA",
+     "marker_rgb": [
+      37,
+      94,
+      145
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 1.1955,
+       "logk_unc": 0.003,
+       "px": [
+        2659.5,
+        1903.75
+       ],
+       "x_read_from_pixels": 2.9698,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 1.1893,
+       "logk_unc": 0.003,
+       "px": [
+        2884.0,
+        1907.0
+       ],
+       "x_read_from_pixels": 3.15,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.38,
+       "logk": 1.184,
+       "logk_unc": 0.003,
+       "px": [
+        3170.25,
+        1909.75
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.55,
+       "logk": 1.1394,
+       "logk_unc": 0.003,
+       "px": [
+        3382.0,
+        1933.0
+       ],
+       "x_read_from_pixels": 3.5498,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.8,
+       "logk": 1.0649,
+       "logk_unc": 0.003,
+       "px": [
+        3693.75,
+        1971.75
+       ],
+       "x_read_from_pixels": 3.8001,
+       "visible_fraction": 1.0
+      }
+     ],
+     "flags": []
+    },
+    {
+     "compound": "CBDVA",
+     "marker_rgb": [
+      158,
+      72,
+      14
+     ],
+     "points": [
+      {
+       "pH": 2.97,
+       "logk": 0.9156,
+       "logk_unc": 0.003,
+       "px": [
+        2659.75,
+        2049.5
+       ],
+       "x_read_from_pixels": 2.97,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.15,
+       "logk": 0.906,
+       "logk_unc": 0.003,
+       "px": [
+        2884.12,
+        2054.5
+       ],
+       "x_read_from_pixels": 3.1501,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.38,
+       "logk": 0.9007,
+       "logk_unc": 0.003,
+       "px": [
+        3170.25,
+        2057.25
+       ],
+       "x_read_from_pixels": 3.3798,
+       "visible_fraction": 0.99
+      },
+      {
+       "pH": 3.55,
+       "logk": 0.8481,
+       "logk_unc": 0.003,
+       "px": [
+        3382.12,
+        2084.62
+       ],
+       "x_read_from_pixels": 3.5499,
+       "visible_fraction": 1.0
+      },
+      {
+       "pH": 3.8,
+       "logk": 0.7634,
+       "logk_unc": 0.003,
+       "px": [
+        3693.5,
+        2128.75
+       ],
+       "x_read_from_pixels": 3.7999,
+       "visible_fraction": 0.99
+      }
+     ],
+     "flags": []
+    }
+   ],
+   "acetonitrile_pct": 65.0,
+   "title_as_printed": "D: Ascentis Experess RP-Amide; 65% (v/v) ACN",
+   "elution_order_at_pH_2_97_low_to_high_logk": [
+    "CBDVA",
+    "CBDA",
+    "THCVA",
+    "CBGA",
+    "CBNA",
+    "d9-THCA",
+    "CBLA",
+    "CBCA"
+   ]
+  }
+ ]
+}
