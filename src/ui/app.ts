@@ -5,11 +5,12 @@ import { Lab, loadSession, newSession, saveSession, type Catalog } from "../lab/
 import type { AnalysisSettings, SampleSpec, StressAgent } from "../lab/types.ts";
 import { clear, h, resetIds, slug } from "./dom.ts";
 
-export type TabId = "setup" | "instrument" | "model" | "quant" | "validation" | "report" | "limits" | "instructor";
+export type TabId = "setup" | "instrument" | "compare" | "model" | "quant" | "validation" | "report" | "limits" | "instructor";
 
 export const TABS: ReadonlyArray<{ id: TabId; label: string }> = [
   { id: "setup", label: "Setup" },
   { id: "instrument", label: "Instrument" },
+  { id: "compare", label: "Compare runs" },
   { id: "model", label: "Fit and predict" },
   { id: "quant", label: "Quantitation" },
   { id: "validation", label: "Suitability and validation" },
@@ -52,6 +53,10 @@ export class App {
   fitT0: number | null = null;
   fitPlates = 10000;
   map = { ...DEFAULT_MAP };
+  /** Compare runs: which runs, what colour stands for, and how far apart the traces sit. */
+  compare: { runs: Set<number>; touched: boolean; by: "run" | "sample" | "column" | "temp" | "ph" | "flow" | "tg" | "phi0" | "inj"; spacing: number; normalise: boolean } = { runs: new Set(), touched: false, by: "run", spacing: 0.5, normalise: false };
+  /** Whether the instrument drawing is shown. */
+  showBench = true;
   instructorCodes = "";
   instructorOpen = false;
   private views = new Map<TabId, (app: App) => HTMLElement>();
@@ -151,6 +156,7 @@ export class App {
     this.fitT0 = null;
     this.fitPlates = 10000;
     this.map = { ...DEFAULT_MAP };
+    this.compare = { runs: new Set(), touched: false, by: "run", spacing: 0.5, normalise: false };
     this.persist();
   }
 

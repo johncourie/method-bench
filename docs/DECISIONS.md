@@ -43,3 +43,9 @@ Append-only. Newest last.
 **2026-11-13. Plate numbers are calibrated to one published table, and labelled as calibration.**
 
 **2026-11-13. Proper unit symbols** (µ, °) in interface text. The house rule excludes dashes, curly quotes and emoji, not unit signs.
+
+**2026-11-13. three.js for the visual layer, not a game engine.** The owner asked to move beyond flat pages toward something more like an instrument (three.js or Godot). three.js was chosen because the engine is TypeScript and runs unchanged beside it, the site stays static, the download stays small (three.js is fetched only when a drawing is shown), and the forms and tables remain as the accessible route. A Godot web export would have meant porting or bridging the engine and giving up keyboard and screen-reader access.
+
+**2026-11-13. The instrument drawing is generic by design.** Modules are plain boxes with this project's own palette, name plates and readouts. It represents the class of instrument (reservoirs, pump, autosampler, column oven, detector), not a product. Panels show only what an operator sees; the inside of the column is never drawn, because that would hand the student the answer.
+
+**2026-11-13. Colour in the run comparison always has a text twin.** Each trace carries its run number in the drawing and a row in the table under it.

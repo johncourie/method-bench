@@ -1,3 +1,5 @@
+import { pressureBar } from "../../engine/efficiency.ts";
+import { programPhi } from "../../engine/gradient.ts";
 import { maxPressure, methodFaults } from "../../engine/simulate.ts";
 import type { Method } from "../../engine/types.ts";
 import { peakPurity, PURITY_LIMIT, SPECTRUM_GRID } from "../../lab/analysis.ts";
@@ -7,6 +9,7 @@ import type { StressAgent } from "../../lab/types.ts";
 import type { App } from "../app.ts";
 import { Chart, type Series } from "../chart.ts";
 import { field, fixed, h, numberInput, select, sig } from "../dom.ts";
+import { Bench, type ModuleId } from "../three/bench.ts";
 
 export function methodSummary(app: App, m: Method): string {
   const col = app.catalog.columns.get(m.columnId);
@@ -329,6 +332,90 @@ function spectrumPanel(app: App, ex: Executed): HTMLElement | null {
   );
 }
 
+let bench: Bench | null = null;
+let benchFailed = false;
+let benchLoading = false;
+/** The newest run already replayed on the drawing, so a redraw does not replay it. */
+let replayed = -1;
+
+const MODULE_FIELD: Record<ModuleId, { label: string; field: string }> = {
+  pump: { label: "Pump", field: "f-flow-ml-min" },
+  sampler: { label: "Autosampler", field: "f-injection-l" },
+  oven: { label: "Column oven", field: "f-column" },
+  detector: { label: "Detector", field: "f-type" },
+};
+
+/** The drawing of the instrument, with front-panel readouts. The form beside it holds the same settings. */
+function benchPanel(app: App): HTMLElement {
+  const toggle = h("button", { type: "button", class: "small", "aria-expanded": String(app.showBench), onClick: () => { app.showBench = !app.showBench; app.refresh(); } }, app.showBench ? "Hide the drawing" : "Show the instrument drawing");
+  if (!app.showBench) return h("section", { class: "panel" }, h("div", { class: "row", style: "justify-content:space-between" }, h("h2", { style: "margin:0" }, "Instrument"), toggle));
+  const m = app.method;
+  const col = app.lab.column(m.columnId);
+  const inst = app.lab.instrument;
+  const runs = app.lab.session.runs;
+  const last = runs[runs.length - 1];
+  const goTo = (id: ModuleId): void => {
+    const el = document.getElementById(MODULE_FIELD[id].field);
+    el?.scrollIntoView({ block: "center", behavior: "auto" });
+    el?.focus({ preventScroll: true });
+  };
+  const holder = h("div", { class: "bench-holder" });
+  if (bench) {
+    const b = bench;
+    holder.appendChild(b.el);
+    const faults = methodFaults(m, inst, col);
+    const phi0 = m.program[0]?.phi ?? 0;
+    const det = m.detector.kind === "uv" ? `UV ${m.detector.nm} nm` : `MS ${m.detector.polarity === "pos" ? "+" : "-"} ${m.detector.mz}`;
+    requestAnimationFrame(() => {
+      b.update({
+        flow: m.flowMlMin,
+        pctB: phi0 * 100,
+        pressure: faults.some((f) => !f.startsWith("Pressure")) ? 0 : pressureBar(col, m.flowMlMin, m.modifier, phi0, m.tempC),
+        pressureLimit: Math.min(inst.pMaxBar, col.pMaxBar),
+        tempC: m.tempC,
+        injUl: m.injUl,
+        sample: app.sample.kind === "blank" ? "BLANK" : app.sample.kind === "standard" ? "STANDARD" : `SAMPLE PREP ${app.sample.prep}`,
+        column: { name: col.name, lengthMm: col.lengthMm, idMm: col.idMm },
+        detector: det,
+        signal: faults.length ? "NOT READY" : "READY",
+        status: "",
+      });
+      // Replay a run that has just been injected: what the panels would have shown as it ran.
+      if (last && last.id > replayed && app.selectedRun === last.id) {
+        const first = replayed === -1;
+        replayed = last.id;
+        if (!first) {
+          const ex = app.lab.execute(last);
+          const t = ex.result.time;
+          const n = 90;
+          const fmt = (v: number): string => (ex.result.unit === "mAU" ? `${v.toFixed(v < 100 ? 2 : 0)} mAU` : `${v.toExponential(1)} cps`);
+          b.play(Array.from({ length: n }, (_, i) => {
+            const k = Math.floor((i / (n - 1)) * (t.length - 1));
+            const pump = programPhi(last.method.program, t[k]!);
+            return { t: t[k]!, pctB: pump * 100, pressure: pressureBar(col, last.method.flowMlMin, last.method.modifier, programPhi(last.method.program, t[k]! - ex.result.tDwell), last.method.tempC), signal: fmt(ex.result.signal[k]!) };
+          }));
+        }
+      }
+    });
+  } else if (benchFailed) {
+    holder.appendChild(h("p", { class: "note warn" }, "The drawing needs WebGL, which this browser has turned off or does not have. Everything on it is in the form below."));
+  } else {
+    holder.appendChild(h("p", { class: "muted" }, "Loading the drawing."));
+    if (!benchLoading) {
+      benchLoading = true;
+      Bench.create(goTo).then((b) => { bench = b; }, () => { benchFailed = true; }).finally(() => { benchLoading = false; app.refresh(); });
+    }
+  }
+  return h(
+    "section",
+    { class: "panel" },
+    h("div", { class: "row", style: "justify-content:space-between;margin-bottom:8px" }, h("h2", { style: "margin:0" }, "Instrument"), toggle),
+    holder,
+    h("div", { class: "row", style: "margin-top:8px" }, h("span", { class: "muted" }, "Go to the settings of:"), (Object.keys(MODULE_FIELD) as ModuleId[]).map((id) => h("button", { type: "button", class: "small", onClick: () => goTo(id) }, MODULE_FIELD[id].label))),
+    h("p", { class: "muted", style: "margin-top:6px" }, "A generic instrument of this class, not any maker's model. The panels show what an operator sees. Select a module, here or in the drawing, to reach its settings."),
+  );
+}
+
 export function instrumentView(app: App): HTMLElement {
-  return h("div", { style: "display:grid;gap:16px" }, h("h1", { class: "sr" }, "Instrument"), h("div", { class: "grid2" }, methodPanel(app), samplePanel(app)), resultPanel(app));
+  return h("div", { style: "display:grid;gap:16px" }, h("h1", { class: "sr" }, "Instrument"), benchPanel(app), h("div", { class: "grid2" }, methodPanel(app), samplePanel(app)), resultPanel(app));
 }

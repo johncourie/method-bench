@@ -1,7 +1,7 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test, type Page } from "@playwright/test";
 
-const TABS = ["setup", "instrument", "model", "quant", "validation", "report", "limits", "instructor"] as const;
+const TABS = ["setup", "instrument", "compare", "model", "quant", "validation", "report", "limits", "instructor"] as const;
 
 /** Name every integrated peak of the selected run after the compound that really eluted there (a student would inject single standards). */
 async function nameSelectedRun(page: Page): Promise<number> {

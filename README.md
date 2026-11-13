@@ -48,7 +48,7 @@ node tools/build-data.ts
 | `src/engine/` | Pure, deterministic numerics. No DOM. Retention, gradient migration, band broadening, detector, integration, calibration statistics, model fitting. |
 | `src/lab/` | The teaching layer: cases, sample preparation, degradation, the notebook, quantitation and validation derived from it. |
 | `src/data/` | Generated data set with a provenance record on every value. |
-| `src/ui/` | Views. No framework. |
+| `src/ui/` | Views. No framework. `src/ui/three/` holds the two WebGL views (three.js, loaded on demand): a drawing of a generic instrument with live front-panel readouts, and a colour-mapped comparison of runs that opens from an overlay into a waterfall. |
 | `tools/` | Transcribed source tables, fitting scripts, the data build. |
 | `tests/`, `e2e/` | Golden tests, literature reproduction, a scripted student, regression tests from two adversarial reviews, browser and accessibility tests. |
 | `docs/` | Model, data provenance, instructor guide, decisions. |

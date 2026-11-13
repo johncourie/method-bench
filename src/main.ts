@@ -1,5 +1,6 @@
 import { catalog } from "./data/index.ts";
 import { App, TABS, type TabId } from "./ui/app.ts";
+import { compareView } from "./ui/views/compare.ts";
 import { instructorView } from "./ui/views/instructor.ts";
 import { instrumentView } from "./ui/views/instrument.ts";
 import { limitsView } from "./ui/views/limits.ts";
@@ -14,6 +15,7 @@ const VERSION = "0.9.0";
 const app = new App(catalog, VERSION);
 app.register("setup", setupView);
 app.register("instrument", instrumentView);
+app.register("compare", compareView);
 app.register("model", modelView);
 app.register("quant", quantView);
 app.register("validation", validationView);
