@@ -6,6 +6,8 @@ import { fitLss, predictLss } from "../src/engine/fit.ts";
 import { integrate } from "../src/engine/integrate.ts";
 import { gaussian } from "../src/engine/peakshape.ts";
 import { makeRng } from "../src/engine/rng.ts";
+import { simulateRun } from "../src/engine/simulate.ts";
+import { column, instrument, method, params, sample, solute, soluteMap } from "./fixtures.ts";
 import { degrade } from "../src/lab/degradation.ts";
 import { contentAsReceived, truthFor } from "../src/lab/samples.ts";
 import { Lab, loadSession, newSession, saveSession } from "../src/lab/session.ts";
@@ -110,6 +112,32 @@ describe("student fit guards", () => {
   it("a peak that elutes before the gradient reaches it in both runs gives no model", () => {
     const early = (tG: number) => ({ program: prog(tG), t0, tD: 3, tR: predictLss(0.2, 6, prog(tG), t0, 3) });
     expect(fitLss([early(15), early(45)])).toBeNull();
+  });
+});
+
+describe("buffers", () => {
+  const acid = solute("ha", params(6, 12), { ionization: { kind: "acid", pKa: 4, dpKaDphi: 0, ionizedRatio: 0.05, prov: { basis: "assumed", ref: "t" } } });
+  const run = (extra: object, seed: string) => simulateRun({ method: method({ program: [{ t: 0, phi: 0.4 }], ...extra }), instrument, column, sample: sample(["ha"]), solutes: soluteMap(acid), seed });
+  it("phosphate is refused with the mass detector and accepted with UV", () => {
+    expect(() => run({ buffer: "phosphate", pH: 2.5, detector: { kind: "ms", mz: 301, polarity: "pos", rateHz: 5 } }, "a")).toThrow(/not volatile/);
+    expect(run({ buffer: "phosphate", pH: 2.5 }, "a").warnings).toEqual([]);
+  });
+  it("outside the buffer's range the run carries a warning and retention of an acid scatters more", () => {
+    const spread = (pH: number): number => {
+      const t = Array.from({ length: 12 }, (_, i) => run({ buffer: "formate", pH }, `r${i}`).peaks[0]!.tR);
+      const m = t.reduce((s, v) => s + v, 0) / t.length;
+      return Math.sqrt(t.reduce((s, v) => s + (v - m) ** 2, 0) / (t.length - 1)) / m;
+    };
+    expect(run({ buffer: "formate", pH: 5.5 }, "a").warnings.join(" ")).toMatch(/outside the range/);
+    expect(run({ buffer: "formate", pH: 3.5 }, "a").warnings).toEqual([]);
+    expect(spread(5.5)).toBeGreaterThan(3 * spread(3.5));
+  });
+  it("a buffer that absorbs makes a low-wavelength gradient baseline fall; phosphate does not", () => {
+    const end = (buffer: string): number => {
+      const r = simulateRun({ method: method({ buffer, pH: 3, program: [{ t: 0, phi: 0.1 }, { t: 15, phi: 0.9 }], detector: { kind: "uv", nm: 205, rateHz: 5 } }), instrument, column, sample: sample([]), solutes: soluteMap(), seed: "b", injRsd: 0 });
+      return r.signal[r.signal.length - 1]!;
+    };
+    expect(end("formate")).toBeLessThan(end("phosphate") - 50);
   });
 });
 

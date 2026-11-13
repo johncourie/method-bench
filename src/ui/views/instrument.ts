@@ -1,6 +1,7 @@
 import { pressureBar } from "../../engine/efficiency.ts";
 import { programPhi } from "../../engine/gradient.ts";
 import { maxPressure, methodFaults } from "../../engine/simulate.ts";
+import { BUFFERS, buffers } from "../../engine/tunables.ts";
 import type { Method } from "../../engine/types.ts";
 import { peakPurity, PURITY_LIMIT, SPECTRUM_GRID } from "../../lab/analysis.ts";
 import { describeSpec } from "../../lab/samples.ts";
@@ -15,7 +16,7 @@ export function methodSummary(app: App, m: Method): string {
   const col = app.catalog.columns.get(m.columnId);
   const prog = m.program.length === 1 || m.program.every((p) => p.phi === m.program[0]!.phi) ? `${Math.round(m.program[0]!.phi * 100)}% B isocratic` : m.program.map((p) => `${Math.round(p.phi * 1000) / 10}% at ${p.t}`).join(", ");
   const det = m.detector.kind === "uv" ? `UV ${m.detector.nm} nm` : `MS ${m.detector.polarity === "pos" ? "positive" : "negative"} ion m/z ${m.detector.mz}`;
-  return `${col?.name ?? m.columnId}; ${m.modifier === "MeCN" ? "acetonitrile" : "methanol"}; pH ${m.pH}; ${m.tempC} °C; ${m.flowMlMin} mL/min; ${prog}; ${m.injUl} µL; ${det}`;
+  return `${col?.name ?? m.columnId}; ${m.modifier === "MeCN" ? "acetonitrile" : "methanol"}; pH ${m.pH}${m.buffer && BUFFERS[m.buffer] ? ` ${BUFFERS[m.buffer]!.short.toLowerCase()}` : ""}; ${m.tempC} °C; ${m.flowMlMin} mL/min; ${prog}; ${m.injUl} µL; ${det}`;
 }
 
 /** The textbook estimate a chromatographer makes from the tube dimensions (about two thirds of the empty volume). */
@@ -58,6 +59,15 @@ function methodPanel(app: App): HTMLElement {
       field("Column", select(m.columnId, columns, (v) => { m.columnId = v; app.refresh(); })),
       field("Solvent B", select(m.modifier, c.modifiers.map((x) => ({ value: x, label: x === "MeCN" ? "Acetonitrile" : "Methanol" })), (v) => { m.modifier = v; app.refresh(); })),
       field("Solvent A pH", numberInput(m.pH, { min: c.pH.min, max: c.pH.max, step: c.pH.step, onChange: (v) => { m.pH = Math.min(c.pH.max, Math.max(c.pH.min, v)); app.refresh(); } }), c.pH.note),
+      field(
+        "Solvent A buffer",
+        select(m.buffer ?? c.buffers[0]!, c.buffers.map((id) => ({ value: id, label: BUFFERS[id]?.name ?? id })), (v) => { m.buffer = v; app.refresh(); }),
+        (() => {
+          const b = BUFFERS[m.buffer ?? ""];
+          if (!b) return undefined;
+          return `Buffers pH ${b.ranges.map(([lo, hi]) => `${lo} to ${hi}`).join(" and ")}. ${b.volatile ? "Volatile: suits the mass detector." : "Not volatile: UV detector only."}`;
+        })(),
+      ),
       field("Column temperature, °C", numberInput(m.tempC, { min: 5, max: 100, step: 1, onChange: (v) => { m.tempC = v; app.refresh(); } })),
       field("Flow, mL/min", numberInput(m.flowMlMin, { min: 0.01, max: 10, step: 0.05, onChange: (v) => { m.flowMlMin = v; app.refresh(); } })),
       field("Injection, µL", numberInput(m.injUl, { min: 0.1, max: 100, step: 0.5, onChange: (v) => { m.injUl = v; app.refresh(); } })),
@@ -93,6 +103,7 @@ function methodPanel(app: App): HTMLElement {
       { class: faults.length ? "note bad" : "note", style: "margin-top:10px" },
       faults.length ? faults.join(" ") : `Pump pressure about ${fixed(p, 0)} bar of ${limit} bar. Column volume about ${fixed(estimatedColumnVolumeMl(col), 2)} mL by the usual estimate from its dimensions; inject an unretained marker to measure it.`,
     ),
+    m.buffer && BUFFERS[m.buffer] && !buffers(BUFFERS[m.buffer]!, m.pH) ? h("p", { class: "note warn" }, `pH ${m.pH} is outside the range where ${BUFFERS[m.buffer]!.name.toLowerCase()} buffers. The pH at the column will not be well controlled.`) : null,
     h("div", { class: "row" }, h("button", { type: "button", class: "small", onClick: () => { app.method = structuredClone(c.defaultMethod); app.refresh(); } }, "Reset to starting method")),
   );
 }
@@ -343,6 +354,7 @@ const MODULE_FIELD: Record<ModuleId, { label: string; field: string }> = {
   sampler: { label: "Autosampler", field: "f-injection-l" },
   oven: { label: "Column oven", field: "f-column" },
   detector: { label: "Detector", field: "f-type" },
+  solvents: { label: "Solvents", field: "f-solvent-a-ph" },
 };
 
 const clamp = (v: number, lo: number, hi: number): number => Math.min(hi, Math.max(lo, v));
@@ -374,6 +386,10 @@ function readoutOf(app: App): Readout {
     detectorValue: m.detector.kind === "uv" ? m.detector.nm : m.detector.mz,
     detector: m.detector.kind === "uv" ? `UV ${m.detector.nm} nm` : `MS ${m.detector.polarity === "pos" ? "+" : "-"} m/z ${m.detector.mz}`,
     signal: faults.length ? "NOT READY" : "READY",
+    pH: m.pH,
+    buffer: BUFFERS[m.buffer ?? ""]?.short ?? "ACIDIFIED WATER",
+    bufferHolds: !m.buffer || !BUFFERS[m.buffer] || buffers(BUFFERS[m.buffer]!, m.pH),
+    organic: m.modifier === "MeCN" ? "ACETONITRILE" : "METHANOL",
   };
 }
 
@@ -386,6 +402,7 @@ function turnKnob(app: App, knob: KnobId, detents: number): void {
   if (knob === "flow") m.flowMlMin = snap(clamp(m.flowMlMin + detents * (m.flowMlMin < 1 ? 0.02 : 0.1), 0.02, 10), 0.01);
   else if (knob === "inj") m.injUl = snap(clamp(m.injUl + detents * 0.5, 0.5, 100), 0.5);
   else if (knob === "temp") m.tempC = clamp(Math.round(m.tempC + detents), 5, 100);
+  else if (knob === "ph") m.pH = snap(clamp(m.pH + detents * app.lab.case.pH.step, app.lab.case.pH.min, app.lab.case.pH.max), app.lab.case.pH.step);
   else if (knob === "detect") {
     if (m.detector.kind === "uv") m.detector.nm = clamp(Math.round(m.detector.nm + detents), 200, 400);
     else m.detector.mz = clamp(Math.round(m.detector.mz + detents), 50, 1500);
@@ -414,6 +431,9 @@ function pressButton(app: App, button: ButtonId): void {
   else if (button === "col-prev" || button === "col-next") {
     const i = Math.max(0, c.columns.indexOf(m.columnId));
     m.columnId = c.columns[(i + (button === "col-next" ? 1 : c.columns.length - 1)) % c.columns.length]!;
+  } else if (button === "buffer-next") {
+    const i = Math.max(0, c.buffers.indexOf(m.buffer ?? ""));
+    m.buffer = c.buffers[(i + 1) % c.buffers.length]!;
   } else if (button === "det-mode") {
     m.detector = m.detector.kind === "uv" ? { kind: "ms", mz: 300, polarity: "pos", rateHz: Math.min(m.detector.rateHz, 5) } : { kind: "uv", nm: 280, rateHz: m.detector.rateHz };
   }

@@ -1,4 +1,5 @@
 import { hashString } from "../../engine/rng.ts";
+import { BUFFERS } from "../../engine/tunables.ts";
 import { suitability } from "../../lab/analysis.ts";
 import { describeSpec } from "../../lab/samples.ts";
 import { methodKey } from "../../lab/session.ts";
@@ -100,7 +101,7 @@ export function reportView(app: App): HTMLElement {
           {},
           h("tbody", {}, [
             ["Column", `${col.name}, ${col.chemistry}, ${col.lengthMm} x ${col.idMm} mm, ${col.particleUm} um`],
-            ["Mobile phase", `A: water at pH ${m.pH}. B: ${m.modifier === "MeCN" ? "acetonitrile" : "methanol"}`],
+            ["Mobile phase", `A: ${m.buffer && BUFFERS[m.buffer] ? BUFFERS[m.buffer]!.name.toLowerCase() : "acidified water"}, pH ${m.pH}. B: ${m.modifier === "MeCN" ? "acetonitrile" : "methanol"}`],
             ["Programme", m.program.map((p) => `${p.t} min ${Math.round(p.phi * 1000) / 10}% B`).join("; ")],
             ["Flow, temperature", `${m.flowMlMin} mL/min, ${m.tempC} °C`],
             ["Injection, run time", `${m.injUl} µL, ${m.runTimeMin} min`],

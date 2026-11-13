@@ -61,6 +61,8 @@ export interface CaseDef {
   recovery: [number, number];
   columns: string[];
   modifiers: Modifier[];
+  /** Buffers offered for solvent A (keys of BUFFERS in the engine). */
+  buffers: string[];
   pH: { min: number; max: number; step: number; note: string };
   reactions: Reaction[];
   variants: Variant[];

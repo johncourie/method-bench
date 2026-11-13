@@ -80,3 +80,33 @@ export const UV_FLICKER_RATIO = 2.5;
 export const UV_FLICKER_TAU_MIN = 0.07;
 /** Size of the unretained solvent disturbance at 200 nm, mAU min per uL injected per unit composition mismatch. Assumed. */
 export const SOLVENT_FRONT_MAU_MIN_PER_UL = 0.06;
+
+/**
+ * Buffers for the aqueous solvent A. The pKa values, the rule of thumb that a buffer holds pH
+ * within about one unit of its pKa, and the fact that phosphate is not volatile are textbook
+ * chemistry. The UV figures (absorbance of the buffered solvent against water at nm0, falling
+ * off with width w, mAU in a 1 cm cell) are typical magnitudes, assumed. The buffer changes
+ * nothing about retention here except through the pH it does or does not hold.
+ */
+export interface Buffer {
+  id: string;
+  name: string;
+  short: string;
+  /** pH ranges over which it buffers usefully. */
+  ranges: Array<[number, number]>;
+  volatile: boolean;
+  uv: { a: number; nm0: number; w: number };
+}
+export const BUFFERS: Record<string, Buffer> = {
+  formate: { id: "formate", name: "Formic acid with ammonium formate", short: "FORMATE", ranges: [[2.5, 4.75]], volatile: true, uv: { a: 140, nm0: 205, w: 8 } },
+  acetate: { id: "acetate", name: "Acetic acid with ammonium acetate", short: "ACETATE", ranges: [[3.8, 5.8]], volatile: true, uv: { a: 110, nm0: 205, w: 7 } },
+  phosphate: { id: "phosphate", name: "Phosphoric acid with potassium phosphate", short: "PHOSPHATE", ranges: [[1.5, 3.1], [6.2, 8.2]], volatile: false, uv: { a: 6, nm0: 200, w: 5 } },
+};
+/** Run-to-run standard deviation of the pH of solvent A, inside and outside the buffer's range. Assumed. */
+export const PH_SD_BUFFERED = 0.01;
+export const PH_SD_UNBUFFERED = 0.12;
+
+/** Whether a buffer holds the given pH. */
+export function buffers(b: Buffer, pH: number): boolean {
+  return b.ranges.some(([lo, hi]) => pH >= lo - 1e-9 && pH <= hi + 1e-9);
+}

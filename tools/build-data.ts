@@ -574,6 +574,7 @@ const cases: CaseDef[] = [
     recovery: [0.93, 0.99],
     columns: ["gt-c18-spp4", "gt-c18-fpp35", "gt-c18-fpp17", "gt-pfp-spp4", "gt-pfp-spp19"],
     modifiers: ["MeCN"],
+    buffers: ["formate", "phosphate", "acetate"],
     pH: { min: 2, max: 7, step: 0.1, note: "Before mixing with solvent B." },
     reactions: gtReactions,
     variants: [
@@ -584,7 +585,7 @@ const cases: CaseDef[] = [
     ],
     ratios: [{ label: "EGCG to caffeine", num: "egcg", den: "caf" }, { label: "EGCG to ECG", num: "egcg", den: "ecg" }],
     totals: [{ label: "Total catechins (sum of eight)", terms: ["gc", "egc", "c", "ec", "egcg", "gcg", "ecg", "cg"].map((id) => ({ id, factor: 1 })) }],
-    defaultMethod: { columnId: "gt-c18-spp4", modifier: "MeCN", pH: 2.7, tempC: GT_START.tempC, flowMlMin: GT_START.flow, program: GT_START.program, runTimeMin: 35, injUl: 5, detector: uv(280) },
+    defaultMethod: { columnId: "gt-c18-spp4", modifier: "MeCN", pH: 2.7, buffer: "formate", tempC: GT_START.tempC, flowMlMin: GT_START.flow, program: GT_START.program, runTimeMin: 35, injUl: 5, detector: uv(280) },
     diluentPhi: 0.05,
   },
   {
@@ -600,7 +601,8 @@ const cases: CaseDef[] = [
     recovery: [0.92, 0.99],
     columns: ["cb-c18", "cb-c18sp", "cb-carb", "cb-amide"],
     modifiers: ["MeCN"],
-    pH: { min: 2.5, max: 4.5, step: 0.05, note: "Formic acid with ammonium formate, before mixing." },
+    buffers: ["formate", "acetate", "phosphate"],
+    pH: { min: 2.5, max: 5.5, step: 0.05, note: "Before mixing with solvent B. Retention data covers pH 3.0 to 3.8." },
     reactions: cbReactions,
     variants: [
       { id: "clean", label: "Lot as submitted. Nothing unusual." },
@@ -613,7 +615,7 @@ const cases: CaseDef[] = [
       { label: "Total THC = d9-THC + 0.877 x THCA", terms: [{ id: "d9thc", factor: 1 }, { id: "thca", factor: 0.877 }], limit: { kind: "max", mgPerG: 3, text: "limit 3 mg/g (0.3%)" } },
       { label: "Total CBD = CBD + 0.877 x CBDA", terms: [{ id: "cbd", factor: 1 }, { id: "cbda", factor: 0.877 }] },
     ],
-    defaultMethod: { columnId: "cb-c18", modifier: "MeCN", pH: 3.0, tempC: 30, flowMlMin: 0.3, program: [{ t: 0, phi: 0.7 }], runTimeMin: 20, injUl: 3, detector: uv(230) },
+    defaultMethod: { columnId: "cb-c18", modifier: "MeCN", pH: 3.0, buffer: "formate", tempC: 30, flowMlMin: 0.3, program: [{ t: 0, phi: 0.7 }], runTimeMin: 20, injUl: 3, detector: uv(230) },
     diluentPhi: 0.8,
   },
 ];

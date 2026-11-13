@@ -8,7 +8,7 @@ import { mobilePhaseAbsorbance } from "./mobilephase.ts";
 import { emg } from "./peakshape.ts";
 import { dLnKdPhi, retentionFactor, type KContext } from "./retention.ts";
 import { makeRng } from "./rng.ts";
-import { FLOW_RSD, INJECTION_RSD, MS_BACKGROUND, MS_COUNTS_PER_PMOL, MS_SATURATION_CPS, MS_SOURCE_RSD, MS_WINDOW_DA, OVEN_SD_C, SATURATION_MG_150x46, SOLVENT_FRONT_MAU_MIN_PER_UL, UV_FLICKER_RATIO, UV_FLICKER_TAU_MIN } from "./tunables.ts";
+import { BUFFERS, buffers, FLOW_RSD, INJECTION_RSD, PH_SD_BUFFERED, PH_SD_UNBUFFERED, MS_BACKGROUND, MS_COUNTS_PER_PMOL, MS_SATURATION_CPS, MS_SOURCE_RSD, MS_WINDOW_DA, OVEN_SD_C, SATURATION_MG_150x46, SOLVENT_FRONT_MAU_MIN_PER_UL, UV_FLICKER_RATIO, UV_FLICKER_TAU_MIN } from "./tunables.ts";
 
 /** Molar absorptivity of a solute at a wavelength, L mol^-1 cm^-1. */
 export function epsilonAt(s: Solute, nm: number): number {
@@ -55,6 +55,9 @@ export function methodFaults(method: Method, instrument: Instrument, column: Col
   if (!within(method.injUl, 0.01, 500)) faults.push("Injection volume must lie between 0.01 and 500 \u00b5L.");
   if (!within(method.tempC, 5, 100)) faults.push("Column temperature must lie between 5 and 100 \u00b0C.");
   if (!within(method.detector.rateHz, 0.5, 100)) faults.push("Data rate must lie between 0.5 and 100 Hz.");
+  const buffer = method.buffer ? BUFFERS[method.buffer] : undefined;
+  if (method.buffer && !buffer) faults.push("Unknown buffer.");
+  if (buffer && !buffer.volatile && method.detector.kind === "ms") faults.push(`${buffer.name} is not volatile and must not go to a mass detector. Choose a volatile buffer or the UV detector.`);
   if (faults.length > 0) return faults;
   const pLimit = Math.min(instrument.pMaxBar, column.pMaxBar);
   let pMax = 0;
@@ -166,7 +169,12 @@ export function simulateRun(input: RunInput): RunResult {
   // Run-to-run pump and oven variation: what makes replicate retention times scatter.
   const jitter = input.injRsd === 0 ? 1 : 1 + FLOW_RSD * rng.gauss();
   const tempShift = input.injRsd === 0 ? 0 : OVEN_SD_C * rng.gauss();
-  input = { ...input, method: { ...method, flowMlMin: method.flowMlMin * jitter, tempC: method.tempC + tempShift } };
+  // A buffer used outside its range does not hold pH, so the pH that reaches the column wanders from run to run.
+  const buffer = method.buffer ? BUFFERS[method.buffer] : undefined;
+  const setPh = method.pH;
+  const held = !buffer || buffers(buffer, setPh);
+  const pHShift = input.injRsd === 0 || !buffer ? 0 : (held ? PH_SD_BUFFERED : PH_SD_UNBUFFERED) * rng.gauss();
+  input = { ...input, method: { ...method, flowMlMin: method.flowMlMin * jitter, tempC: method.tempC + tempShift, pH: method.pH + pHShift } };
   method = input.method;
   const bands = computeBands(input, injFactor);
   const det = method.detector;
@@ -228,7 +236,7 @@ export function simulateRun(input: RunInput): RunResult {
       signal[i]! += (front / (sFront * 2.5066)) * (Math.exp(-0.5 * (z - 0.6) ** 2) - 0.7 * Math.exp(-0.5 * (z + 0.9) ** 2));
     }
     // Mobile-phase background follows the programme, delayed by dwell and dead time, zeroed at injection.
-    const base0 = mobilePhaseAbsorbance(method.modifier, phiStart, det.nm) * instrument.pathCm;
+    const base0 = mobilePhaseAbsorbance(method.modifier, phiStart, det.nm, method.buffer) * instrument.pathCm;
     const noise = instrument.uvNoiseMau * Math.sqrt(det.rateHz);
     // Slow baseline noise (lamp, flow cell, pump ripple): a first-order process with a few seconds' memory.
     const keep = Math.exp(-dt / UV_FLICKER_TAU_MIN);
@@ -239,7 +247,7 @@ export function simulateRun(input: RunInput): RunResult {
     const baseAu = -Math.log10((Math.pow(10, -base0 / 1000) + s) / (1 + s));
     for (let i = 0; i < n; i++) {
       const phi = programPhi(method.program, time[i]! - tD - t0);
-      const background = mobilePhaseAbsorbance(method.modifier, phi, det.nm) * instrument.pathCm;
+      const background = mobilePhaseAbsorbance(method.modifier, phi, det.nm, method.buffer) * instrument.pathCm;
       const ideal = signal[i]! + background - base0;
       // Stray light bends the response at high total absorbance.
       const totalAu = (ideal + base0) / 1000;
@@ -266,6 +274,7 @@ export function simulateRun(input: RunInput): RunResult {
     if (saturated) warnings.push("The ion signal is high enough for the mass detector to saturate. Response is no longer proportional to amount.");
   }
 
+  if (buffer && !held) warnings.push(`pH ${setPh} is outside the range where ${buffer.name.toLowerCase()} buffers. The pH at the column is not well controlled, and retention of ionizable compounds will wander between runs.`);
   // The engine treats the injection as a plug that is focused or broadened at the column head.
   // It does not follow analyte travelling inside a large plug of strong solvent.
   const v0 = deadVolumeMl(column);

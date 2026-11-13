@@ -1,7 +1,7 @@
 // Mobile-phase physical properties. docs/MODEL.md section 5.
 
 import type { Modifier } from "./types.ts";
-import { MODIFIER_UV, SOLVENT, T0_K, VISCOSITY } from "./tunables.ts";
+import { BUFFERS, MODIFIER_UV, SOLVENT, T0_K, VISCOSITY } from "./tunables.ts";
 
 /** Viscosity of a water-organic mixture, cP. */
 export function viscosityCp(modifier: Modifier, phi: number, tempC: number): number {
@@ -30,7 +30,10 @@ export function associationTerm(modifier: Modifier, phi: number): number {
 }
 
 /** Background absorbance of the mobile phase against water, mAU per cm. */
-export function mobilePhaseAbsorbance(modifier: Modifier, phi: number, nm: number): number {
+export function mobilePhaseAbsorbance(modifier: Modifier, phi: number, nm: number, buffer?: string): number {
   const m = MODIFIER_UV[modifier];
-  return phi * m.a * Math.exp(-(nm - m.nm0) / m.w);
+  const b = buffer ? BUFFERS[buffer] : undefined;
+  // The buffer is in solvent A only, so its contribution falls as % B rises.
+  const aqueous = b ? (1 - phi) * b.uv.a * Math.exp(-(nm - b.uv.nm0) / b.uv.w) : 0;
+  return phi * m.a * Math.exp(-(nm - m.nm0) / m.w) + aqueous;
 }

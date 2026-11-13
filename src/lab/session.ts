@@ -46,7 +46,7 @@ const keyCache = new WeakMap<Method, string>();
 export function methodKey(m: Method): string {
   let k = keyCache.get(m);
   if (k === undefined) {
-    k = JSON.stringify([m.columnId, m.modifier, m.pH, m.tempC, m.flowMlMin, m.program, m.runTimeMin, m.detector]);
+    k = JSON.stringify([m.columnId, m.modifier, m.pH, m.buffer ?? "", m.tempC, m.flowMlMin, m.program, m.runTimeMin, m.detector]);
     keyCache.set(m, k);
   }
   return k;
@@ -227,6 +227,9 @@ function checkMethod(m: unknown, c: CaseDef, catalog: Catalog, what: string): vo
   if (!isObj(m)) throw new Error(`${what} has no method.`);
   if (typeof m.columnId !== "string" || !catalog.columns.has(m.columnId)) throw new Error(`${what} uses a column this version does not have.`);
   if (!c.modifiers.includes(m.modifier as never)) throw new Error(`${what} uses a solvent this case does not have.`);
+  // Notebooks saved before buffers existed take the case's usual buffer.
+  if (m.buffer === undefined) m.buffer = c.defaultMethod.buffer;
+  if (m.buffer !== undefined && (typeof m.buffer !== "string" || !c.buffers.includes(m.buffer))) throw new Error(`${what} uses a buffer this case does not have.`);
   if (!isNum(m.pH, 0, 14) || !isNum(m.tempC, L.tempC[0], L.tempC[1]) || !isNum(m.flowMlMin, L.flow[0], L.flow[1]) || !isNum(m.runTimeMin, L.runTime[0], L.runTime[1]) || !isNum(m.injUl, L.inj[0], L.inj[1])) throw new Error(`${what} has a method setting out of range.`);
   if (!Array.isArray(m.program) || m.program.length < 1 || m.program.length > L.steps) throw new Error(`${what} has a bad gradient table.`);
   for (const p of m.program) if (!isObj(p) || !isNum(p.t, 0, 1e4) || !isNum(p.phi, 0, 1)) throw new Error(`${what} has a bad gradient table.`);

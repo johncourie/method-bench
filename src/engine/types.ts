@@ -137,6 +137,8 @@ export interface Method {
   modifier: Modifier;
   /** pH of the aqueous component before mixing. */
   pH: number;
+  /** Buffer in the aqueous component (a key of BUFFERS). Absent means plain acidified water with no buffer effects. */
+  buffer?: string;
   tempC: number;
   flowMlMin: number;
   /** Piecewise-linear programme; a single point or equal phis means isocratic. */

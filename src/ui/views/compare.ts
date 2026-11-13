@@ -1,6 +1,7 @@
 // Compare runs: chromatograms overlaid or spread into a waterfall, coloured by a
 // variable of the student's choosing. The table carries the same information as text.
 
+import { BUFFERS } from "../../engine/tunables.ts";
 import { describeSpec } from "../../lab/samples.ts";
 import type { RunRecord } from "../../lab/types.ts";
 import type { App } from "../app.ts";
@@ -9,12 +10,13 @@ import { CATEGORICAL, ramp } from "../three/common.ts";
 import { Waterfall, type Trace } from "../three/waterfall.ts";
 import { methodSummary } from "./instrument.ts";
 
-export type ColourBy = "run" | "sample" | "column" | "temp" | "ph" | "flow" | "tg" | "phi0" | "inj";
+export type ColourBy = "run" | "sample" | "column" | "buffer" | "temp" | "ph" | "flow" | "tg" | "phi0" | "inj";
 
 const CHOICES: ReadonlyArray<{ value: ColourBy; label: string; numeric: boolean; of: (app: App, r: RunRecord) => number | string; unit: string }> = [
   { value: "run", label: "Run", numeric: false, of: (_a, r) => `Run ${r.id}`, unit: "" },
   { value: "sample", label: "Kind of sample", numeric: false, of: (_a, r) => (r.spec.kind === "blank" ? "Blank" : r.spec.stress ? "Stressed" : r.spec.kind === "standard" ? "Standard" : Object.values(r.spec.spike ?? {}).some((v) => v > 0) ? "Spiked sample" : "Sample"), unit: "" },
   { value: "column", label: "Column", numeric: false, of: (a, r) => a.catalog.columns.get(r.method.columnId)?.name ?? r.method.columnId, unit: "" },
+  { value: "buffer", label: "Buffer", numeric: false, of: (_a, r) => BUFFERS[r.method.buffer ?? ""]?.name ?? "None", unit: "" },
   { value: "temp", label: "Column temperature", numeric: true, of: (_a, r) => r.method.tempC, unit: "°C" },
   { value: "ph", label: "Solvent A pH", numeric: true, of: (_a, r) => r.method.pH, unit: "" },
   { value: "flow", label: "Flow", numeric: true, of: (_a, r) => r.method.flowMlMin, unit: "mL/min" },

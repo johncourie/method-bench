@@ -119,6 +119,7 @@ export function robustness(app: App, soluteId: string): Varied[] {
     const diffs: string[] = [];
     if (r.method.tempC !== m.tempC) diffs.push(`temperature ${r.method.tempC} °C`);
     if (r.method.pH !== m.pH) diffs.push(`pH ${r.method.pH}`);
+    if ((r.method.buffer ?? "") !== (m.buffer ?? "")) diffs.push(`buffer ${r.method.buffer ?? "none"}`);
     if (r.method.flowMlMin !== m.flowMlMin) diffs.push(`flow ${r.method.flowMlMin} mL/min`);
     if (JSON.stringify(r.method.program) !== JSON.stringify(m.program)) diffs.push("gradient or % B");
     if (diffs.length !== 1) continue;

@@ -55,6 +55,8 @@ Diffusion: Wilke-Chang, `D = 7.4e-8 sqrt(psi M) T / (eta V^0.6)` in cm2/s. **Sec
 
 Background absorbance of solvent B: an exponential tail from the UV cutoff. **Heuristic**.
 
+Buffers in solvent A (`BUFFERS` in `src/engine/tunables.ts`): formate, acetate and phosphate, each with the pH ranges it buffers (about one unit either side of a pKa: 3.75, 4.76, and 2.15 and 7.20), a low-wavelength absorbance, and whether it is volatile. **Standard** for the pKa values, the one-unit rule and the non-volatility of phosphate; **heuristic** for the absorbance magnitudes and for the run-to-run pH scatter (0.01 inside the range, 0.12 outside). Three effects follow: a method that sends phosphate to the mass detector is refused; outside the buffer's range the pH at the column wanders between runs, which shows as irreproducible retention of ionizable compounds; and because the buffer is in A only, a gradient at low wavelength drifts downward as A is replaced. The buffer has no other effect on retention: buffer-specific selectivity and ionic strength are not modelled.
+
 ## 6. Efficiency and pressure
 
 Reduced van Deemter, `h = A + B/nu + C nu`, `nu = u_e d_p / D_m`. **Standard**. Coefficients are typical values by particle class (fully porous 1.0, 2.5, 0.08; superficially porous 0.7, 2.0, 0.05); no open coefficient set for superficially porous particles was found. The superficially porous coefficients, the peak-tailing spread and the HPLC's extra-column term were then adjusted so that plate numbers measured from the simulated peak table (5.54 (tR / w_h)^2) fall within about 10% of the seven published values for neutral cannabinoids on the C18 column (Owolabi 2025, Supplementary Table S4). That is calibration to one table, not a prediction.

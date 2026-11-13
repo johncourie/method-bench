@@ -54,7 +54,7 @@ export class App {
   fitPlates = 10000;
   map = { ...DEFAULT_MAP };
   /** Compare runs: which runs, what colour stands for, and how far apart the traces sit. */
-  compare: { runs: Set<number>; touched: boolean; by: "run" | "sample" | "column" | "temp" | "ph" | "flow" | "tg" | "phi0" | "inj"; spacing: number; normalise: boolean } = { runs: new Set(), touched: false, by: "run", spacing: 0.5, normalise: false };
+  compare: { runs: Set<number>; touched: boolean; by: "run" | "sample" | "column" | "buffer" | "temp" | "ph" | "flow" | "tg" | "phi0" | "inj"; spacing: number; normalise: boolean } = { runs: new Set(), touched: false, by: "run", spacing: 0.5, normalise: false };
   /** Whether the instrument drawing is shown. */
   showBench = true;
   instructorCodes = "";

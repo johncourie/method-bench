@@ -12,9 +12,9 @@
 import type * as Three from "three";
 import { drawText, loadThree, reducedMotion, textCanvas, type ThreeModule } from "./common.ts";
 
-export type ModuleId = "pump" | "sampler" | "oven" | "detector";
-export type KnobId = "flow" | "bStart" | "bEnd" | "gradTime" | "inj" | "temp" | "detect";
-export type ButtonId = "inject" | "vial-blank" | "vial-standard" | "vial-unknown" | "col-prev" | "col-next" | "det-mode";
+export type ModuleId = "pump" | "sampler" | "oven" | "detector" | "solvents";
+export type KnobId = "flow" | "bStart" | "bEnd" | "gradTime" | "inj" | "temp" | "detect" | "ph";
+export type ButtonId = "inject" | "vial-blank" | "vial-standard" | "vial-unknown" | "col-prev" | "col-next" | "det-mode" | "buffer-next";
 
 export interface Readout {
   flow: number;
@@ -34,6 +34,12 @@ export interface Readout {
   detectorValue: number;
   detector: string;
   signal: string;
+  /** Solvent A: its pH, its buffer, and whether that buffer holds that pH. */
+  pH: number;
+  buffer: string;
+  bufferHolds: boolean;
+  /** Solvent B. */
+  organic: string;
 }
 
 /** One moment of a run being replayed on the panels. */
@@ -72,6 +78,7 @@ const MODULES: Array<{ id: ModuleId; label: string; height: number }> = [
   { id: "sampler", label: "AUTOSAMPLER", height: 1.45 },
   { id: "oven", label: "COLUMN OVEN", height: 1.45 },
   { id: "detector", label: "DETECTOR", height: 1.15 },
+  { id: "solvents", label: "SOLVENTS", height: 1.0 },
 ];
 const W = 4.4;
 const D = 3;
@@ -236,12 +243,13 @@ export class Bench {
         this.button("det-mode", L + 0.55, ky - 0.02, 0.62, 0.26, "UV / MS", "Switch between the UV and the mass detector");
         this.knob("detect", L + 1.55, ky, "nm | m/z", 0, 1, (r) => (r.detectorKind === "uv" ? (r.detectorValue - 200) / 200 : (r.detectorValue - 100) / 500), "Wavelength or selected ion");
       }
+      if (m.id === "solvents") {
+        this.knob("ph", L + 0.45, ky - 0.11, "pH OF A", 2, 8, (r) => r.pH, "pH of solvent A");
+        this.button("buffer-next", L + 1.45, ky - 0.11, 0.8, 0.26, "BUFFER ›", "Change the buffer in solvent A");
+      }
       y += m.height;
     }
-    // Solvent tray with two reservoirs, and a waste bottle beside the stack.
-    const tray = new T.Mesh(new T.BoxGeometry(W, 0.12, D), body);
-    tray.position.set(0, y + 0.06, 0);
-    this.scene.add(tray);
+    // Two reservoirs on the solvent module, and a waste bottle beside the stack.
     const bottle = (x: number, z: number, base: number, glass: number, liquid: number, text: string): void => {
       const g = new T.Mesh(new T.CylinderGeometry(0.42, 0.42, 1.1, 24), new T.MeshStandardMaterial({ color: glass, transparent: true, opacity: 0.35, roughness: 0.1 }));
       g.position.set(x, base + 0.55, z);
@@ -252,9 +260,11 @@ export class Bench {
       const tag = new T.Mesh(new T.PlaneGeometry(0.62, 0.3), new T.MeshBasicMaterial({ map: new T.CanvasTexture(textCanvas([text], { w: 256, h: 124, bg: "#ffffff", fg: "#14181f", font: "700 84px system-ui, sans-serif", align: "center" })) }));
       tag.position.set(x, base + 0.5, z + 0.43);
       this.scene.add(l, g, cap, tag);
+      // Selecting a reservoir looks at the solvent module, where its controls are.
+      if (text !== "WASTE") for (const part of [g, l, tag]) this.bodies.set(part, "solvents");
     };
-    bottle(-1, 0.4, y + 0.12, 0xdff3ff, 0x9fd0ea, "A");
-    bottle(0.9, 0.4, y + 0.12, 0xe9d2a0, 0xf2e6c4, "B");
+    bottle(-1, 0.4, y, 0xdff3ff, 0x9fd0ea, "A");
+    bottle(0.9, 0.4, y, 0xe9d2a0, 0xf2e6c4, "B");
     bottle(W / 2 + 0.9, 0.6, 0, 0xdddddd, 0xc9c2a8, "WASTE");
     const table = new T.Mesh(new T.BoxGeometry(9, 0.1, 5), new T.MeshStandardMaterial({ color: 0x8d949c, roughness: 0.9 }));
     table.position.set(0.6, -0.05, 0);
@@ -344,7 +354,7 @@ export class Bench {
     } else {
       // Far enough back for the whole stack, reservoirs included, at any shape of view.
       const pull = Math.max(1, 1.9 / wide);
-      this.goal = { pos: [5.6 * pull, 5.0, 13.6 * pull], look: [0.5, 3.25, 0] };
+      this.goal = { pos: [6.0 * pull, 5.6, 15.4 * pull], look: [0.5, 3.75, 0] };
     }
     this.el.dispatchEvent(new CustomEvent("framed", { detail: module }));
     if (this.fly !== null) cancelAnimationFrame(this.fly);
@@ -414,7 +424,7 @@ export class Bench {
     }
     this.renderer.domElement.setAttribute(
       "aria-label",
-      `Drawing of a generic liquid chromatograph that can be operated with a pointer: solvent reservoirs A and B, pump at ${r.flow} mL/min and ${r.pctB.toFixed(0)}% B, autosampler set to ${r.injUl} µL, column oven at ${r.tempC} °C holding the ${r.column.name} column, and the detector at ${r.detector}. Every control on it is also in the form below.`,
+      `Drawing of a generic liquid chromatograph that can be operated with a pointer: solvent reservoirs A and B, pump at ${r.flow} mL/min and ${r.pctB.toFixed(0)}% B, autosampler set to ${r.injUl} µL, column oven at ${r.tempC} °C holding the ${r.column.name} column, and the detector at ${r.detector}. Solvent A is ${r.buffer.toLowerCase()} at pH ${r.pH}. Every control on it is also in the form below.`,
     );
     this.draw();
   }
@@ -435,6 +445,7 @@ export class Bench {
     set("sampler", [`INJ ${r.injUl} µL`, r.sample.slice(0, 20)]);
     set("oven", [`${r.tempC.toFixed(1)} °C`, `${r.column.lengthMm} x ${r.column.idMm} mm`, `COLUMN ${r.column.index + 1} OF ${r.column.count}`]);
     set("detector", [r.detector, f?.signal ?? r.signal]);
+    set("solvents", [`A ${r.buffer} pH ${r.pH.toFixed(2)}`, r.bufferHolds ? `B ${r.organic}` : "pH OUTSIDE BUFFER RANGE"], r.bufferHolds ? fg : warn);
   }
 
   /** Replay a finished run on the front panels over a few seconds. */

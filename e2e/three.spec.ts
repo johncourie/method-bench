@@ -39,6 +39,26 @@ test("the instrument drawing can be operated, and stays in step with the form", 
   expect((await method(page)).flowMlMin).toBe(0.3);
   await page.screenshot({ path: "e2e/shots/three-pump.png" });
 
+  // Solvents: selecting reservoir controls, changing the buffer and the pH of solvent A.
+  await page.getByRole("button", { name: "Solvents", exact: true }).click();
+  p = await at(page, "buffer-next");
+  await page.mouse.click(p.x, p.y);
+  await expect(page.getByLabel("Solvent A buffer")).toHaveValue("acetate");
+  // Acetate does not buffer at pH 3: the form says so, and the panel shows it.
+  await expect(page.getByText(/outside the range where acetic acid with ammonium acetate buffers/)).toBeVisible();
+  p = await at(page, "ph");
+  await page.mouse.move(p.x, p.y);
+  for (let i = 0; i < 20; i++) await page.mouse.wheel(0, -100);
+  await expect(page.getByLabel("Solvent A pH")).toHaveValue("4");
+  await expect(page.getByText(/outside the range where/)).toHaveCount(0);
+  await page.screenshot({ path: "e2e/shots/three-solvents.png" });
+  for (let i = 0; i < 20; i++) await page.mouse.wheel(0, 100);
+  p = await at(page, "buffer-next");
+  await page.mouse.click(p.x, p.y);
+  await page.mouse.click(p.x, p.y);
+  await expect(page.getByLabel("Solvent A buffer")).toHaveValue("formate");
+  await expect(page.getByLabel("Solvent A pH")).toHaveValue("3");
+
   // Oven: scroll the temperature knob up three detents, then change column.
   await page.getByRole("button", { name: "Column oven", exact: true }).click();
   p = await at(page, "temp");
