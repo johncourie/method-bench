@@ -146,7 +146,7 @@ test("fit two scouting gradients, predict a third method, and confirm it by inje
   const fitted = page.locator("table", { hasText: "Fitted model" });
   await expect(fitted.locator("tbody tr")).toHaveCount(9);
   await expect(page.getByRole("group", { name: "Critical resolution map" }).getByRole("button")).toHaveCount(70);
-  await page.screenshot({ path: "e2e/shots/03-model.png", fullPage: true });
+  await page.screenshot({ path: "e2e/shots/03-model.png", fullPage: true }).catch(() => undefined); // a picture for review, never a reason to fail
   // Load a cell from the map, inject it, and compare prediction with observation.
   await page.locator("#map-2-4").click();
   await page.getByRole("tab", { name: "Instrument" }).click();
@@ -185,7 +185,7 @@ for (const width of [1280, 390]) {
         expect(overflow.by, `${tab} overflows at ${width}: ${overflow.who.join(", ")}`).toBeLessThanOrEqual(1);
         const axe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
         expect(axe.violations.map((v) => `${tab}/${theme}: ${v.id} (${v.nodes.length}) ${v.nodes[0]?.target}`), `${tab} ${theme}`).toEqual([]);
-        if (theme === "light" || tab === "instrument") await page.screenshot({ path: `e2e/shots/${width}-${theme}-${tab}.png`, fullPage: true });
+        if (theme === "light" || tab === "instrument") await page.screenshot({ path: `e2e/shots/${width}-${theme}-${tab}.png`, fullPage: true }).catch(() => undefined); // a picture for review, never a reason to fail
       }
     }
   });

@@ -37,7 +37,7 @@ test("the instrument drawing can be operated, and stays in step with the form", 
   await page.getByLabel("Flow, mL/min").fill("0.3");
   await page.getByLabel("Flow, mL/min").press("Tab");
   expect((await method(page)).flowMlMin).toBe(0.3);
-  await page.screenshot({ path: "e2e/shots/three-pump.png" });
+  await page.screenshot({ path: "e2e/shots/three-pump.png" }).catch(() => undefined); // a picture for review, never a reason to fail
 
   // Solvents: selecting reservoir controls, changing the buffer and the pH of solvent A.
   await page.getByRole("button", { name: "Solvents", exact: true }).click();
@@ -51,7 +51,7 @@ test("the instrument drawing can be operated, and stays in step with the form", 
   for (let i = 0; i < 20; i++) await page.mouse.wheel(0, -100);
   await expect(page.getByLabel("Solvent A pH")).toHaveValue("4");
   await expect(page.getByText(/outside the range where/)).toHaveCount(0);
-  await page.screenshot({ path: "e2e/shots/three-solvents.png" });
+  await page.screenshot({ path: "e2e/shots/three-solvents.png" }).catch(() => undefined); // a picture for review, never a reason to fail
   for (let i = 0; i < 20; i++) await page.mouse.wheel(0, 100);
   p = await at(page, "buffer-next");
   await page.mouse.click(p.x, p.y);
@@ -86,9 +86,9 @@ test("the instrument drawing can be operated, and stays in step with the form", 
   await page.mouse.click(p.x, p.y);
   await expect(page.getByRole("heading", { name: "Chromatogram, run 1" })).toBeVisible();
   await expect(page.locator("table", { hasText: "Run" }).last()).toContainText("Blank (diluent)");
-  await page.screenshot({ path: "e2e/shots/three-sampler.png" });
+  await page.screenshot({ path: "e2e/shots/three-sampler.png" }).catch(() => undefined); // a picture for review, never a reason to fail
   await page.getByRole("button", { name: "Whole instrument" }).click();
-  await page.screenshot({ path: "e2e/shots/three-bench.png" });
+  await page.screenshot({ path: "e2e/shots/three-bench.png" }).catch(() => undefined); // a picture for review, never a reason to fail
 
   // The form route still reaches every setting, and the drawing can be put away.
   await page.getByRole("button", { name: "Pump settings in the form" }).click();
@@ -117,7 +117,7 @@ test("run comparison draws, and its table carries the same information", async (
   await expect(page.locator("table", { hasText: "Traces shown" }).locator("tbody tr")).toHaveCount(3);
   await expect(page.locator("table", { hasText: "Traces shown" })).toContainText("60 % B");
   await page.waitForTimeout(500);
-  await page.screenshot({ path: "e2e/shots/three-compare.png", fullPage: true });
+  await page.screenshot({ path: "e2e/shots/three-compare.png", fullPage: true }).catch(() => undefined); // a picture for review, never a reason to fail
   expect(errors).toEqual([]);
 });
 
@@ -136,12 +136,12 @@ test("moving parts: the needle samples, the run replays with flow, and the oven 
   await expect.poll(async () => (await motion()).needleBusy, { timeout: 3000 }).toBe(true);
   await expect.poll(async () => (await motion()).replaying, { timeout: 3000 }).toBe(true);
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: "e2e/shots/three-running.png" });
+  await page.screenshot({ path: "e2e/shots/three-running.png" }).catch(() => undefined); // a picture for review, never a reason to fail
   await expect.poll(async () => { const m = await motion(); return m.replaying || m.needleBusy; }, { timeout: 8000 }).toBe(false);
   await page.getByRole("button", { name: "Column oven", exact: true }).click();
   await expect.poll(async () => (await motion()).doorOpen, { timeout: 3000 }).toBe(true);
   await page.waitForTimeout(300);
-  await page.screenshot({ path: "e2e/shots/three-oven.png" });
+  await page.screenshot({ path: "e2e/shots/three-oven.png" }).catch(() => undefined); // a picture for review, never a reason to fail
   await page.getByRole("button", { name: "Whole instrument" }).click();
   await expect.poll(async () => (await motion()).doorOpen, { timeout: 3000 }).toBe(false);
   // With reduced motion nothing animates, and injecting still works.
