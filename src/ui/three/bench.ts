@@ -98,7 +98,20 @@ export class Bench {
   private centre = new Map<ModuleId, number>();
   private column: Three.Mesh | null = null;
   private readout: Readout | null = null;
-  private playing: number | null = null;
+  // Moving parts. One loop drives them all and stops when nothing is moving.
+  private loop: number | null = null;
+  private replay: { frames: readonly Frame[]; start: number } | null = null;
+  private door: Three.Group | null = null;
+  private doorAngle = 0;
+  /** The door stays open until this time after a column change made elsewhere (ms). */
+  private doorHold = 0;
+  private shownColumn = -1;
+  private needle: Three.Mesh | null = null;
+  private needleRest = { x: 0, y: 0 };
+  private vialX = new Map<Readout["vial"], number>();
+  private needleRun: { start: number; x: number } | null = null;
+  private beads: Array<{ mesh: Three.Mesh; curve: Three.Curve<Three.Vector3>; phase: number; mixed: boolean }> = [];
+  private flowPhase = 0;
   private focus: ModuleId | null = null;
   private fly: number | null = null;
   private goal = { pos: [0, 0, 0] as [number, number, number], look: [0, 0, 0] as [number, number, number] };
@@ -219,11 +232,17 @@ export class Bench {
           cap.position.set(x, y + 0.8, FRONT + 0.11);
           this.scene.add(glass, cap);
           this.vials.set(kind, capMat);
+          this.vialX.set(kind, x);
           const title = kind === "blank" ? "Blank" : kind === "standard" ? "Reference standard" : "Sample";
           this.buttons.set(glass, { id: `vial-${kind}`, title: `Vial: ${title}` });
           this.buttons.set(cap, { id: `vial-${kind}`, title: `Vial: ${title}` });
           this.label(kind === "blank" ? "BLANK" : kind === "standard" ? "STD" : "SAMPLE", x, y + 0.2, 0.36, 0.12);
         });
+        // Sampling needle on its carriage above the tray.
+        this.needleRest = { x: L + 0.18, y: y + 1.08 };
+        this.needle = new T.Mesh(new T.CylinderGeometry(0.014, 0.014, 0.34, 8), steel);
+        this.needle.position.set(this.needleRest.x, this.needleRest.y, FRONT + 0.11);
+        this.scene.add(this.needle);
         this.knob("inj", L + 1.75, ky + 0.05, "INJ µL", 0, 20, (r) => r.injUl, "Injection volume");
         this.button("inject", L + 2.25, ky + 0.05, 0.42, 0.34, "INJECT", "Inject", 0x0b5a7a);
       }
@@ -235,6 +254,15 @@ export class Bench {
         this.column.rotation.z = Math.PI / 2;
         this.column.position.set(L + 0.75, y + 0.72, FRONT + 0.06);
         this.scene.add(this.column);
+        // Smoked door over the column compartment, hinged on its left edge.
+        this.door = new T.Group();
+        this.door.position.set(L + 0.125, y + 0.72, FRONT + 0.13);
+        const pane = new T.Mesh(new T.PlaneGeometry(1.25, 0.42), new T.MeshStandardMaterial({ color: 0x1b2027, transparent: true, opacity: 0.5, side: T.DoubleSide, roughness: 0.2 }));
+        pane.position.x = 0.625;
+        const handle = new T.Mesh(new T.BoxGeometry(0.03, 0.2, 0.03), steel);
+        handle.position.set(1.17, 0, 0.02);
+        this.door.add(pane, handle);
+        this.scene.add(this.door);
         this.button("col-prev", L + 0.45, y + 0.28, 0.42, 0.22, "‹ COL", "Previous column");
         this.button("col-next", L + 1.05, y + 0.28, 0.42, 0.22, "COL ›", "Next column");
         this.knob("temp", L + 1.9, ky + 0.05, "TEMP °C", 0, 100, (r) => r.tempC, "Column temperature");
@@ -269,6 +297,103 @@ export class Bench {
     const table = new T.Mesh(new T.BoxGeometry(9, 0.1, 5), new T.MeshStandardMaterial({ color: 0x8d949c, roughness: 0.9 }));
     table.position.set(0.6, -0.05, 0);
     this.scene.add(table);
+
+    // Tubing, with beads that move along it while a run is replayed. The path follows the real
+    // order of flow: reservoirs to pump, pump to autosampler, column and detector, detector to waste.
+    const at = (id: ModuleId): number => this.centre.get(id)!;
+    const side = W / 2 + 0.16;
+    const v = (x: number, yy: number, z: number): Three.Vector3 => new T.Vector3(x, yy, z);
+    const top = y + 1.2;
+    const paths: Array<{ pts: Three.Vector3[]; colour: number; mixed: boolean; n: number }> = [
+      { pts: [v(-1, top, 0.4), v(-1.6, top + 0.25, 0.5), v(-side, top - 0.4, 0.7), v(-side, at("pump") + 0.3, 0.7), v(-W / 2, at("pump"), 0.7)], colour: 0x6fb6dc, mixed: false, n: 7 },
+      { pts: [v(0.9, top, 0.4), v(0, top + 0.45, 0.2), v(-1.9, top + 0.3, 0.1), v(-side, top - 0.5, 0.2), v(-side, at("pump") + 0.3, 0.2), v(-W / 2, at("pump"), 0.2)], colour: 0xd9b25a, mixed: false, n: 8 },
+      { pts: [v(W / 2, at("pump"), -0.4), v(side, at("pump") + 0.3, -0.4), v(side, at("sampler"), -0.4), v(side + 0.12, at("sampler") + 0.4, -0.4), v(side, at("oven"), -0.4), v(side + 0.12, at("oven") + 0.4, -0.4), v(side, at("detector"), -0.4), v(W / 2, at("detector"), -0.4)], colour: 0x8fc7a0, mixed: true, n: 9 },
+      { pts: [v(W / 2, at("detector"), 0.6), v(side + 0.5, at("detector") - 0.2, 0.6), v(W / 2 + 0.9, 2.2, 0.6), v(W / 2 + 0.9, 1.25, 0.6)], colour: 0x8fc7a0, mixed: true, n: 6 },
+    ];
+    for (const p of paths) {
+      const curve = new T.CatmullRomCurve3(p.pts, false, "centripetal");
+      this.scene.add(new T.Mesh(new T.TubeGeometry(curve, 60, 0.03, 8), new T.MeshStandardMaterial({ color: 0xf2f4f6, transparent: true, opacity: 0.55, roughness: 0.3 })));
+      for (let i = 0; i < p.n; i++) {
+        const mesh = new T.Mesh(new T.SphereGeometry(0.045, 10, 8), new T.MeshBasicMaterial({ color: p.colour }));
+        this.scene.add(mesh);
+        this.beads.push({ mesh, curve, phase: i / p.n, mixed: p.mixed });
+      }
+    }
+    this.placeBeads(0);
+  }
+
+  /** Put the beads along the tubing, and tint the ones downstream of the pump by composition. */
+  private placeBeads(pctB: number): void {
+    const a = new this.T.Color(0x6fb6dc);
+    const mix = a.lerp(new this.T.Color(0xd9b25a), Math.min(1, Math.max(0, pctB / 100)));
+    for (const b of this.beads) {
+      b.mesh.position.copy(b.curve.getPointAt((b.phase + this.flowPhase) % 1));
+      if (b.mixed) (b.mesh.material as Three.MeshBasicMaterial).color.copy(mix);
+    }
+  }
+
+  // ------------------------------------------------------------------ motion
+
+  private static readonly DOOR_OPEN = -1.9;
+
+  /** Start the loop if it is not running. */
+  private kick(): void {
+    if (this.loop === null) this.loop = requestAnimationFrame((t) => this.tick(t));
+  }
+
+  private tick(now: number): void {
+    this.loop = null;
+    let busy = false;
+    const still = reducedMotion();
+
+    // Oven door: open while the oven is being looked at, or briefly after the column was changed elsewhere.
+    const want = this.focus === "oven" || now < this.doorHold ? Bench.DOOR_OPEN : 0;
+    if (this.door) {
+      this.doorAngle = still ? want : this.doorAngle + (want - this.doorAngle) * 0.22;
+      if (Math.abs(want - this.doorAngle) < 0.01) this.doorAngle = want;
+      else busy = true;
+      this.door.rotation.y = this.doorAngle;
+      if (now < this.doorHold) busy = true;
+    }
+
+    // Needle: across to the chosen vial, down into it, back up, then home.
+    if (this.needle && this.needleRun) {
+      const u = (now - this.needleRun.start) / 1400;
+      if (u >= 1 || still) {
+        this.needleRun = null;
+        this.needle.position.x = this.needleRest.x;
+        this.needle.position.y = this.needleRest.y;
+      } else {
+        const ease = (v: number): number => v * v * (3 - 2 * v);
+        const across = ease(Math.min(1, u / 0.25));
+        const back = ease(Math.min(1, Math.max(0, (u - 0.75) / 0.25)));
+        const dip = u < 0.25 ? 0 : u < 0.5 ? ease((u - 0.25) / 0.25) : u < 0.75 ? 1 - ease((u - 0.5) / 0.25) : 0;
+        this.needle.position.x = this.needleRest.x + (this.needleRun.x - this.needleRest.x) * (across - back);
+        this.needle.position.y = this.needleRest.y - 0.3 * dip;
+        busy = true;
+      }
+    }
+
+    // Replay of a run on the panels, with solvent moving through the tubing.
+    if (this.replay && this.readout) {
+      const u = (now - this.replay.start) / 4000;
+      if (u < 0) busy = true; // the needle is still sampling
+      else if (u >= 1 || !this.el.isConnected) {
+        this.replay = null;
+        this.paint(this.readout, null);
+        this.placeBeads(this.readout.pctB);
+      } else {
+        const f = this.replay.frames[Math.min(this.replay.frames.length - 1, Math.floor(u * this.replay.frames.length))]!;
+        this.paint(this.readout, f);
+        // Faster flow moves the beads faster, within reason.
+        this.flowPhase = (this.flowPhase + 0.004 + 0.006 * Math.min(2, this.readout.flow)) % 1;
+        this.placeBeads(f.pctB);
+        busy = true;
+      }
+    }
+
+    this.draw();
+    if (busy) this.kick();
   }
 
   // ------------------------------------------------------------------ pointer
@@ -349,14 +474,18 @@ export class Bench {
     if (module) {
       const y = this.centre.get(module)!;
       // Close enough for the module's face to fill the width of the view.
-      const dist = (W / 2 + 0.25) / (Math.tan((this.camera.fov * Math.PI) / 360) * wide) + D / 2;
-      this.goal = { pos: [0, y + 0.1, Math.max(4.2, dist)], look: [0, y, 0] };
+      const tan = Math.tan((this.camera.fov * Math.PI) / 360);
+      const tall = MODULES.find((m) => m.id === module)!.height;
+      // Close enough for the module's face to fill the view, whichever of width and height binds.
+      const dist = Math.max((W / 2 + 0.25) / (tan * wide), (tall / 2 + 0.12) / tan) + D / 2;
+      this.goal = { pos: [0, y + 0.05, dist], look: [0, y, 0] };
     } else {
       // Far enough back for the whole stack, reservoirs included, at any shape of view.
       const pull = Math.max(1, 1.9 / wide);
       this.goal = { pos: [6.0 * pull, 5.6, 15.4 * pull], look: [0.5, 3.75, 0] };
     }
     this.el.dispatchEvent(new CustomEvent("framed", { detail: module }));
+    this.kick();
     if (this.fly !== null) cancelAnimationFrame(this.fly);
     this.fly = null;
     if (instant || reducedMotion()) {
@@ -410,7 +539,14 @@ export class Bench {
   /** Show the instrument's present settings and reading. */
   update(r: Readout): void {
     this.readout = r;
-    if (this.playing === null) this.paint(r, null);
+    if (!this.replay) {
+      this.paint(r, null);
+      this.placeBeads(r.pctB);
+    }
+    // A column changed anywhere (drawing or form) opens the door for a moment.
+    if (this.shownColumn !== -1 && this.shownColumn !== r.column.index) this.doorHold = performance.now() + 1100;
+    this.shownColumn = r.column.index;
+    this.kick();
     for (const k of this.knobs.values()) {
       const v = k.value(r);
       const f = v === null ? 0 : Math.min(1, Math.max(0, (v - k.lo) / (k.hi - k.lo)));
@@ -448,25 +584,18 @@ export class Bench {
     set("solvents", [`A ${r.buffer} pH ${r.pH.toFixed(2)}`, r.bufferHolds ? `B ${r.organic}` : "pH OUTSIDE BUFFER RANGE"], r.bufferHolds ? fg : warn);
   }
 
-  /** Replay a finished run on the front panels over a few seconds. */
+  /** Replay a finished run: the needle samples the vial, the panels follow the run, solvent moves in the tubing. */
   play(frames: readonly Frame[]): void {
-    if (this.playing !== null) cancelAnimationFrame(this.playing);
-    this.playing = null;
     if (!this.readout || frames.length === 0 || reducedMotion()) return;
-    const start = performance.now();
-    const step = (now: number): void => {
-      const u = (now - start) / 4000;
-      if (u >= 1 || !this.readout || !this.el.isConnected) {
-        this.playing = null;
-        if (this.readout) this.paint(this.readout, null);
-        this.draw();
-        return;
-      }
-      this.paint(this.readout, frames[Math.min(frames.length - 1, Math.floor(u * frames.length))]!);
-      this.draw();
-      this.playing = requestAnimationFrame(step);
-    };
-    this.playing = requestAnimationFrame(step);
+    const now = performance.now();
+    this.replay = { frames, start: now + 700 };
+    this.needleRun = { start: now, x: this.vialX.get(this.readout.vial) ?? this.needleRest.x };
+    this.kick();
+  }
+
+  /** What is moving now. For tests. */
+  get motion(): { doorOpen: boolean; needleBusy: boolean; replaying: boolean } {
+    return { doorOpen: this.doorAngle < -1, needleBusy: this.needleRun !== null, replaying: this.replay !== null };
   }
 
   private draw(): void {

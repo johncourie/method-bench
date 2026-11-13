@@ -120,3 +120,35 @@ test("run comparison draws, and its table carries the same information", async (
   await page.screenshot({ path: "e2e/shots/three-compare.png", fullPage: true });
   expect(errors).toEqual([]);
 });
+
+test("moving parts: the needle samples, the run replays with flow, and the oven door opens when looked at", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  const motion = (): Promise<{ doorOpen: boolean; needleBusy: boolean; replaying: boolean }> => page.evaluate(() => (window as unknown as { methodBenchDrawing: { motion: any } }).methodBenchDrawing.motion);
+  await page.goto("/");
+  await page.getByRole("button", { name: /^(Start|Discard)/ }).click();
+  await expect(page.locator(".bench3d canvas")).toBeVisible();
+  // The first injection of a page visit is not replayed (it could be an old notebook reloading), the second is.
+  await page.getByRole("button", { name: "Inject", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Chromatogram, run 1" })).toBeVisible();
+  await page.getByRole("button", { name: "Inject", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Chromatogram, run 2" })).toBeVisible();
+  await expect.poll(async () => (await motion()).needleBusy, { timeout: 3000 }).toBe(true);
+  await expect.poll(async () => (await motion()).replaying, { timeout: 3000 }).toBe(true);
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: "e2e/shots/three-running.png" });
+  await expect.poll(async () => { const m = await motion(); return m.replaying || m.needleBusy; }, { timeout: 8000 }).toBe(false);
+  await page.getByRole("button", { name: "Column oven", exact: true }).click();
+  await expect.poll(async () => (await motion()).doorOpen, { timeout: 3000 }).toBe(true);
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: "e2e/shots/three-oven.png" });
+  await page.getByRole("button", { name: "Whole instrument" }).click();
+  await expect.poll(async () => (await motion()).doorOpen, { timeout: 3000 }).toBe(false);
+  // With reduced motion nothing animates, and injecting still works.
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.getByRole("button", { name: "Inject", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Chromatogram, run 3" })).toBeVisible();
+  await page.waitForTimeout(300);
+  expect(await motion()).toEqual({ doorOpen: false, needleBusy: false, replaying: false });
+  expect(errors).toEqual([]);
+});
