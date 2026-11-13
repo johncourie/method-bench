@@ -9,7 +9,7 @@ import type { StressAgent } from "../../lab/types.ts";
 import type { App } from "../app.ts";
 import { Chart, type Series } from "../chart.ts";
 import { field, fixed, h, numberInput, select, sig } from "../dom.ts";
-import { Bench, type ModuleId } from "../three/bench.ts";
+import { Bench, type ButtonId, type KnobId, type ModuleId, type Readout } from "../three/bench.ts";
 
 export function methodSummary(app: App, m: Method): string {
   const col = app.catalog.columns.get(m.columnId);
@@ -345,13 +345,84 @@ const MODULE_FIELD: Record<ModuleId, { label: string; field: string }> = {
   detector: { label: "Detector", field: "f-type" },
 };
 
-/** The drawing of the instrument, with front-panel readouts. The form beside it holds the same settings. */
+const clamp = (v: number, lo: number, hi: number): number => Math.min(hi, Math.max(lo, v));
+const snap = (v: number, step: number): number => Number((Math.round(v / step) * step).toFixed(6));
+
+/** What the front panels show for the method and sample now in the editor. */
+function readoutOf(app: App): Readout {
+  const m = app.method;
+  const c = app.lab.case;
+  const col = app.lab.column(m.columnId);
+  const inst = app.lab.instrument;
+  const faults = methodFaults(m, inst, col);
+  const first = m.program[0]!;
+  const last = m.program[m.program.length - 1]!;
+  const gradient = m.program.some((p) => p.phi !== first.phi);
+  return {
+    flow: m.flowMlMin,
+    pctB: first.phi * 100,
+    pctBEnd: gradient ? last.phi * 100 : null,
+    gradMin: gradient ? last.t - first.t : null,
+    pressure: faults.some((f) => !f.startsWith("Pressure")) ? 0 : maxPressure(m, col),
+    pressureLimit: Math.min(inst.pMaxBar, col.pMaxBar),
+    tempC: m.tempC,
+    injUl: m.injUl,
+    vial: app.sample.kind,
+    sample: app.sample.kind === "blank" ? "BLANK" : app.sample.kind === "standard" ? "STANDARD" : `SAMPLE PREP ${app.sample.prep}`,
+    column: { name: col.name, lengthMm: col.lengthMm, idMm: col.idMm, index: Math.max(0, c.columns.indexOf(m.columnId)), count: c.columns.length },
+    detectorKind: m.detector.kind,
+    detectorValue: m.detector.kind === "uv" ? m.detector.nm : m.detector.mz,
+    detector: m.detector.kind === "uv" ? `UV ${m.detector.nm} nm` : `MS ${m.detector.polarity === "pos" ? "+" : "-"} m/z ${m.detector.mz}`,
+    signal: faults.length ? "NOT READY" : "READY",
+  };
+}
+
+/** A knob on the drawing was turned. The same limits apply as in the form. */
+function turnKnob(app: App, knob: KnobId, detents: number): void {
+  const m = app.method;
+  const first = m.program[0]!;
+  const last = m.program[m.program.length - 1]!;
+  const flat = m.program.every((p) => p.phi === first.phi);
+  if (knob === "flow") m.flowMlMin = snap(clamp(m.flowMlMin + detents * (m.flowMlMin < 1 ? 0.02 : 0.1), 0.02, 10), 0.01);
+  else if (knob === "inj") m.injUl = snap(clamp(m.injUl + detents * 0.5, 0.5, 100), 0.5);
+  else if (knob === "temp") m.tempC = clamp(Math.round(m.tempC + detents), 5, 100);
+  else if (knob === "detect") {
+    if (m.detector.kind === "uv") m.detector.nm = clamp(Math.round(m.detector.nm + detents), 200, 400);
+    else m.detector.mz = clamp(Math.round(m.detector.mz + detents), 50, 1500);
+  } else if (knob === "bStart") {
+    const phi = snap(clamp(first.phi + detents * 0.01, 0, 1), 0.001);
+    // An isocratic method stays isocratic: every step follows.
+    if (flat) for (const p of m.program) p.phi = phi;
+    else first.phi = phi;
+  } else if (knob === "bEnd") {
+    // Turning the end away from the start makes a gradient of an isocratic method.
+    if (m.program.length === 1) m.program.push({ t: first.t + 10, phi: first.phi });
+    const end = m.program[m.program.length - 1]!;
+    end.phi = snap(clamp(end.phi + detents * 0.01, 0, 1), 0.001);
+  } else if (knob === "gradTime") {
+    if (m.program.length === 1) return;
+    const before = m.program[m.program.length - 2]!;
+    last.t = snap(clamp(last.t + detents * 0.5, before.t + 0.5, 240), 0.5);
+  }
+}
+
+function pressButton(app: App, button: ButtonId): void {
+  const m = app.method;
+  const c = app.lab.case;
+  if (button === "inject") app.inject();
+  else if (button === "vial-blank" || button === "vial-standard" || button === "vial-unknown") app.sample.kind = button.slice(5) as "blank" | "standard" | "unknown";
+  else if (button === "col-prev" || button === "col-next") {
+    const i = Math.max(0, c.columns.indexOf(m.columnId));
+    m.columnId = c.columns[(i + (button === "col-next" ? 1 : c.columns.length - 1)) % c.columns.length]!;
+  } else if (button === "det-mode") {
+    m.detector = m.detector.kind === "uv" ? { kind: "ms", mz: 300, polarity: "pos", rateHz: Math.min(m.detector.rateHz, 5) } : { kind: "uv", nm: 280, rateHz: m.detector.rateHz };
+  }
+}
+
+/** The instrument, drawn and operable. The form below holds the same settings and is an equal way to work. */
 function benchPanel(app: App): HTMLElement {
   const toggle = h("button", { type: "button", class: "small", "aria-expanded": String(app.showBench), onClick: () => { app.showBench = !app.showBench; app.refresh(); } }, app.showBench ? "Hide the drawing" : "Show the instrument drawing");
   if (!app.showBench) return h("section", { class: "panel" }, h("div", { class: "row", style: "justify-content:space-between" }, h("h2", { style: "margin:0" }, "Instrument"), toggle));
-  const m = app.method;
-  const col = app.lab.column(m.columnId);
-  const inst = app.lab.instrument;
   const runs = app.lab.session.runs;
   const last = runs[runs.length - 1];
   const goTo = (id: ModuleId): void => {
@@ -363,36 +434,21 @@ function benchPanel(app: App): HTMLElement {
   if (bench) {
     const b = bench;
     holder.appendChild(b.el);
-    const faults = methodFaults(m, inst, col);
-    const phi0 = m.program[0]?.phi ?? 0;
-    const det = m.detector.kind === "uv" ? `UV ${m.detector.nm} nm` : `MS ${m.detector.polarity === "pos" ? "+" : "-"} ${m.detector.mz}`;
     requestAnimationFrame(() => {
-      b.update({
-        flow: m.flowMlMin,
-        pctB: phi0 * 100,
-        pressure: faults.some((f) => !f.startsWith("Pressure")) ? 0 : pressureBar(col, m.flowMlMin, m.modifier, phi0, m.tempC),
-        pressureLimit: Math.min(inst.pMaxBar, col.pMaxBar),
-        tempC: m.tempC,
-        injUl: m.injUl,
-        sample: app.sample.kind === "blank" ? "BLANK" : app.sample.kind === "standard" ? "STANDARD" : `SAMPLE PREP ${app.sample.prep}`,
-        column: { name: col.name, lengthMm: col.lengthMm, idMm: col.idMm },
-        detector: det,
-        signal: faults.length ? "NOT READY" : "READY",
-        status: "",
-      });
+      b.update(readoutOf(app));
       // Replay a run that has just been injected: what the panels would have shown as it ran.
       if (last && last.id > replayed && app.selectedRun === last.id) {
-        const first = replayed === -1;
+        const firstDraw = replayed === -1;
         replayed = last.id;
-        if (!first) {
+        if (!firstDraw) {
           const ex = app.lab.execute(last);
+          const col = app.lab.column(last.method.columnId);
           const t = ex.result.time;
           const n = 90;
           const fmt = (v: number): string => (ex.result.unit === "mAU" ? `${v.toFixed(v < 100 ? 2 : 0)} mAU` : `${v.toExponential(1)} cps`);
           b.play(Array.from({ length: n }, (_, i) => {
             const k = Math.floor((i / (n - 1)) * (t.length - 1));
-            const pump = programPhi(last.method.program, t[k]!);
-            return { t: t[k]!, pctB: pump * 100, pressure: pressureBar(col, last.method.flowMlMin, last.method.modifier, programPhi(last.method.program, t[k]! - ex.result.tDwell), last.method.tempC), signal: fmt(ex.result.signal[k]!) };
+            return { t: t[k]!, pctB: programPhi(last.method.program, t[k]!) * 100, pressure: pressureBar(col, last.method.flowMlMin, last.method.modifier, programPhi(last.method.program, t[k]! - ex.result.tDwell), last.method.tempC), signal: fmt(ex.result.signal[k]!) };
           }));
         }
       }
@@ -403,16 +459,23 @@ function benchPanel(app: App): HTMLElement {
     holder.appendChild(h("p", { class: "muted" }, "Loading the drawing."));
     if (!benchLoading) {
       benchLoading = true;
-      Bench.create(goTo).then((b) => { bench = b; }, () => { benchFailed = true; }).finally(() => { benchLoading = false; app.refresh(); });
+      // The handlers read `app` afresh each time, so they stay valid across notebooks and redraws.
+      Bench.create({
+        turn: (k, d) => { turnKnob(app, k, d); return readoutOf(app); },
+        press: (id) => { pressButton(app, id); return readoutOf(app); },
+        settled: () => app.refresh(),
+      }).then((b) => { bench = b; (window as unknown as { methodBenchDrawing?: Bench }).methodBenchDrawing = b; }, () => { benchFailed = true; }).finally(() => { benchLoading = false; app.refresh(); });
     }
   }
+  const look = (id: ModuleId | null, text: string): HTMLElement => h("button", { type: "button", class: "small", "aria-pressed": String((bench?.focused ?? null) === id), onClick: () => { bench?.frame(id); app.refresh(); } }, text);
   return h(
     "section",
     { class: "panel" },
     h("div", { class: "row", style: "justify-content:space-between;margin-bottom:8px" }, h("h2", { style: "margin:0" }, "Instrument"), toggle),
     holder,
-    h("div", { class: "row", style: "margin-top:8px" }, h("span", { class: "muted" }, "Go to the settings of:"), (Object.keys(MODULE_FIELD) as ModuleId[]).map((id) => h("button", { type: "button", class: "small", onClick: () => goTo(id) }, MODULE_FIELD[id].label))),
-    h("p", { class: "muted", style: "margin-top:6px" }, "A generic instrument of this class, not any maker's model. The panels show what an operator sees. Select a module, here or in the drawing, to reach its settings."),
+    h("div", { class: "row", style: "margin-top:8px" }, h("span", { class: "muted" }, "Look at:"), look(null, "Whole instrument"), (Object.keys(MODULE_FIELD) as ModuleId[]).map((id) => look(id, MODULE_FIELD[id].label))),
+    h("div", { class: "row", style: "margin-top:6px" }, h("span", { class: "muted" }, "Settings in the form:"), (Object.keys(MODULE_FIELD) as ModuleId[]).map((id) => { const el = h("button", { type: "button", class: "small", onClick: () => goTo(id) }, MODULE_FIELD[id].label); el.id = `goto-${id}`; el.setAttribute("aria-label", `${MODULE_FIELD[id].label} settings in the form`); return el; })),
+    h("p", { class: "muted", style: "margin-top:6px" }, "A generic instrument of this class, not any maker's model. Select a module to look closer. Drag a knob sideways, or scroll over it, to turn it. Choose a vial, then press Inject. The form below does everything the drawing does, and more: the full gradient table, sample preparation and replicates."),
   );
 }
 

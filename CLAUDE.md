@@ -11,6 +11,7 @@ Static browser application. Strict TypeScript, Vite, Vitest, Playwright, no fram
 - A physical claim in the UI or docs must be true of the code. If a value is assumed, the UI says assumed.
 - Golden tests before UI. A new engine behaviour gets a closed-form or literature test first.
 - The WebGL views are an addition, never the only way in. Every setting on the instrument drawing is in the form beside it, every trace in the comparison is in the table under it, and the page works with WebGL off. Nothing inside the column is drawn: the drawing shows only what an operator could see.
+- The drawing never owns a setting. A knob or button calls a handler that changes the method (`turnKnob`, `pressButton` in `src/ui/views/instrument.ts`), and both the drawing and the form are redrawn from the method. A control added to the drawing must already exist in the form, with the same limits.
 - The instrument drawing is a generic instrument of its class. No maker's shapes, colours, panel layouts, names or badges.
 - Accessibility is tested, not asserted: `npm run e2e` scans every tab at two widths in both themes. Every chart has a table with the same content. Nothing is conveyed by colour alone.
 - Student-facing text: no em or en dashes, no curly quotes, no emoji, no exclamation marks, no "not X but Y".

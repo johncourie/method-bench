@@ -49,3 +49,5 @@ Append-only. Newest last.
 **2026-11-13. The instrument drawing is generic by design.** Modules are plain boxes with this project's own palette, name plates and readouts. It represents the class of instrument (reservoirs, pump, autosampler, column oven, detector), not a product. Panels show only what an operator sees; the inside of the column is never drawn, because that would hand the student the answer.
 
 **2026-11-13. Colour in the run comparison always has a text twin.** Each trace carries its run number in the drawing and a row in the table under it.
+
+**2026-11-13. The drawing is operable, and the form stays an equal route.** Knobs, buttons and the vial tray on the drawing change the same method the form edits; neither holds state of its own. The drawing covers the settings an instrument front panel would carry. The full gradient table, sample preparation, replicates and stress conditions stay in the form, which is also the keyboard and screen-reader route. Knobs turn by sideways drag or scroll so that a vertical swipe on a phone still scrolls the page.
