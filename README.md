@@ -29,6 +29,16 @@ It is a teaching instrument. It is not a substitute for commercial method-modell
 | [Model and limits](https://johncourie.github.io/method-bench/#limits) | Equations, where every parameter comes from, checks against the literature, the debrief. |
 | [Instructor](https://johncourie.github.io/method-bench/#instructor) | Assignment codes and the key. |
 
+To look around in finished work instead of starting cold, open a sample notebook:
+
+| Sample | What it shows |
+|---|---|
+| [Hemp: a complete exercise](https://johncourie.github.io/method-bench/?sample=hemp-full-exercise#quant) | 39 injections: calibration, replicates, blank, six preparations, spike recovery, forced degradation, robustness. |
+| [Green tea: scouting and model fitting](https://johncourie.github.io/method-bench/?sample=greentea-scouting-and-fit#model) | Two scouting gradients with every peak named, ready to fit and predict from. |
+| [Green tea: a hidden co-eluting interferent](https://johncourie.github.io/method-bench/?sample=greentea-coeluting-interferent#compare) | One lot under two gradients: EGCG reads about 10% high until the interferent is separated. |
+
+A sample link does not load over a notebook already in progress in that browser. The Setup tab has a button for each sample, and the files themselves are in [`public/examples/`](public/examples).
+
 A first session, five minutes: open [Setup](https://johncourie.github.io/method-bench/#setup), choose a case, press Start, press Inject. Nine or ten peaks appear, none of them named. Inject single standards to find out which is which, change the gradient, and watch the separation change.
 
 ## Two cases

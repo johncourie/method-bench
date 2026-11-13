@@ -121,3 +121,17 @@ test("the resolution map passes the accessibility scan in the dark theme and the
   await expect(page.getByRole("heading", { name: "Report", exact: true })).toBeVisible();
   await expect(page.getByRole("button", { name: "Print or save as PDF" })).toBeHidden();
 });
+
+test("a sample link opens a finished notebook, and does not overwrite one in progress", async ({ page }) => {
+  await page.goto("/?sample=hemp-full-exercise#quant");
+  await expect(page.getByRole("heading", { name: "Quantitation" })).toBeVisible();
+  await expect(page.locator("table", { hasText: "Regression" })).toContainText("Points");
+  await expect(page.locator("section", { hasText: "Sample results" }).locator("table").first().locator("tbody tr")).toHaveCount(6);
+  // The same browser now has that notebook in progress: a second sample link must not replace it.
+  await page.goto("/?sample=greentea-scouting-and-fit#model");
+  await expect(page.locator("#live")).toHaveText(/was not loaded over it/);
+  expect(await page.evaluate(() => (window as unknown as { methodBench: any }).methodBench.lab.session.caseId)).toBe("cannabis");
+  // The button on Setup does replace it, on request.
+  await page.getByRole("button", { name: "Load: Green tea: scouting and model fitting" }).click();
+  await expect(page.getByRole("heading", { name: /Chromatogram, run 9/ })).toBeVisible();
+});

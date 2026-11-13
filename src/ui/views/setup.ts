@@ -1,5 +1,6 @@
 import type { App } from "../app.ts";
 import { field, h, select } from "../dom.ts";
+import { loadSample, SAMPLES } from "../samples.ts";
 
 function download(name: string, text: string): void {
   const a = document.createElement("a");
@@ -103,6 +104,30 @@ export function setupView(app: App): HTMLElement {
       h("h2", { style: "margin-top:16px" }, "Notebook file"),
       h("p", { class: "muted" }, "The notebook holds every injection you made. Results are recomputed from it, so it reproduces exactly on another computer."),
       h("div", { class: "row" }, h("button", { type: "button", onClick: () => download(`method-bench-${s.caseId}-${s.seed}.json`, app.exportSession()) }, "Download notebook"), field("Load a notebook", file)),
+      h("h2", { style: "margin-top:16px" }, "Sample notebooks"),
+      h("p", { class: "muted" }, hasRuns ? "Finished pieces of work to look around in. Loading one replaces the notebook you have open, so download yours first if you want to keep it." : "Finished pieces of work to look around in."),
+      h(
+        "ul",
+        {},
+        SAMPLES.map((x) =>
+          h(
+            "li",
+            { style: "margin-bottom:8px" },
+            h("button", {
+              type: "button",
+              class: "small",
+              onClick: () => {
+                loadSample(app, x.id).then(
+                  () => { pending = null; app.message = { kind: "ok", text: `Sample notebook loaded: ${x.title}.` }; app.go("instrument"); },
+                  (e: unknown) => { app.message = { kind: "bad", text: e instanceof Error ? e.message : String(e) }; app.refresh(); },
+                );
+              },
+            }, `Load: ${x.title}`),
+            " ",
+            h("span", { class: "muted" }, x.about),
+          ),
+        ),
+      ),
     ),
     h(
       "section",
